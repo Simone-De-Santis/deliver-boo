@@ -1,6 +1,7 @@
 <!-- !inizializzazione  -->
 <!-- creato progetto con ('composer create-project --prefer-dist laravel/laravel:^7.0 deliver-boo') -->
 <!-- creato db 'deliver_db' e agganciato nel file env  -->
+<!-- installiamo i pack di autentificazione composer require laravel/ui:^2.4 -->
 
 |
 |
