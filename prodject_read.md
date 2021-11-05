@@ -9,6 +9,9 @@
 <!-- ! migration -->
 <!-- php artisan make:model Models/'NomeModello' - m per creare tutti i modelli e le migration delle tabelle madri -->
 <!-- php artisan make:migration update_users_ table --table=users per aggiungere i dati alla tabella users già esistente -->
+<!-- php artisan make:migration create_nome_tabponte_table per creare le migration delle tabelle ponti  -->
+<!-- Inserite nei modelli interessati le relazioni 'many to many' per collegare la tabella ponte alle due tabelle madri -->
+<!-- php artisan make:migration add_foreign_user_id_on_products_table --table=products per aggiungere la foreign key nelle tabelle deboli per le relazioni 'one to many' -->
 
 
 |
