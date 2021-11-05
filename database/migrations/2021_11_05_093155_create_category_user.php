@@ -15,14 +15,10 @@ class CreateCategoryUser extends Migration
     {
         Schema::create('category_user', function (Blueprint $table) {
             $table->id();
-
-
             // Foreign key link to 'category_id'
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
             // Foreign key link to 'user_id'
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-
-
             $table->timestamps();
         });
     }
