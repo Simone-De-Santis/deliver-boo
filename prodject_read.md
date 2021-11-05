@@ -7,11 +7,9 @@
 <!-- avviato npm install  -->
 <!-- avviato npm run dev -->
 <!-- ! migration -->
-<!-- php artisan make:migration create_categories_table --table=categories -->
-<!-- add dati in migration/created_categories... -->
-<!-- creato modello e migration php artisan make:model Models/Category -->
-<!-- creata tabella ponte per vincolo php artisan make:migration create_category_user_table --table=category_user   -->
-<!-- aggiunto vincolo nella tabella ponte e gestito il roll back  -->
+<!-- php artisan make:model Models/'NomeModello' - m per creare tutti i modelli e le migration delle tabelle madri -->
+<!-- php artisan make:migration update_users_ table --table=users per aggiungere i dati alla tabella users già esistente -->
+
 
 |
 |
