@@ -18,11 +18,9 @@ class CreateCategoryUser extends Migration
 
 
             // Foreign key link to 'category_id'
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
             // Foreign key link to 'user_id'
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
 
 
             $table->timestamps();
