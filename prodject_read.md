@@ -2,6 +2,16 @@
 <!-- creato progetto con ('composer create-project --prefer-dist laravel/laravel:^7.0 deliver-boo') -->
 <!-- creato db 'deliver_db' e agganciato nel file env  -->
 <!-- mod webpack processCssUrls -->
+<!-- install 'composer require laravel/ui:^2.4' -->
+<!-- installiamo vue --- auth 'php artisan ui vue --auth' -->
+<!-- avviato npm install  -->
+<!-- avviato npm run dev -->
+<!-- ! migration -->
+<!-- php artisan make:migration create_categories_table --table=categories -->
+<!-- add dati in migration/created_categories... -->
+<!-- creato modello e migration php artisan make:model Models/Category -->
+<!-- creata tabella ponte per vincolo php artisan make:migration create_category_user_table --table=category_user   -->
+<!-- aggiunto vincolo nella tabella ponte e gestito il roll back  -->
 
 |
 |
