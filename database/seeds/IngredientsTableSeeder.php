@@ -13,6 +13,7 @@ class IngredientsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+        //Added 'for loop' to generate data within the 'ingredients' table
         for ($i = 0; $i < 20; $i++) {
             $new_ingredient = new Ingredient();
 
