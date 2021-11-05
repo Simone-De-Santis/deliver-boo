@@ -14,6 +14,7 @@ class CreateCategoryUserTable extends Migration
     public function up()
     {
         Schema::create('category_user', function (Blueprint $table) {
+            // added links to 'category' and 'user' table 'id'
             $table->id();
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
