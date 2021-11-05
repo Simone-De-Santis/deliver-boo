@@ -38,6 +38,7 @@ class User extends Authenticatable
     ];
     public function categories()
     {
+        // Added 'many to many' report with the 'category model'
         return $this->belongsToMany('App\Models\Category');
     }
 }
