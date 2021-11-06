@@ -16,18 +16,18 @@ class EditTableUsers extends Migration
         Schema::table('users', function (Blueprint $table) {
             //Creation of 'categories' table with relevant data
 
-            $table->string('activity_name', 100);
-            $table->string('province', 100);
-            $table->string('municipality', 100)->nullable();
-            $table->string('address');
-            $table->string('city', 100);
-            $table->char('zip', 5);
-            $table->char('vat', 11)->unique();
-            $table->string('telephone', 20)->unique()->nullable();
-            $table->text('description');
-            $table->string('url')->nullable();
-            $table->string('longitude')->nullable();
-            $table->string('latidude')->nullable();
+            $table->string('activity_name', 100)->after('remember_token');
+            $table->string('province', 100)->after('activity_name');
+            $table->string('municipality', 100)->nullable()->after('province');
+            $table->string('address')->after('municipality');
+            $table->string('city', 100)->after('address');
+            $table->char('zip', 5)->after('city');
+            $table->char('vat', 11)->unique()->after('zip');
+            $table->string('telephone', 20)->unique()->nullable()->after('vat');
+            $table->text('description')->after('telephone');
+            $table->string('url')->nullable()->after('description');
+            $table->string('longitude')->nullable()->after('url');
+            $table->string('latitude')->nullable()->after('longitude');
         });
     }
 
