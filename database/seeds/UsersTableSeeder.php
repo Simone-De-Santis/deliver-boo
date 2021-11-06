@@ -4,7 +4,6 @@ use Illuminate\Database\Seeder;
 use App\User;
 use Faker\Generator as Faker;
 use Faker\Provider\en_US\Address as FakerAddress;
-use Faker\Provider\en_US\Person as FakerPerson;
 use Faker\Provider\en_US\PhoneNumber as FakerNumber;
 
 class UsersTableSeeder extends Seeder
@@ -14,7 +13,7 @@ class UsersTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker, FakerAddress $faker_address, FakerPerson $faker_person, FakerNumber $faker_number)
+    public function run(Faker $faker, FakerAddress $faker_address, FakerNumber $faker_number)
     {
         //generate our personal user for access
         $user  = new User();
