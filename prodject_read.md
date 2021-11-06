@@ -13,7 +13,15 @@
 <!-- Inserite nei modelli interessati le relazioni 'many to many' per collegare la tabella ponte alle due tabelle madri -->
 <!-- php artisan make:migration add_foreign_user_id_on_products_table --table=products per aggiungere la foreign key nelle tabelle deboli per le relazioni 'one to many' -->
 <!-- ! seeder -->
-<!-- in caso di problemi utilizzare il comando composer dumpautoload e attendere il ricaricamento  -->
+<!-- in caso di problemi utilizzare il comando 'composer dumpautoload' e attendere il ricaricamento  -->
+<!-- rifare il comando 'php artisan migrate:fresh --seed'  -->
+<!--  andiamo a creare i seeder autocompilando i vari ciampi con i faker -->
+<!-- per quanto riguarda le tabelle ponte andiamo a definire un legame 'faker' andando ad aggiunger la fk partendo dall' array degli id presenti nelle tabelle 'madri ' e aggiungendole random es:  for ($x = 0; $x < 10; $x++) {
+                /* Attaching ingredient id to pivot table */
+                $new_product->ingredients()->attach(Arr::random($ingredients_id));
+            }-->
+
+<!-- ! rotte -->
 
 |
 |
