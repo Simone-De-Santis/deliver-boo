@@ -24,7 +24,7 @@ class OrdersTableSeeder extends Seeder
             $new_order->last_name = $faker_person->lastName();
             $new_order->address = $faker_address->streetAddress();
             $new_order->city = $faker_address->city();
-            $new_order->zip = $faker_address->randomNumber(5, true);
+            $new_order->zip = $faker->randomNumber(5, true);
             $new_order->phone_number = $faker_number->phoneNumber();
             $new_order->discount = $faker->randomFloat(2, 0, 99);
             $new_order->total_price = $faker->randomFloat(2, 0, 9999);
