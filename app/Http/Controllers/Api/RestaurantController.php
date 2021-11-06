@@ -39,7 +39,10 @@ class RestaurantController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return response()->json($user);
+
+        /*//!Not working return response()->json($user); */
     }
 
     /**
