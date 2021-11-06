@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use App\Models\Category;
+use Illuminate\Support\Arr;
 use Faker\Generator as Faker;
 use Faker\Provider\en_US\Address as FakerAddress;
 use Faker\Provider\en_US\PhoneNumber as FakerNumber;
@@ -15,6 +17,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run(Faker $faker, FakerAddress $faker_address, FakerNumber $faker_number)
     {
+        //Creating array of categories ids
+        $categories = Category::pluck('id')->toArray();
         //generate our personal user for access
         $user  = new User();
         $user->name = 'admin';
@@ -33,6 +37,10 @@ class UsersTableSeeder extends Seeder
         $user->longitude = '43.76954';
         $user->latitude = '11.23788';
         $user->save();
+        for ($x = 0; $x < 2; $x++) {
+            /* Attaching category id to pivot table */
+            $user->categories()->attach(Arr::random($categories));
+        }
 
         //for cycle to generate faker data for 'users' table
         for ($i = 0; $i < 10; $i++) {
@@ -53,6 +61,10 @@ class UsersTableSeeder extends Seeder
             $new_user->longitude = $faker_address->latitude(-90, 90);
             $new_user->latitude = $faker_address->longitude(-180, 180);;
             $new_user->save();
+            for ($x = 0; $x < 2; $x++) {
+                /* Attaching category id to pivot table */
+                $new_user->categories()->attach(Arr::random($categories));
+            }
         }
     }
 }
