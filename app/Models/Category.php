@@ -10,6 +10,6 @@ class Category extends Model
     public function users()
     {
         // added 'many to many' report with the 'users' table
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany('App\User')->withTimestamps();
     }
 }
