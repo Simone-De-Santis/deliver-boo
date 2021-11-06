@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 //Import model
 use App\User;
+use App\Models\Product;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -39,8 +40,11 @@ class RestaurantController extends Controller
      */
     public function show($id)
     {
+        //Temporary solution
+
         $user = User::findOrFail($id);
-        return response()->json($user);
+        $products = Product::where('user_id', '=', $id)->get();
+        return response()->json([$user, $products]);
 
         /*//!Not working return response()->json($user); */
     }
