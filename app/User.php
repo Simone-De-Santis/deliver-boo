@@ -41,4 +41,10 @@ class User extends Authenticatable
         // Added 'many to many' report with the 'category model'
         return $this->belongsToMany('App\Models\Category')->withTimestamps();
     }
+
+    public function products()
+    {
+        // Added 'many to many' report with the 'category model'
+        return $this->hasMany('App\Models\Product');
+    }
 }

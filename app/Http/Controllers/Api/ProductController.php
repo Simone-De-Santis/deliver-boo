@@ -35,10 +35,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
         //Product with relative ingredients
-        $product = Product::with('ingredients')->findOrFail($id);
+        $product->ingredients;
         return response()->json($product);
     }
 
