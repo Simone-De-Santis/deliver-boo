@@ -8,7 +8,7 @@ use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class RestaurantController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -38,15 +38,10 @@ class RestaurantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //Temporary solution
-
-        $user = User::findOrFail($id);
-        $products = Product::where('user_id', '=', $id)->get();
-        return response()->json([$user, $products]);
-
-        /*//!Not working return response()->json($user); */
+        $user->products;
+        return response()->json($user);
     }
 
     /**

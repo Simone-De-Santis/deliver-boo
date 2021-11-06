@@ -17,4 +17,10 @@ class Product extends Model
     {
         return $this->belongsToMany('App\Models\Order')->withPivot('quantity')->withTimestamps();
     }
+
+    public function users()
+    {
+        // Added 'many to many' report with the 'category model'
+        return $this->belongsTo('App\User');
+    }
 }
