@@ -12,4 +12,9 @@ class Product extends Model
         // added 'many to many' report with the 'ingredients' table
         return $this->belongsToMany('App\Models\Ingredient');
     }
+
+    public function orders()
+    {
+        return $this->belongsToMany('App\Models\Order')->withPivot('quantity')->withTimestamps();
+    }
 }
