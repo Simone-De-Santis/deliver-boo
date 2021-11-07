@@ -22,7 +22,7 @@
             }-->
 
 <!-- ! rotte -->
-
+<!-- Create rotte api, usare naming convention di Laravel e chiamare il nome della rotta con lo stesso nome del modello su cui andrò a lavorare-->
 |
 |
 |
