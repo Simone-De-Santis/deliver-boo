@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\Category;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
@@ -40,6 +41,9 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        $cat = Category::all()->toArray();
+        // @dd($cat);
+        // $this->$cat;
     }
 
     /**
@@ -67,6 +71,7 @@ class RegisterController extends Controller
             'latitude' => ['digits_between:5,30'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'category' => ['string'],
         ]);
     }
 
@@ -78,7 +83,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+
+        $new_user = User::create([
             'name' => $data['name'],
             'activity_name' => $data['activity_name'],
             'province' => $data['province'],
@@ -89,16 +96,18 @@ class RegisterController extends Controller
             'vat' => $data['vat'],
             'telephone' => $data['telephone'],
             'description' => $data['description'],
-
             'url' => Storage::put('uploads', $data['url']),
-
-
-
             'longitude' => $data['longitude'],
             'latitude' => $data['latitude'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'category' => $data['category'],
         ]);
+
+
+
+
+        return compact('new_user');
     }
 
 

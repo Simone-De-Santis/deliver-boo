@@ -26,6 +26,7 @@
                 </div>
               </div>
               {{-- Activity name --}}
+
               <div class="form-group row">
                 <label for="activity_name"
                   class="col-md-4 col-form-label text-md-right">{{ __('activity_name') }}</label>
@@ -162,83 +163,134 @@
                 <label for="exampleFormControlFile1">Example file input</label>
                 <input type="file" class="form-control-file" id="exampleFormControlFile1">
               </div> --}}
+              {{-- <fieldset>
+                <h5>Categories</h5>
+                @foreach ($categories as $category)
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1-{{ $category->id }}"
+                      value="{{ $category->id }}" name="categories[]" @if (in_array($category->id, $categoryIds))  checked @endif>
+                    <label class="form-check-label"
+                      for="inlineCheckbox1-{{ $category->id }}">{{ $category->name }}</label>
+                  </div>
+                @endforeach
+              </fieldset> --}}
+              {{-- @dd($cat) --}}
 
-
-
-              {{-- longitude --}}
-              <div class="form-group row">
-                <label for="longitude" class="col-md-4 col-form-label text-md-right">{{ __('longitude') }}</label>
-                <div class="col-md-6">
-                  <input id="longitude" type="text" class="form-control @error('longitude') is-invalid @enderror"
-                    name="longitude" value="{{ old('longitude') }}">
-                  @error('longitude')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                  @enderror
-                </div>
-              </div>
-              {{-- latitude --}}
-              <div class="form-group row">
-                <label for="latitude" class="col-md-4 col-form-label text-md-right">{{ __('latitude') }}</label>
-                <div class="col-md-6">
-                  <input id="latitude" type="text" class="form-control @error('latitude') is-invalid @enderror"
-                    name="latitude" value="{{ old('latitude') }}">
-                  @error('latitude')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                  @enderror
-                </div>
-              </div>
 
               <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                <div class="col-md-6">
-                  <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-                    value="{{ old('email') }}" required autocomplete="email">
-
-                  @error('email')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                  @enderror
+                <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
+                <div class="col-sm-6">
+                  <select class="form-control" id="category" name="category" required focus>
+                    <option value="Admin">Admin</option>
+                    <option value="Student">Student</option>
+                    <option value="" disabled selected>Select category</option>
+                  </select>
                 </div>
-              </div>
 
-              <div class="form-group row">
-                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                <div class="col-md-6">
-                  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                    name="password" required autocomplete="new-password">
 
-                  @error('password')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                  @enderror
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {{-- longitude --}}
+                <div class="form-group row">
+                  <label for="longitude" class="col-md-4 col-form-label text-md-right">{{ __('longitude') }}</label>
+                  <div class="col-md-6">
+                    <input id="longitude" type="text" class="form-control @error('longitude') is-invalid @enderror"
+                      name="longitude" value="{{ old('longitude') }}">
+                    @error('longitude')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
+                  </div>
                 </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="password-confirm"
-                  class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                <div class="col-md-6">
-                  <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
-                    required autocomplete="new-password">
+                {{-- latitude --}}
+                <div class="form-group row">
+                  <label for="latitude" class="col-md-4 col-form-label text-md-right">{{ __('latitude') }}</label>
+                  <div class="col-md-6">
+                    <input id="latitude" type="text" class="form-control @error('latitude') is-invalid @enderror"
+                      name="latitude" value="{{ old('latitude') }}">
+                    @error('latitude')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
+                  </div>
                 </div>
-              </div>
 
-              <div class="form-group row mb-0">
-                <div class="col-md-6 offset-md-4">
-                  <button type="submit" class="btn btn-primary">
-                    {{ __('Register') }}
-                  </button>
+                <div class="form-group row">
+                  <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                  <div class="col-md-6">
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                      value="{{ old('email') }}" required autocomplete="email">
+
+                    @error('email')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
+                  </div>
                 </div>
-              </div>
+
+                <div class="form-group row">
+                  <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                  <div class="col-md-6">
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
+                      name="password" required autocomplete="new-password">
+
+                    @error('password')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="password-confirm"
+                    class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                  <div class="col-md-6">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                      required autocomplete="new-password">
+                  </div>
+                </div>
+
+                <div class="form-group row mb-0">
+                  <div class="col-md-6 offset-md-4">
+                    <button type="submit" class="btn btn-primary">
+                      {{ __('Register') }}
+                    </button>
+                  </div>
+                </div>
             </form>
           </div>
         </div>
