@@ -23,7 +23,7 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-
+    //QUESTO MODELLO CONTIENE LA FUNZIONE CHE RITORNA REGISTER.BLADE.PHP
     use RegistersUsers;
 
     /**
@@ -41,9 +41,6 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-        $cat = Category::all()->toArray();
-        // @dd($cat);
-        // $this->$cat;
     }
 
     /**
@@ -66,7 +63,7 @@ class RegisterController extends Controller
             'telephone' => ['unique:users,telephone', 'digits_between:10,30'],
             'description' => ['required', 'string'],
             //! da modificare validazione url in image
-            'url' => ['image'],
+            'url' => ['nullable', 'image'],
             'longitude' => ['digits_between:5,30'],
             'latitude' => ['digits_between:5,30'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -84,7 +81,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-
+        dd($data);
         $new_user = User::create([
             'name' => $data['name'],
             'activity_name' => $data['activity_name'],
@@ -96,7 +93,7 @@ class RegisterController extends Controller
             'vat' => $data['vat'],
             'telephone' => $data['telephone'],
             'description' => $data['description'],
-            'url' => Storage::put('uploads', $data['url']),
+            /* 'url' => Storage::put('uploads', $data['url']), */
             'longitude' => $data['longitude'],
             'latitude' => $data['latitude'],
             'email' => $data['email'],
@@ -107,6 +104,7 @@ class RegisterController extends Controller
 
 
 
+        //!SERVIVA O LO ABBIAMO MESSO NOI?
         return compact('new_user');
     }
 
