@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -56,14 +57,14 @@ class RegisterController extends Controller
             'municipality' => ['string', 'max:100'],
             'address' => ['required', 'string', 'max:255'],
             'city' => ['required', 'string', 'max:100'],
-            'zip' => ['required', 'string', 'min:5', 'max:5'],
-            'vat' => ['required', 'string', 'unique:users,vat', 'min:11', 'max:11'],
-            'telephone' => ['string', 'unique:users,telephone', 'min:10', 'max:30'],
+            'zip' => ['required', 'numeric', 'min:5', 'max:5'],
+            'vat' => ['required', 'numeric', 'unique:users,vat', 'min:11', 'max:11'],
+            'telephone' => ['numeric', 'unique:users,telephone', 'min:10', 'max:30'],
             'description' => ['required', 'string'],
             //! da modificare validazione url in image
-            'url' => ['string', 'max:255'],
-            'longitude' => ['string', 'max:255'],
-            'latitude' => ['string', 'max:255'],
+            'url' => ['image'],
+            'longitude' => ['numeric', 'max:255'],
+            'latitude' => ['numeric', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -88,11 +89,23 @@ class RegisterController extends Controller
             'vat' => $data['vat'],
             'telephone' => $data['telephone'],
             'description' => $data['description'],
-            'url' => $data['url'],
+
+            'url' => Storage::put('uploads', $data['url']),
+
+
+
             'longitude' => $data['longitude'],
             'latitude' => $data['latitude'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
     }
+
+
+
+    // public function store(array $data)
+    // {
+    //     $image_path = Storage::put('uploads', $data['url']);
+    //     return
+    // }
 }

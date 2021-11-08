@@ -8,7 +8,7 @@
           <div class="card-header">{{ __('Register') }}</div>
 
           <div class="card-body">
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
               @csrf
 
               <div class="form-group row">
@@ -148,7 +148,7 @@
               <div class="form-group row">
                 <label for="url" class="col-md-4 col-form-label text-md-right">{{ __('url') }}</label>
                 <div class="col-md-6">
-                  <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url"
+                  <input id="url" type="file" class="form-control @error('url') is-invalid @enderror" name="url"
                     value="{{ old('url') }}">
                   @error('url')
                     <span class="invalid-feedback" role="alert">
@@ -157,6 +157,14 @@
                   @enderror
                 </div>
               </div>
+
+              {{-- <div class="form-group">
+                <label for="exampleFormControlFile1">Example file input</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div> --}}
+
+
+
               {{-- longitude --}}
               <div class="form-group row">
                 <label for="longitude" class="col-md-4 col-form-label text-md-right">{{ __('longitude') }}</label>
