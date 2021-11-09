@@ -77,7 +77,6 @@ class RegisterController extends Controller
             'latitude' => ['digits_between:5,30'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'category' => ['string'],
         ]);
     }
 
@@ -101,12 +100,11 @@ class RegisterController extends Controller
             'vat' => $data['vat'],
             'telephone' => $data['telephone'],
             'description' => $data['description'],
-            /* 'url' => Storage::put('uploads', $data['url']), */
+            'url' => Storage::put('uploads', $data['url']),
             'longitude' => $data['longitude'],
             'latitude' => $data['latitude'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            /* 'category' => $data['category'], */
         ]);
 
         //^PASSING CATEGORY ID ASSOCIATED WITH USER ID TO CATEGORY_USER PIVOT TABLE.
