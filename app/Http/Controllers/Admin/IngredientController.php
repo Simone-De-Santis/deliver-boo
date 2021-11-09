@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Ingredient;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,8 @@ class IngredientController extends Controller
      */
     public function index()
     {
-        $ingredients= Ingredient::all();
-        return view ('admin.products.ingredients.index');
+        // $ingredients = Ingredient::all();
+        return view('admin.ingredients.index');
     }
 
     /**
@@ -25,8 +26,8 @@ class IngredientController extends Controller
      */
     public function create()
     {
-    
-        return view ('admin.products.ingredients.craete');
+
+        return view('admin.ingredients.create');
     }
 
     /**
@@ -38,14 +39,13 @@ class IngredientController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'=>['required','string', 'max:100'],
-            'url'=> ['nullable', 'image'],
+            'name' => ['required', 'string', 'max:100'],
+            'url' => ['nullable', 'image'],
         ]);
         $data = $request->all();
         $ingredient = new Ingredient();
         $ingredient->fill($data);
         $ingredient->save;
-
     }
 
     /**
@@ -54,9 +54,9 @@ class IngredientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show( Ingredient $ingredient)
+    public function show(Ingredient $ingredient)
     {
-        return view('admin.products.ingredients.show', compact('ingredient'));
+        return view('admin.ingredients.show', compact('ingredient'));
     }
 
     /**
@@ -67,7 +67,7 @@ class IngredientController extends Controller
      */
     public function edit(Ingredient $ingredient)
     {
-        return view('admin.products.ingredients.edit', compact('ingredient'));   
+        return view('admin.ingredients.edit', compact('ingredient'));
     }
 
     /**
@@ -79,16 +79,15 @@ class IngredientController extends Controller
      */
     public function update(Request $request, Ingredient $ingredient)
     {
-        
+
         $request->validate([
-            'name'=>['required','string', 'max:100'],
-            'url'=> ['nullable', 'image'],
+            'name' => ['required', 'string', 'max:100'],
+            'url' => ['nullable', 'image'],
         ]);
         $data = $request->all();
-        $ingredient ->update($data);
-       
-        return redirect()->route('admin.products.ingredients.show', $ingredient->id);
-    
+        $ingredient->update($data);
+
+        return redirect()->route('admin.ingredients.show', $ingredient->id);
     }
 
     /**
@@ -100,6 +99,6 @@ class IngredientController extends Controller
     public function destroy(Ingredient $ingredient)
     {
         $ingredient->delete();
-        return redirect()->route('admin.products.ingredients.index');
+        return redirect()->route('admin.ingredients.index');
     }
 }

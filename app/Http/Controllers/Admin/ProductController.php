@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
+
 
 class ProductController extends Controller
 {
@@ -14,8 +16,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with('user_id')->get();
-        return view('admin.products.index', compact('products'));
+        // $products = Product::with('user_id')->get();
+        //  return view('admin.products.index', compact('products'));
+        return view('admin.products.index');
     }
 
     /**
@@ -37,7 +40,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string','max:50'],
+            'name' => ['required', 'string', 'max:50'],
             'discount' => ['numeric', 'max:100'],
             'price' => ['required', 'numeric', 'max:10000'],
             'description' => ['string', 'max:10000'],
@@ -49,7 +52,6 @@ class ProductController extends Controller
         $product = new Product();
         $product->fill($data);
         $product->save;
-
     }
 
     /**
@@ -72,7 +74,6 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         return view('admin.products.edit', compact('product'));
-
     }
 
     /**
@@ -85,7 +86,7 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $request->validate([
-            'name' => ['required', 'string','max:50'],
+            'name' => ['required', 'string', 'max:50'],
             'discount' => ['numeric', 'max:100'],
             'price' => ['required', 'numeric', 'max:10000'],
             'description' => ['string', 'max:10000'],
