@@ -26,6 +26,15 @@ class RegisterController extends Controller
     //QUESTO MODELLO CONTIENE LA FUNZIONE CHE RITORNA REGISTER.BLADE.PHP
     use RegistersUsers;
 
+    //^SOVRASCRIVO LA NORMALE FUNZIONE DI REGISTERSUSERS PER PASSARE LE CATEGORIE, E LO FACCIO QUI PERCHE QUELLA
+    //^DEL MODELLO ORIGINALE DEVE RIMANERE INTATTA
+    public function showRegistrationForm()
+    {
+        //^PASSING ALL CATEGORIES TO THE REGISTRATION FORM
+        $categories = Category::all();
+        return view('auth.register', compact('categories'));
+    }
+
     /**
      * Where to redirect users after registration.
      *
@@ -81,7 +90,6 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        dd($data);
         $new_user = User::create([
             'name' => $data['name'],
             'activity_name' => $data['activity_name'],
@@ -98,14 +106,13 @@ class RegisterController extends Controller
             'latitude' => $data['latitude'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'category' => $data['category'],
+            /* 'category' => $data['category'], */
         ]);
 
-
-
-
-        //!SERVIVA O LO ABBIAMO MESSO NOI?
-        return compact('new_user');
+        //^PASSING CATEGORY ID ASSOCIATED WITH USER ID TO CATEGORY_USER PIVOT TABLE.
+        $new_user->categories()->attach($data['category']);
+        //^DEVE RITORNARE UN OGGETTO, QUINDI NIENTE COMPACT.
+        return $new_user;
     }
 
 
