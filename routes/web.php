@@ -21,9 +21,9 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::middleware('Auth')->name('admin')->prefix('admin')->namespace('Admin')->group(function(){
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::resource('product', 'ProductController');
+Route::middleware('auth')->name('admin')->prefix('admin')->namespace('Admin')->group(function(){
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::resource('products', 'ProductController');
 
 });
 
