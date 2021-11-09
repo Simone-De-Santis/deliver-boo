@@ -108,7 +108,7 @@ class RegisterController extends Controller
         ]);
 
         //^PASSING CATEGORY ID ASSOCIATED WITH USER ID TO CATEGORY_USER PIVOT TABLE.
-        $new_user->categories()->attach($data['category']);
+        $new_user->categories()->attach($data['categories']);
         //^DEVE RITORNARE UN OGGETTO, QUINDI NIENTE COMPACT.
         return $new_user;
     }

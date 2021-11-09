@@ -1,4 +1,7 @@
 @extends('layouts.app')
+{{-- @section('sass')
+    <link href="{{ resource_path('sass/_registerform.scss') }}" rel="stylesheet">
+@endsection --}}
 
 @section('content')
     <div class="container">
@@ -168,65 +171,34 @@
                                 </div>
                             </div>
 
-                            {{-- <div class="form-group">
-                <label for="exampleFormControlFile1">Example file input</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-              </div> --}}
-                            {{-- <fieldset>
-                <h5>Categories</h5>
-                @foreach ($categories as $category)
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1-{{ $category->id }}"
-                      value="{{ $category->id }}" name="categories[]" @if (in_array($category->id, $categoryIds))  checked @endif>
-                    <label class="form-check-label"
-                      for="inlineCheckbox1-{{ $category->id }}">{{ $category->name }}</label>
-                  </div>
-                @endforeach
-              </fieldset> --}}
-                            {{-- @dd($cat) --}}
-
-
-
-
+                            {{-- Categories --}}
                             <div class="form-group row">
                                 <label for="category"
                                     class="col-md-4 col-form-label text-md-right">{{ __('category') }}</label>
                                 <div class="col-md-6">
-                                    <select class="custom-select" id="category" name="category">
-                                        <option>No category</option>
-                                        @foreach ($categories as $category)
-                                            {{-- <option @if (old('category_id') == $category->id) selected @endif value="{{ $category->id }}">{{ $category->name }}</option> --}}
-                                            <option {{-- @if ($post->category_id == $category->id) selected @endif --}} value="{{ $category->id }}">
-                                                {{ $category->name }}</option>
-                                        @endforeach
+                                    @foreach ($categories as $category)
+                                        <input class="form-control" type="checkbox" id="category-{{ $category->id }}"
+                                            value="{{ $category->id }}" name="categories[]">
+                                        <label for="category-{{ $category->id }}"
+                                            class="col-md-4 col-form-label text-md-right">{{ $category->name }}</label>
+                                    @endforeach
                                     </select>
                                 </div>
                             </div>
 
+                            {{-- BOOTSTRAP CATEGORY DA FARCI IL MENU A SCOMPARSA --}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                            {{-- <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    Dropdown button
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div> --}}
 
 
 
