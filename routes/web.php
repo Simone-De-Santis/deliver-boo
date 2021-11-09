@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +20,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware('Auth')->name('admin')->prefix('admin')->namespace('Admin')->group(function(){
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::resource('product', 'ProductController');
+
+});
+
+
