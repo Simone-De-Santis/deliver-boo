@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Storage;
 
 class EditTableUsers extends Migration
 {
@@ -14,8 +15,7 @@ class EditTableUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //Creation of 'categories' table with relevant data
-
+            ////Added columns to the table 'users' already present
             $table->string('activity_name', 100)->after('remember_token');
             $table->string('province', 100)->after('activity_name');
             $table->string('municipality', 100)->nullable()->after('province');
@@ -38,9 +38,8 @@ class EditTableUsers extends Migration
      */
     public function down()
     {
+        //// Delete the above created columns
         Schema::table('users', function (Blueprint $table) {
-            //
-
             $table->dropColumn(['activity_name', 'province', 'municipality', 'address', 'city', 'zip', 'vat', 'telephone', 'description', 'url', 'longitude', 'latidude']);
         });
     }

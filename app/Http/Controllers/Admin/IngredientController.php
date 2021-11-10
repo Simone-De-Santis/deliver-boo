@@ -26,7 +26,6 @@ class IngredientController extends Controller
      */
     public function create()
     {
-
         return view('admin.ingredients.create');
     }
 
@@ -38,10 +37,12 @@ class IngredientController extends Controller
      */
     public function store(Request $request)
     {
+        //// Added validation for the fields of the 'ingredients' table for the 'store' function
         $request->validate([
             'name' => ['required', 'string', 'max:100'],
             'url' => ['nullable', 'image'],
         ]);
+        // Recover all data with 'request' and assign them to a new instance
         $data = $request->all();
         $ingredient = new Ingredient();
         $ingredient->fill($data);
@@ -79,14 +80,14 @@ class IngredientController extends Controller
      */
     public function update(Request $request, Ingredient $ingredient)
     {
-
+        //// Added validation for the fields of the 'ingredients' table for the 'update' function
         $request->validate([
             'name' => ['required', 'string', 'max:100'],
             'url' => ['nullable', 'image'],
         ]);
+        // Recover all data with 'request'
         $data = $request->all();
         $ingredient->update($data);
-
         return redirect()->route('admin.ingredients.show', $ingredient->id);
     }
 

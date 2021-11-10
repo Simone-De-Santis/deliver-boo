@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
     {
         //Creating array of categories ids
         $categories = Category::pluck('id')->toArray();
-        //generate our personal user for access
+        ////Generate our personal user for access
         $user  = new User();
         $user->name = 'admin';
         $user->email = 'admin@admin.it';
@@ -37,12 +37,11 @@ class UsersTableSeeder extends Seeder
         $user->longitude = '43.76954';
         $user->latitude = '11.23788';
         $user->save();
+        //* Attaching category id to pivot table
         for ($x = 0; $x < 2; $x++) {
-            /* Attaching category id to pivot table */
             $user->categories()->attach(Arr::random($categories));
         }
-
-        //for cycle to generate faker data for 'users' table
+        //// For cycle to generate faker data for 'users' table
         for ($i = 0; $i < 10; $i++) {
             $new_user  = new User();
             $new_user->name = $faker->userName();
@@ -61,8 +60,8 @@ class UsersTableSeeder extends Seeder
             $new_user->longitude = $faker_address->latitude(-90, 90);
             $new_user->latitude = $faker_address->longitude(-180, 180);;
             $new_user->save();
+            //* Attaching category id to pivot table 
             for ($x = 0; $x < 2; $x++) {
-                /* Attaching category id to pivot table */
                 $new_user->categories()->attach(Arr::random($categories));
             }
         }

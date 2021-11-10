@@ -39,6 +39,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        //// Added validation for the fields of the 'products' table for the 'store' function
         $request->validate([
             'name' => ['required', 'string', 'max:50'],
             'discount' => ['numeric', 'max:100'],
@@ -47,7 +48,7 @@ class ProductController extends Controller
             'is_available' => ['boolean'],
             'url' => ['nullable', 'image'],
         ]);
-
+        // Recover all data with 'request' and assign them to a new instance
         $data = $request->all();
         $product = new Product();
         $product->fill($data);
@@ -85,6 +86,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        //// Added validation for the fields of the 'products' table for the 'store' function
         $request->validate([
             'name' => ['required', 'string', 'max:50'],
             'discount' => ['numeric', 'max:100'],
@@ -93,10 +95,9 @@ class ProductController extends Controller
             'is_available' => ['boolean'],
             'url' => ['nullable', 'image'],
         ]);
-
+        // Recover all data with 'request'
         $data = $request->all();
         $product->update($data);
-
         return redirect()->route('admin.products.show', $product->id);
     }
 

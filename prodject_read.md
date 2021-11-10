@@ -19,7 +19,7 @@
 <!-- per quanto riguarda le tabelle ponte andiamo a definire un legame 'faker' andando ad aggiunger la fk partendo dall' array degli id presenti nelle tabelle 'madri ' e aggiungendole random es:  for ($x = 0; $x < 10; $x++) {
                 /* Attaching ingredient id to pivot table */
                 $new_product->ingredients()->attach(Arr::random($ingredients_id));
-            }-->
+}-->
 
 <!-- ! rotte -->
 <!-- Create rotte api, usare naming convention di Laravel e chiamare il nome della rotta con lo stesso nome del modello su cui andrò a lavorare-->
