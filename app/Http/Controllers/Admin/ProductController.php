@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Type;
-
+use App\Models\Ingredient;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -32,8 +32,9 @@ class ProductController extends Controller
     public function create()
     {
         $types = Type::all();
+        $ingredients = Ingredient::all();
         $product = new Product();
-        return view('admin.products.create', compact('types', 'product'));
+        return view('admin.products.create', compact('types', 'ingredients', 'product'));
     }
 
     /**
@@ -60,6 +61,7 @@ class ProductController extends Controller
         $product->fill($data);
         $product->url = Storage::put('uploads', $data['url']);;
         $product->save();
+        $product->ingredients()->attach($data['ingredients']);
         return redirect()->route('admin.products.show', compact('product'));
     }
 
@@ -100,7 +102,7 @@ class ProductController extends Controller
     {
         //// Added validation for the fields of the 'products' table for the 'store' function
 
-        
+
         $request->validate([
             'name' => ['required', 'string', 'max:50'],
             'discount' => ['numeric', 'max:100'],
@@ -113,12 +115,11 @@ class ProductController extends Controller
         $data = $request->all();
         $product->fill($data);
 
-        if(array_key_exists('url', $data)){
+        if (array_key_exists('url', $data)) {
             if ($product->url) Storage::delete($product->url);
 
             $product->url = Storage::put('uploads', $data['url']);;
-            
-            }
+        }
 
         $product->save($data);
         return redirect()->route('admin.products.show', $product->id);
