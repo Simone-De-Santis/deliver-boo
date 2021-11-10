@@ -18,8 +18,8 @@ class ProductController extends Controller
     {
         //A questo punto questa rotta potrebbe anche non servire dato che li vediamo gia in home
         $id = auth()->user()->id;
-        $product = Product::where('user_id', $id)->get();
-        return view('admin.products.index', compact('product'));
+        $products = Product::where('user_id', $id)->get();
+        return view('admin.products.index', compact('products'));
     }
 
     /**
