@@ -16,9 +16,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        // $products = Product::with('user_id')->get();
-        //  return view('admin.products.index', compact('products'));
-        return view('admin.products.index');
+        //A questo punto questa rotta potrebbe anche non servire dato che li vediamo gia in home
+        $id = auth()->user()->id;
+        $product = Product::where('user_id', $id)->get();
+        return view('admin.products.index', compact('product'));
     }
 
     /**
@@ -60,9 +61,12 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Product $product, Request $request)
     {
-        return view('admin.products.show', compact('product'));
+
+        $id = auth()->user()->id;
+        if ($product->user_id == $id) return view('admin.products.show', compact('product'));
+        //^COSI ALTRI RISTORATORI NON POSSONO VEDERE ALTRI PRODOTTI
     }
 
     /**
