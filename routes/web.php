@@ -24,6 +24,8 @@ Auth::routes();
 //// Middleware route additions for 'admin' pages
 Route::middleware('auth')->name('admin/')->prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/orders', 'OrderController@index')->name('order.index');
+    Route::get('/orders/{order}', 'OrderController@show')->name('order.show');
     Route::resource('products', 'ProductController');
     Route::resource('ingredients', 'IngredientController');
 });
