@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    //// Add the fillable fields
+    protected $fillable = ['name', 'discount', 'price', 'description', 'type_id', 'user_id', 'is_available', 'url'];
+
     //// Added 'many to many' report with the 'ingredients' table
     public function ingredients()
     {

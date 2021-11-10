@@ -22,10 +22,10 @@ Route::get('/', function () {
 Auth::routes();
 
 //// Middleware route additions for 'admin' pages
-Route::middleware('auth')->name('admin/')->prefix('admin')->namespace('Admin')->group(function () {
+Route::middleware('auth')->name('admin.')->prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
-    Route::get('/orders', 'OrderController@index')->name('order.index');
-    Route::get('/orders/{order}', 'OrderController@show')->name('order.show');
+    Route::get('/orders', 'OrderController@index')->name('orders.index');
+    Route::get('/orders/{order}', 'OrderController@show')->name('orders.show');
     Route::resource('products', 'ProductController');
     Route::resource('ingredients', 'IngredientController');
 });

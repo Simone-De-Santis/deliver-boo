@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Type;
+
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -29,7 +31,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create', ['product' => new Product()]);
+        $types = Type::all();
+        $product = new Product();
+        return view('admin.products.create', compact('types', 'product'));
     }
 
     /**
@@ -52,8 +56,10 @@ class ProductController extends Controller
         // Recover all data with 'request' and assign them to a new instance
         $data = $request->all();
         $product = new Product();
+        $product->user_id = auth()->user()->id;
         $product->fill($data);
-        $product->save;
+        $product->save();
+        return redirect()->route('admin.products.show', compact('product'));
     }
 
     /**
@@ -78,7 +84,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('admin.products.edit', compact('product'));
+        $types = Type::all();
+        return view('admin.products.edit', compact('product', 'types'));
     }
 
     /**

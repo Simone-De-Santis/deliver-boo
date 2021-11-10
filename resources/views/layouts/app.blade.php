@@ -61,11 +61,27 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-
+                                <div>
+                                {{-- Added item to the product list --}}
+                                {{-- </div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a href="{{ route('admin.products') }}">My products</a>
+                                </div> --}}
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('admin.home') }}">
+                                        My restaurant
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('admin.products.index') }}">
+                                        My products
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('admin.ingredients.index') }}">
+                                        Ingredients
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('admin.orders.index') }}">
+                                        Orders
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                             document.getElementById('logout-form').submit();">
+                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 

@@ -11,6 +11,10 @@
             <li>Product id: {{ $product->id }}</li>
             <li>Product name: {{ $product->name }}</li>
             <br>
+            <button>
+                <a href="{{ route('admin.products.edit', $product->id) }}">Modifica</a>
+            </button>
         @endforeach
+       
     </ul>
 @endsection
