@@ -7,7 +7,7 @@ use App\Models\Type;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -51,13 +51,15 @@ class ProductController extends Controller
             'price' => ['required', 'numeric', 'max:10000'],
             'description' => ['string', 'max:10000'],
             'is_available' => ['boolean'],
-            'url' => ['nullable', 'image'],
+            // 'url' => ['nullable', 'image'],
         ]);
         // Recover all data with 'request' and assign them to a new instance
         $data = $request->all();
         $product = new Product();
         $product->user_id = auth()->user()->id;
         $product->fill($data);
+        $img_path = Storage::put('public', $data['url']);
+        $product->url = $img_path;
         $product->save();
         return redirect()->route('admin.products.show', compact('product'));
     }
@@ -104,7 +106,7 @@ class ProductController extends Controller
             'price' => ['required', 'numeric', 'max:10000'],
             'description' => ['string', 'max:10000'],
             'is_available' => ['boolean'],
-            'url' => ['nullable', 'image'],
+            // 'url' => ['nullable', 'image'],
         ]);
         // Recover all data with 'request'
         $data = $request->all();

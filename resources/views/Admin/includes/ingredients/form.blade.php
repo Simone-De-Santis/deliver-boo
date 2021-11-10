@@ -12,11 +12,11 @@
 @endif
 {{-- Check if there are errors in the form --}}
 @if ($ingredient->exists)
-<form action="{{route('admin.ingredients.update', $ingredient->id)}}" method="POST"> 
+<form action="{{route('admin.ingredients.update', $ingredient->id)}}" method="POST" enctype="multipart/form-data" > 
     @method('PATCH')
     <h1>siamo in modifica ingredienti</h1>
     @else
-    <form action="{{route('admin.ingredients.store')}}" method="POST">  
+    <form action="{{route('admin.ingredients.store')}}" method="POST" enctype="multipart/form-data">  
         <h1>siamo in creazione ingredienti</h1>
 
 @endif

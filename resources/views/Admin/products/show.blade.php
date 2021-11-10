@@ -2,11 +2,20 @@
 @extends('layouts.app')
 {{--Added 'content' section to add page content  --}}
 @section('content')
-    <h1>questa è la show del prodotto {{ $product->id }} </h1>
+<section class="container">
+    <h1>Questa è la show del prodotto {{ $product->id }} </h1>
+    <button class="btn btn-primary">
+        <a class="text-white text-decoration-none" href="{{route( 'admin.products.index' )}}">Indietro</a>
+    </button>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ asset('storage'. $product->url)  }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ $product->name }}</h5>
+          <p class="card-text">{{ $product->description }}</p>
+          <a href="{{ route('admin.products.index') }}" class="btn btn-primary">Indietro</a>
+        </div>
+      </div>
 
-    <h3 class="mt-5">Prodotto singolo dell'utente attuale:</h3>
-    <ul></ul>
-    <li>Product id: {{ $product->id }}</li>
-    <li>Product name: {{ $product->name }}</li>
-    </ul>
+</section>
+    
 @endsection
