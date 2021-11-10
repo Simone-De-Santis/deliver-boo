@@ -7,8 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\Models\Product;
-//^IMPORTO IL MODELLO AUTH
-use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
