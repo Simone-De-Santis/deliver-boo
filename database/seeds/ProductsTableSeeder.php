@@ -24,10 +24,9 @@ class ProductsTableSeeder extends Seeder
         $users_id = User::pluck('id')->toArray();
         $ingredients_id = Ingredient::pluck('id')->toArray();
 
-        //Added 'for loop' to generate data within the 'products' table
+        ////Added 'for loop' to generate data within the 'products' table
         for ($i = 0; $i < 20; $i++) {
             $new_product = new Product();
-
             $new_product->user_id = Arr::random($users_id);
             $new_product->type_id = Arr::random($types_id);
             $new_product->name = $faker->word();
@@ -36,11 +35,9 @@ class ProductsTableSeeder extends Seeder
             $new_product->description = $faker->paragraph(4);
             $new_product->is_available = $faker->boolean();
             $new_product->url = $faker->imageUrl(640, 680, 'animals', true);
-
             $new_product->save();
-
+            //* Attaching ingredient id to pivot table
             for ($x = 0; $x < 10; $x++) {
-                /* Attaching ingredient id to pivot table */
                 $new_product->ingredients()->attach(Arr::random($ingredients_id));
             }
         }

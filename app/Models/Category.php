@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    //
+    //// Added 'many to many' report with the 'users' table
     public function users()
     {
-        // added 'many to many' report with the 'users' table
         return $this->belongsToMany('App\User')->withTimestamps();
     }
 }

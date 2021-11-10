@@ -1,6 +1,6 @@
+{{-- Added general layout  --}}
 @extends('layouts.app')
-
-@section('content')
+{{--Added 'content' section to add page content  --}}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

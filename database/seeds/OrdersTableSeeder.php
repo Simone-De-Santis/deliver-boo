@@ -20,7 +20,7 @@ class OrdersTableSeeder extends Seeder
     {
         //Creating array of products ids
         $products = Product::pluck('id')->toArray();
-        //for cycle to generate faker data for 'orders' table
+        ////F or cycle to generate faker data for 'orders' table
         for ($i = 0; $i < 20; $i++) {
             $new_order = new Order();
             $new_order->first_name = $faker_person->firstNameMale();
@@ -32,11 +32,9 @@ class OrdersTableSeeder extends Seeder
             $new_order->discount = $faker->randomFloat(2, 0, 99);
             $new_order->total_price = $faker->randomFloat(2, 0, 9999);
             $new_order->message_to_users = $faker->paragraph(2);
-
             $new_order->save();
-
+            //* Attaching product id to pivot table
             for ($x = 0; $x < 5; $x++) {
-                /* Attaching product id to pivot table */
                 $new_order->products()->attach(Arr::random($products), ['quantity' => rand(1, 5)]);
             }
         }
