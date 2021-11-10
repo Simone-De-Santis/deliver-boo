@@ -84,6 +84,20 @@
         <label class="custom-control-label" for="is_not_available">No</label>
     </div>
 </div>
+{{-- Ingredients --}}
+<div class="form-group row">
+    <label for="ingredient" class="col-md-4 col-form-label text-md-right">{{ __('ingredient') }}</label>
+    <div class="col-md-6">
+        @foreach ($ingredients as $ingredient)
+            <input class="form-control" type="checkbox" id="ingredient-{{ $ingredient->id }}"
+                value="{{ $ingredient->id }}" name="ingredients[]">
+            <label for="ingredient-{{ $ingredient->id }}"
+                class="col-md-4 col-form-label text-md-right">{{ $ingredient->name }}</label>
+        @endforeach
+        </select>
+    </div>
+</div>
+
 {{-- Product image --}}
 <div class="form-group">
     <label for="url">Immagine del prodotto:</label>
