@@ -61,7 +61,7 @@ class ProductController extends Controller
         $product->fill($data);
         $product->url = Storage::put('uploads', $data['url']);;
         $product->save();
-        $product->ingredients()->attach($data['ingredients']);
+        if (array_key_exists('ingredients', $data)) $product->ingredients()->attach($data['ingredients']);
         return redirect()->route('admin.products.show', compact('product'));
     }
 
@@ -88,7 +88,9 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         $types = Type::all();
-        return view('admin.products.edit', compact('product', 'types'));
+        $ingredients = Ingredient::all();
+        $ingredientIds = $product->ingredients->pluck('id')->toArray();
+        return view('admin.products.edit', compact('product', 'types', 'ingredients', 'ingredientIds'));
     }
 
     /**
@@ -121,8 +123,12 @@ class ProductController extends Controller
             $product->url = Storage::put('uploads', $data['url']);;
         }
 
+        $data = $request->all();
+        if (!array_key_exists('ingredients', $data) && count($product->ingredients)) $product->ingredients()->detach();
+        else $product->ingredients()->sync($data['ingredients']);
+
         $product->save($data);
-        return redirect()->route('admin.products.show', $product->id);
+        return redirect()->route('admin.products.show', compact('product'));
     }
 
     /**
