@@ -98,13 +98,14 @@ class IngredientController extends Controller
         ]);
         // Recover all data with 'request'
         $data = $request->all();
+        $ingredient->fill($data);
         if (array_key_exists('url', $data)) {
             if ($ingredient->url) Storage::delete($ingredient->url);
 
             $ingredient->url = Storage::put('uploads', $data['url']);
         }
 
-        $ingredient->update($data);
+        $ingredient->save($data);
         return redirect()->route('admin.ingredients.show', $ingredient->id);
     }
 
