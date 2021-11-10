@@ -99,6 +99,8 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         //// Added validation for the fields of the 'products' table for the 'store' function
+
+        
         $request->validate([
             'name' => ['required', 'string', 'max:50'],
             'discount' => ['numeric', 'max:100'],
@@ -109,8 +111,16 @@ class ProductController extends Controller
         ]);
         // Recover all data with 'request'
         $data = $request->all();
-        $product->url = Storage::put('uploads', $data['url']);;
-        $product->update($data);
+        $product->fill($data);
+
+        if(array_key_exists('url', $data)){
+            if ($product->url) Storage::delete($product->url);
+
+            $product->url = Storage::put('uploads', $data['url']);;
+            
+            }
+
+        $product->save($data);
         return redirect()->route('admin.products.show', $product->id);
     }
 
