@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Ingredient;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class IngredientController extends Controller
@@ -15,8 +16,12 @@ class IngredientController extends Controller
      */
     public function index()
     {
-        // $ingredients = Ingredient::all();
-        return view('admin.ingredients.index');
+        $products = Product::all();
+        return view('admin.ingredients.index', compact('products'));
+        /*         $id = auth()->user()->id;
+        //^PASSO TUTTI I PRODOTTI ASSOCIATI ALL'UTENTE CON I LORO RELATIVI INGREDIENTI, IN QUESTO MODO L'UTENTE
+        //^ VEDRA' SOLO GLI INGREDIENTI UTILIZZATI  DA LUI STESSO NEI SUOI PIATTI, E BASTA.
+        $products = Product::with('ingredients')->where('user_id', $id)->get(); */
     }
 
     /**
@@ -56,6 +61,8 @@ class IngredientController extends Controller
      */
     public function show(Ingredient $ingredient)
     {
+        //^QUI NON PENSO CI SIANO DA FARE CONTROLLI, PERCHE' TUTTI NELLA PIATTAFORMA POSSONO AVERE
+        //^ACCESSO AGLI INGREDIENTI ANCHE, SE MAGARI NON LI USANO LORO MA ALTRI RISTORATORI
         return view('admin.ingredients.show', compact('ingredient'));
     }
 
