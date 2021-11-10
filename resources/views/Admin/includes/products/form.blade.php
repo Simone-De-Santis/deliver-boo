@@ -92,13 +92,8 @@
                 @error('url')
                     <div class="invalid-feedback">{{ $message }}</div>          
                 @enderror --}}
-    </div>
-    
-
-
-
-    
-    <div>
+    </div>  
+    <div class="mt-4">
       <button type="button" class="btn btn-dark"><a class="text-white text-decoration-none" href="{{route('admin.products.index')}}">Indietro</a></button>
       <button type="submit" class="btn btn-primary">Salva prodotto</button>
     </div>   

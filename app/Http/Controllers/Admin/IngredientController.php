@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Ingredient;
-use App\Models\Product;
 use Illuminate\Http\Request;
 
 class IngredientController extends Controller
@@ -16,8 +15,8 @@ class IngredientController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('admin.ingredients.index', compact('products'));
+        $ingredients = Ingredient::all();
+        return view('admin.ingredients.index', compact('ingredients'));
         /*         $id = auth()->user()->id;
         //^PASSO TUTTI I PRODOTTI ASSOCIATI ALL'UTENTE CON I LORO RELATIVI INGREDIENTI, IN QUESTO MODO L'UTENTE
         //^ VEDRA' SOLO GLI INGREDIENTI UTILIZZATI  DA LUI STESSO NEI SUOI PIATTI, E BASTA.
@@ -31,7 +30,8 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        return view('admin.ingredients.create');
+        $ingredient = new Ingredient();
+        return view('admin.ingredients.create', compact('ingredient'));
     }
 
     /**
@@ -51,7 +51,8 @@ class IngredientController extends Controller
         $data = $request->all();
         $ingredient = new Ingredient();
         $ingredient->fill($data);
-        $ingredient->save;
+        $ingredient->save();
+        return redirect()->route('admin.ingredients.show', $ingredient->id);
     }
 
     /**

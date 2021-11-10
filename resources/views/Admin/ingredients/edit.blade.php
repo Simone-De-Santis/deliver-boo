@@ -2,5 +2,8 @@
 @extends('layouts.app')
 {{--Added 'content' section to add page content  --}}
 @section('content')
-    <h1>questa è la edit degli ingredienti </h1>
+<section class="container">
+    <h1>Questa è la edit degli ingredienti </h1>
+    @include('admin.includes.ingredients.form')
+</section>
 @endsection

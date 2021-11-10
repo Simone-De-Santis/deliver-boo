@@ -2,17 +2,28 @@
 @extends('layouts.app')
 {{--Added 'content' section to add page content  --}}
 @section('content')
-    <h1>questa è la index degli ingredienti </h1>
-
-    {{-- @dd($products) --}}
-
+<section class="container">
+    <h1>Questa è la index degli ingredienti </h1>
+    <button type="button" class="btn btn-primary">
+        <a class="text-white text-decoration-none" href="{{ route('admin.ingredients.create') }}">Aggiungi un nuovo ingrediente</a>
+    </button> 
+    <hr> 
     <ul>
-        @foreach ($products as $product)
-            <li>{{ $product->id }}</li>
-            <li>{{ $product->name }}</li>
-            <br>
-        @endforeach
+        @foreach ($ingredients as $ingredient)
+            <li>Ingredient id: {{ $ingredient->id }}</li>
+            <li>ingredient name: {{ $ingredient->name }}</li>
+            <br>     
+            <button type="button" class="btn btn-secondary">
+                <a class="text-white text-decoration-none" href="{{ route('admin.ingredients.edit', $ingredient->id) }}">Modifica</a>
+            </button>
+        @endforeach    
     </ul>
+
+
+          
+
+</section>
+   
 
 
     {{-- Se piu avanti in altre rotte dovesse servire, qui ci sono i prodotti

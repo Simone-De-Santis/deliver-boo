@@ -2,6 +2,10 @@
 @extends('layouts.app')
 {{--Added 'content' section to add page content  --}}
 @section('content')
-    <h1>questa è la edit dei prodotti</h1>
+<section class="container">
+    <h1>Questa è la edit dei prodotti</h1>
     @include('admin.includes.products.form')
+
+</section>
+   
 @endsection
