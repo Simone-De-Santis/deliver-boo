@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Ingredient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class IngredientController extends Controller
 {
@@ -51,6 +53,7 @@ class IngredientController extends Controller
         $data = $request->all();
         $ingredient = new Ingredient();
         $ingredient->fill($data);
+        $ingredient->url = Storage::put('uploads', $data['url']);
         $ingredient->save();
         return redirect()->route('admin.ingredients.show', $ingredient->id);
     }
@@ -95,6 +98,12 @@ class IngredientController extends Controller
         ]);
         // Recover all data with 'request'
         $data = $request->all();
+        if (array_key_exists('url', $data)) {
+            if ($ingredient->url) Storage::delete($ingredient->url);
+
+            $ingredient->url = Storage::put('uploads', $data['url']);
+        }
+
         $ingredient->update($data);
         return redirect()->route('admin.ingredients.show', $ingredient->id);
     }
