@@ -59,7 +59,7 @@ class ProductController extends Controller
         $product = new Product();
         $product->user_id = auth()->user()->id;
         $product->fill($data);
-        $product->url = Storage::put('uploads', $data['url']);;
+        if ($product->url) $product->url = Storage::put('uploads', $data['url']);
         $product->save();
         if (array_key_exists('ingredients', $data)) $product->ingredients()->attach($data['ingredients']);
         return redirect()->route('admin.products.show', compact('product'));
