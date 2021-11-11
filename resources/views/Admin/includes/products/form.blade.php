@@ -90,7 +90,7 @@
     <div class="col-md-6">
         @foreach ($ingredients as $ingredient)
             <input class="form-control" type="checkbox" id="ingredient-{{ $ingredient->id }}"
-                value="{{ $ingredient->id }}" name="ingredients[]" @if (in_array($ingredient->id, $ingredientIds))  checked @endif>
+                value="{{ $ingredient->id }}" name="ingredients[]" @if ($product->exists) @if (in_array($ingredient->id, $ingredientIds))  checked @endif @endif>
             <label for="ingredient-{{ $ingredient->id }}"
                 class="col-md-4 col-form-label text-md-right">{{ $ingredient->name }}</label>
         @endforeach
