@@ -2272,13 +2272,14 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "App"
+  name: "App",
+  data: function data() {
+    return {};
+  },
+  methods: {
+    getRestaurants: function getRestaurants() {}
+  }
 });
 
 /***/ }),
@@ -37869,19 +37870,9 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div")
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid" }, [
-      _vm._v("\n  iiiiii\n  "),
-      _c("main", { staticClass: "container" }, [_vm._v("aaaaaa")]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

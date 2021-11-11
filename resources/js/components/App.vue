@@ -1,12 +1,13 @@
-<template>
-  <div class="container-fluid">
-    iiiiii
-    <main class="container">aaaaaa</main>
-  </div>
-</template>
+<template></template>
 
 <script>
 export default {
   name: "App",
+  data() {
+    return {};
+  },
+  methods: {
+    getRestaurants() {},
+  },
 };
 </script>
