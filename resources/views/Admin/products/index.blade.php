@@ -1,24 +1,68 @@
-{{-- Added general layout  --}}
+{{-- Added general layout --}}
 @extends('layouts.app')
-{{--Added 'content' section to add page content  --}}
+{{-- Added 'content' section to add page content --}}
 @section('content')
-<section class="container">
+  <section class="container">
     <h1>Questa è la index dei prodotti </h1>
     <h3 class="mt-5">Prodotti associati all'utente attuale:</h3>
-    <button type="button" class="btn btn-primary">
-        <a class="text-white text-decoration-none" href="{{ route('admin.products.create') }}">Aggiungi un nuovo prodotto</a>
-    </button>  
-    <hr>
-    <ul>
-        @foreach ($products as $product)
-            <li>Product id: {{ $product->id }}</li>
-            <li>Product name: {{ $product->name }}</li>
-            <br>     
-            <button type="button" class="btn btn-secondary">
-                <a class="text-white text-decoration-none" href="{{ route('admin.products.edit', $product->id) }}">Modifica</a>
+
+
+
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Action</th>
+          <th scope="col">
+            <button type="button" class="btn btn-primary">
+              <a class="text-white text-decoration-none" href="{{ route('admin.products.create') }}">Aggiungi un nuovo
+                prodotto</a>
             </button>
-        @endforeach    
-    </ul>
-</section>
-   
-@endsection
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($products as $product)
+
+          <tr>
+            <th>{{ $product->id }}</th>
+            <td>{{ $product->name }}</td>
+            <td>
+              <button type="button" class="btn btn-primary">
+                <a class="text-white text-decoration-none"
+                  href="{{ route('admin.products.show', $product->id) }}">Dettagli</a>
+              </button>
+              <button type="button" class="btn btn-warning">
+                <a class="text-white text-decoration-none"
+                  href="{{ route('admin.products.edit', $product->id) }}">Modifica</a>
+              </button>
+
+              <form action="{{ route('admin.products.destroy', $product->id) }}" method="post" class="delete-button">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger ml-2">Elimina</button>
+              </form>
+
+
+
+
+            </td>
+
+          </tr>
+        @endforeach
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+  @endsection
