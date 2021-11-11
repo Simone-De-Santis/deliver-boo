@@ -24,7 +24,7 @@ class CreateOrdersTable extends Migration
             $table->string('phone_number', 20);
             $table->float('discount', 4, 2)->unsigned();
             $table->float('total_price', 7, 2)->unsigned();
-            $table->text('message_to_users');
+            $table->text('message_to_users')->nullable();
             $table->timestamps();
         });
     }

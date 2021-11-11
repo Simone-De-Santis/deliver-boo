@@ -40,7 +40,7 @@
 </div>
 {{-- Product price --}}
 <div class="form-group">
-    <label for="discount">Prezzo del prodotto:</label>
+    <label for="price">Prezzo del prodotto:</label>
     <input type="number" step=".01" min="0" class="form-control @error('price') is-invalid @enderror" id="price"
         name="price" value="{{ old('price', $product->price) }}" required>
     @error('price')
@@ -49,7 +49,7 @@
 </div>
 {{-- Product description --}}
 <div class="form-group">
-    <label for="discount">Descrizione del prodotto:</label>
+    <label for="description">Descrizione del prodotto:</label>
     <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"
         id="description" rows="3" required>
             {{ old('description', $product->description) }}

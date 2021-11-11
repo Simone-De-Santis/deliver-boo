@@ -4,7 +4,7 @@
 @section('content')
 <section class="container">
     <h1>Questa è la creazione dei prodotti </h1>
-    @include('admin.includes.products.form')
+    @include('includes.admin.products.form')
 </section>
 
 @endsection
