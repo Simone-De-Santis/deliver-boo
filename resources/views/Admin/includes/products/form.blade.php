@@ -32,8 +32,8 @@
 {{-- Product discount --}}
 <div class="form-group">
     <label for="discount">Discount del prodotto:</label>
-    <input type="number" class="form-control @error('discount') is-invalid @enderror" id="discount" name="discount"
-        value="{{ old('discount', $product->discount) }}" required>
+    <input type="number" step=".01" min="0" class="form-control @error('discount') is-invalid @enderror" id="discount"
+        name="discount" value="{{ old('discount', $product->discount) }}" required>
     @error('discount')
         <div class="invalid-feedback">{{ $message }}</div>
     @enderror
@@ -41,8 +41,8 @@
 {{-- Product price --}}
 <div class="form-group">
     <label for="discount">Prezzo del prodotto:</label>
-    <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price"
-        value="{{ old('price', $product->price) }}" required>
+    <input type="number" step=".01" min="0" class="form-control @error('price') is-invalid @enderror" id="price"
+        name="price" value="{{ old('price', $product->price) }}" required>
     @error('price')
         <div class="invalid-feedback">{{ $message }}</div>
     @enderror
@@ -70,18 +70,20 @@
 </div>
 {{-- Product available --}}
 <div class="form-group">
-    <label for="discount">Disponibilità prodotto:</label>
+    <label for="is_available">Disponibilità prodotto:</label>
     {{-- <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="{{old('price', $product->price)}}" required>
         @error('price')
           <div class="invalid-feedback">{{ $message }}</div>          
         @enderror --}}
     <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="is_available" name="is_available" class="custom-control-input" value="1">
+        <input type="radio" id="is_available" name="is_available" class="custom-control-input" value="1"
+            {{-- @if (old('is_available'))  checked @endif --}} @if (old('is_available', $product->is_available) == '1') checked @endif>
         <label class="custom-control-label" for="is_available">Si</label>
     </div>
     <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="is_not_available" name="is_available" class="custom-control-input" value="0">
-        <label class="custom-control-label" for="is_not_available">No</label>
+        <input type="radio" id="is_not_available" name="is_available" class="custom-control-input" value="0"
+            {{-- @if (!old('is_available'))  checked @endif --}} @if (old('is_available', $product->is_available) == '0') checked @endif>
+        <label class="custom-control-label" for="is_available">No</label>
     </div>
 </div>
 {{-- Ingredients --}}
