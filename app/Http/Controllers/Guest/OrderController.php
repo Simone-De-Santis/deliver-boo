@@ -37,17 +37,17 @@ class OrderController extends Controller
             'last_name' => ['required', 'string', 'max:100'],
             'address' => ['required', 'string', 'max:255'],
             'city' => ['required', 'string', 'max:50'],
-            'zip' => ['required', 'number', 'min:5', 'max:5'],
-            'phone_number' => ['required', 'number', 'min:8', 'max:20'],
+            'zip' => ['required', 'string', 'min:5', 'max:5'],
+            'phone_number' => ['required', 'string', 'min:8', 'max:20'],
             'message_to_users' => ['nullable', 'string'],
-            'discount' => ['required', 'number', 'max:100'],
-            'price' => ['required', 'number', '10000'],
+            'discount' => ['required', 'numeric', 'max:100'],
+            'total_price' => ['required', 'numeric', 'max:10000'],
         ]);
         // Recover all data with 'request' and assign them to a new instance
         $data = $request->all();
         $order = new Order();
         $order->fill($data);
         $order->save();
-        return redirect()->route('guest.orders.show', compact('order'));
+        return redirect()->route('login', compact('order'));
     }
 }
