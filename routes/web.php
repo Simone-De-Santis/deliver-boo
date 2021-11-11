@@ -29,3 +29,7 @@ Route::middleware('auth')->name('admin.')->prefix('admin')->namespace('Admin')->
     Route::resource('products', 'ProductController');
     Route::resource('ingredients', 'IngredientController');
 });
+
+Route::get('{any?}', function () {
+    return view('welcome');
+})->where('any', '.*');
