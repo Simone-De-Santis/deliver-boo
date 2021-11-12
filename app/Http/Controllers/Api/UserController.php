@@ -20,12 +20,4 @@ class UserController extends Controller
         $users = User::with('categories')->get();
         return response()->json($users);
     }
-
-    public function show(User $user)
-    {
-        $user->products;
-        /* 
-        $user = User::findOrFail($id)->with('categories')->get(); */
-        return response()->json($user);
-    }
 }

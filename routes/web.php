@@ -33,7 +33,7 @@ Route::middleware('auth')->name('admin.')->prefix('admin')->namespace('Admin')->
 // Routes guest
 Route::resource('checkout', 'Guest\OrderController');
 
-Route::resource('checkout', 'Guest\UserController');
+Route::resource('user', 'Guest\UserController');
 
 
 Route::get('{any?}', function () {
