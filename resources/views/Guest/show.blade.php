@@ -12,7 +12,27 @@
         {{-- <div v-for="product in products.products">
             {{ product . name }}
         </div> --}}
-        <div>@{{ products. }}</div>
+
+
+
+
+
+        <section class="container">
+            <h1>Questa è la show del prodott del ristorante {{ $user->id }} </h1>
+
+            @foreach ($user->products as $product)
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ asset('storage/' . $product->url) }}" alt="immagine-prodotto">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <p class="card-text">{{ $product->description }}</p>
+                        <a href="{{ route('admin.products.index') }}" class="btn btn-primary">Indietro</a>
+                    </div>
+                </div>
+            @endforeach
+
+        </section>
+
     </div>
 
 @endsection
@@ -28,17 +48,8 @@
                 products: {},
             },
             methods: {
-                getProducts(id) {
-                    axios.get(`http://127.0.0.1:8000/api/users/${id}`).then((res) => {
-                        this.products = res.data
-                        console.log(res.data);
-                    })
-                }
-            },
-            created() {
-                this.getProducts(2);
-            },
 
+            },
         })
     </script>
 @endsection
