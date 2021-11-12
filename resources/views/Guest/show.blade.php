@@ -12,6 +12,7 @@
         {{-- <div v-for="product in products.products">
             {{ product . name }}
         </div> --}}
+        <div>@{{ products. }}</div>
     </div>
 
 @endsection
@@ -24,17 +25,18 @@
         const app = new Vue({
             el: '#app',
             data: {
-                products: [],
+                products: {},
             },
             methods: {
                 getProducts(id) {
                     axios.get(`http://127.0.0.1:8000/api/users/${id}`).then((res) => {
                         this.products = res.data
+                        console.log(res.data);
                     })
                 }
             },
             created() {
-                this.getProducts(id);
+                this.getProducts(2);
             },
 
         })

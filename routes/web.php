@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 */
 //// Route for home page by logged-in user
 Route::get('/', function () {
-    return view('guest.show');
+    return view('guest.home');
 });
 //// Auth routes for registration and login pages
 Auth::routes();
@@ -32,6 +32,8 @@ Route::middleware('auth')->name('admin.')->prefix('admin')->namespace('Admin')->
 
 // Routes guest
 Route::resource('checkout', 'Guest\OrderController');
+
+Route::resource('checkout', 'Guest\UserController');
 
 
 Route::get('{any?}', function () {
