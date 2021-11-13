@@ -48,6 +48,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
+
         $user->products;
         return view('guest.show', compact('user'));
     }

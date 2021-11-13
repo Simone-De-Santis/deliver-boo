@@ -24,7 +24,7 @@
             <h5 class="card-title">@{{ restaurant . activity_name }}</h5>
             <p class="card-text">@{{ restaurant . description }}</p>
             <h1>id @{{ restaurant . id }}</h1>
-            <a href="" class="btn btn-primary">Dettagli</a>
+            <a :href="'/user/'+restaurant.id" class="btn btn-primary">Dettagli</a>
           </div>
         </div>
         <hr>

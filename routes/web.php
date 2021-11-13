@@ -30,9 +30,9 @@ Route::middleware('auth')->name('admin.')->prefix('admin')->namespace('Admin')->
     Route::resource('ingredients', 'IngredientController');
 });
 
+
 // Routes guest
 Route::resource('checkout', 'Guest\OrderController');
-
 Route::resource('user', 'Guest\UserController');
 
 
