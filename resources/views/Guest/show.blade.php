@@ -74,25 +74,28 @@
         cart: [],
       },
       methods: {
+
+
         addProduct(x) {
+          var isInArray = false;
+
           if (this.cart.length > 0) {
 
-
-            for (let i = 0; i < this.cart.length; i++) {
-
+            for (i = 0; i < this.cart.length; i++) {
               if (x.id == this.cart[i].id) {
-                console.log(this.cart[i].id)
-
-                this.cart[i].quantity = this.cart[i].quantity + 1;
-              } else {
-                x.quantity = 1;
-                this.cart.push(x);
+                isInArray = true;
               }
             }
-          } else {
+          }
+          if (!isInArray) {
             x.quantity = 1;
             this.cart.push(x);
           }
+          // controlliamo se nell'array è presente un ogetto con un id = all'id del prodotto che vogliamo inserire 
+
+
+
+
         }
 
       }
