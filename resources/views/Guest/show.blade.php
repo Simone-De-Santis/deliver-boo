@@ -34,18 +34,24 @@
                 <p class="card-text">{{ $product->description }}</p>
                 <p class="card-text">€ {{ $product->price }}</p>
                 <a href="/" class="btn btn-primary">Index guest</a>
-                <button class="btn btn-warning" v-on:click="addProduct({{ $product }})">add</button>
+                <button class="btn btn-warning" v-on:click="addProduct({{ $product }})">add in cart</button>
               </div>
             </div>
           @endforeach
         </section>
         <section class="col-6">
           <h1>carrello</h1>
-          <div v-for="item in cart">
+          <div v-for="(item,index) in cart">
             <ul>
               <li>
                 @{{ item . name }}
+                <button class="btn btn-warning" v-on:click="decreaseQuantity(item)">add quantity</button>
+
                 @{{ item . quantity }}
+                <button class="btn btn-warning" v-on:click="addQuantity(item)">add quantity</button>
+
+                <button class="btn btn-danger" v-on:click="removeProduct(index)">remove</button>
+
 
 
               </li>
@@ -91,13 +97,25 @@
             x.quantity = 1;
             this.cart.push(x);
           }
-          // controlliamo se nell'array è presente un ogetto con un id = all'id del prodotto che vogliamo inserire 
+        },
+        addQuantity(x) {
+          x.quantity++;
+        },
+        decreaseQuantity(x) {
+          x.quantity--;
+          if (x.quantity <= 0) {
+            x.quantity = 1
+          }
 
-
-
-
+        },
+        removeProduct(x) {
+          for (var i = 0; i < this.cart.length; i++) {
+            if (i === x) {
+              console.log(x)
+              this.cart.splice(i, 1)
+            }
+          }
         }
-
       }
 
     })
