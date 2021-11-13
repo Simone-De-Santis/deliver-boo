@@ -45,6 +45,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
         //// Added validation for the fields of the 'products' table for the 'store' function
         $request->validate([
             'name' => ['required', 'string', 'max:50'],

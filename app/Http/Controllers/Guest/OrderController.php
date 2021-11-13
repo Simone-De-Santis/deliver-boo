@@ -31,7 +31,11 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //// Added validation for the fields of the 'orders' table for the 'store' function
+        //Dati trasformati da stringhe ad array.
+        $request->productIds = explode(',', $request->productIds);
+        $request->arrayProductsQuantity = explode(',', $request->arrayProductsQuantity);
+
+        // Added validation for the fields of the 'orders' table for the 'store' function
         $request->validate([
             'first_name' => ['required', 'string', 'max:100'],
             'last_name' => ['required', 'string', 'max:100'],
@@ -48,6 +52,10 @@ class OrderController extends Controller
         $order = new Order();
         $order->fill($data);
         $order->save();
+        //Aggancio il product id e la sua quantity alla pivot table
+        for ($i = 0; $i < count($request->productIds); $i++) {
+            $order->products()->attach($request->productIds[$i], ['quantity' => $request->arrayProductsQuantity[$i]]);
+        }
         return redirect()->route('login', compact('order'));
     }
 }
