@@ -51,6 +51,12 @@
       data: {
         cart: [],
         totalPrice: 0,
+        pippo: [
+          "saluto", "ciao"
+        ],
+
+
+
       },
       methods: {
         getStorage() {
@@ -63,7 +69,9 @@
             total += this.cart[i].price * this.cart[i].quantity;
           }
           return this.totalPrice = total.toFixed(2);
-        }
+        },
+
+
       },
       created() {
         this.getStorage(),

@@ -97,6 +97,24 @@
       <div class="invalid-feedback">{{ $message }}</div>
     @enderror
   </div>
+
+
+
+
+  <div class="form-group d-none ">
+
+
+    <label for="cart">{{-- tutti i prodotti ordinati: --}}</label>
+    <input type="hidden" step=".01" min="0" class="form-control @error('cart') is-invalid @enderror" id="cart"
+      name="cart" :value="pippo" required>
+    @error('cart')
+      <div class="invalid-feedback">{{ $message }}</div>
+    @enderror
+
+
+
+  </div>
+
   <div class="mt-4">
     <button type="button" class="btn btn-dark"><a class="text-white text-decoration-none"
         href="#">Indietro</a></button>
