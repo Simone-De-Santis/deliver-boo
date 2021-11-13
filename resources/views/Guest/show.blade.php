@@ -77,7 +77,7 @@
                     let total = 0;
                     for (let i = 0; i < this.cart.length; i++) {
                         const product = this.cart[i];
-                        total += product.price;
+                        total += product.price * product.quantity;
 
                     }
                     return total;
