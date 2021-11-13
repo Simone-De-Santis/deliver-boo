@@ -57,6 +57,7 @@
               </li>
             </ul>
           </div>
+          <button class="btn btn-success" v-on:click="">vai al pagamento </button>
 
 
 
@@ -80,8 +81,6 @@
         cart: [],
       },
       methods: {
-
-
         addProduct(x) {
           var isInArray = false;
 
@@ -111,11 +110,13 @@
         removeProduct(x) {
           for (var i = 0; i < this.cart.length; i++) {
             if (i === x) {
-              console.log(x)
               this.cart.splice(i, 1)
             }
           }
         }
+
+
+
       }
 
     })
