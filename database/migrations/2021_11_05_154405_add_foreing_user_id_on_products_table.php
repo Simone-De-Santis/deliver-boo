@@ -14,7 +14,7 @@ class AddForeingUserIdOnProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            ////Added 'foreign id' of table users
+            // Added 'foreign id' of table users
             $table->foreignId('user_id')->after('id')->nullable()->constrained()->onDelete('set null');
         });
     }
@@ -27,9 +27,9 @@ class AddForeingUserIdOnProductsTable extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            ////gate constraint and column
+            // Gate constraint and column
             $table->dropForeign('products_user_id_foreign');
-            //// Delete the 'user_id' column
+            // Delete the 'user_id' column
             $table->dropColumn('user_id');
         });
     }

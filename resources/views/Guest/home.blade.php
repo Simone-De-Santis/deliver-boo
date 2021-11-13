@@ -1,11 +1,13 @@
+{{-- Added general layout  --}}
 @extends('layouts.app');
+{{-- Added cdn of 'vue' and 'axios' --}}
 @section('cdns')
   <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
     integrity='sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ=='
     crossorigin='anonymous'></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 @endsection
-
+{{-- Content section with all restaurant --}}
 @section('content')
   <div id="app">
     <section class="container">
@@ -30,36 +32,30 @@
         <hr>
       </div>
   </div>
-
-
-
   </section>
 @endsection
-
+{{-- Added the script section for the Vue logic --}}
 @section('script-end')
   <script>
     Vue.config.devtools = true;
-
-    console.log('vue', Vue)
+    // Initialized a new instance of 'vue'
     const app = new Vue({
       el: '#app',
       data: {
         restaurants: [],
         search_bar: '',
-
       },
       methods: {
+        // Function that returns all restaurants
         getRestaurants() {
           axios.get('http://127.0.0.1:8000/api/users').then((res) => {
             this.restaurants = res.data
           })
         }
-
       },
       created() {
         this.getRestaurants();
       },
-
     })
   </script>
 @endsection

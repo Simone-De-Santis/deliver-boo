@@ -14,7 +14,7 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            //// Creation of 'products' table with relevant data
+            // Creation of 'products' table with relevant data
             $table->id();
             $table->string('name', 50);
             $table->float('discount', 4, 2)->unsigned();
@@ -33,7 +33,7 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        //// Delete the 'products' table
+        // Delete the 'products' table
         Schema::dropIfExists('products');
     }
 }

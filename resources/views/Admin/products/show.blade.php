@@ -15,6 +15,5 @@
                 <a href="{{ route('admin.products.index') }}" class="btn btn-primary">Indietro</a>
             </div>
         </div>
-
     </section>
 @endsection

@@ -17,9 +17,9 @@ class UsersTableSeeder extends Seeder
      */
     public function run(Faker $faker, FakerAddress $faker_address, FakerNumber $faker_number)
     {
-        //Creating array of categories ids
+        // Creating array of categories ids
         $categories = Category::pluck('id')->toArray();
-        ////Generate our personal user for access
+        // Generate our personal user for access
         $user  = new User();
         $user->name = 'admin';
         $user->email = 'admin@admin.it';

@@ -17,14 +17,11 @@ class ProductsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-
-        /* Selecting id column, then with pluck we get back the collection with the ids array inside, but we 
-        just need the array itself, so we get it with toArray() */
         $types_id = Type::pluck('id')->toArray();
         $users_id = User::pluck('id')->toArray();
         $ingredients_id = Ingredient::pluck('id')->toArray();
 
-        ////Added 'for loop' to generate data within the 'products' table
+        // Added 'for loop' to generate data within the 'products' table
         for ($i = 0; $i < 20; $i++) {
             $new_product = new Product();
             $new_product->user_id = Arr::random($users_id);
@@ -36,7 +33,7 @@ class ProductsTableSeeder extends Seeder
             $new_product->is_available = $faker->boolean();
             $new_product->url = $faker->imageUrl(640, 680, 'animals', true);
             $new_product->save();
-            //* Attaching ingredient id to pivot table
+            // Attaching ingredient id to pivot table
             for ($x = 0; $x < 10; $x++) {
                 $new_product->ingredients()->attach(Arr::random($ingredients_id));
             }

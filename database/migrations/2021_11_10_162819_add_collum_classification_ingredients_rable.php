@@ -14,7 +14,6 @@ class AddCollumClassificationIngredientsRable extends Migration
     public function up()
     {
         Schema::table('ingredients', function (Blueprint $table) {
-            //
             $table->string('classification', 150)->nullable()->after('id');
         });
     }
@@ -27,7 +26,6 @@ class AddCollumClassificationIngredientsRable extends Migration
     public function down()
     {
         Schema::table('ingredients', function (Blueprint $table) {
-            //
             $table->dropColumn('classification');
         });
     }

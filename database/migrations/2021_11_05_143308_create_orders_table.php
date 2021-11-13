@@ -14,7 +14,7 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            //// Creation of 'orders' table with relevant data
+            // Creation of 'orders' table with relevant data
             $table->id();
             $table->string('first_name', 100);
             $table->string('last_name', 100);
@@ -36,7 +36,7 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        //// Delete the 'orders' table
+        // Delete the 'orders' table
         Schema::dropIfExists('orders');
     }
 }

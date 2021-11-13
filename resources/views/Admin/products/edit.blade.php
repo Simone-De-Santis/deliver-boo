@@ -5,7 +5,5 @@
 <section class="container">
     <h1>Questa è la edit dei prodotti</h1>
     @include('includes.admin.products.form')
-
 </section>
-   
 @endsection

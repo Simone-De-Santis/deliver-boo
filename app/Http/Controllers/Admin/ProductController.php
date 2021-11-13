@@ -18,7 +18,6 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //A questo punto questa rotta potrebbe anche non servire dato che li vediamo gia in home
         $id = auth()->user()->id;
         $products = Product::where('user_id', $id)->get();
         return view('admin.products.index', compact('products'));
@@ -74,10 +73,8 @@ class ProductController extends Controller
      */
     public function show(Product $product, Request $request)
     {
-
         $id = auth()->user()->id;
         if ($product->user_id == $id) return view('admin.products.show', compact('product'));
-        //^COSI ALTRI RISTORATORI NON POSSONO VEDERE ALTRI PRODOTTI
     }
 
     /**
@@ -103,9 +100,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //// Added validation for the fields of the 'products' table for the 'store' function
-
-
+        // Added validation for the fields of the 'products' table for the 'store' function
         $request->validate([
             'name' => ['required', 'string', 'max:50'],
             'discount' => ['numeric', 'max:100'],
@@ -117,17 +112,13 @@ class ProductController extends Controller
         // Recover all data with 'request'
         $data = $request->all();
         $product->fill($data);
-
         if (array_key_exists('url', $data)) {
             if ($product->url) Storage::delete($product->url);
-
             $product->url = Storage::put('uploads', $data['url']);;
         }
-
         $data = $request->all();
         if (!array_key_exists('ingredients', $data) && count($product->ingredients)) $product->ingredients()->detach();
         else $product->ingredients()->sync($data['ingredients']);
-
         $product->save($data);
         return redirect()->route('admin.products.show', compact('product'));
     }

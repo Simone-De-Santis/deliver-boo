@@ -18,10 +18,6 @@
             </button>
         @endforeach    
     </ul>
-
-
-          
-
 </section>
    
 
