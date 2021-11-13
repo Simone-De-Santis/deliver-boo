@@ -5,10 +5,6 @@
     <section class="container">
         <h1>Questa è la index dei prodotti </h1>
         <h3 class="mt-5">Prodotti associati all'utente attuale:</h3>
-
-
-
-
         <table class="table table-dark">
             <thead>
                 <tr>
@@ -26,7 +22,6 @@
             </thead>
             <tbody>
                 @foreach ($products as $product)
-
                     <tr>
                         <th>{{ $product->id }}</th>
                         <td>{{ $product->name }}</td>
@@ -49,17 +44,6 @@
                         </td>
                     </tr>
                 @endforeach
-
         </table>
-
-
-
-
-
-
-
-
-
-
-
-    @endsection
+    </section>
+@endsection

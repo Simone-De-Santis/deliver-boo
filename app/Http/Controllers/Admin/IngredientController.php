@@ -19,10 +19,6 @@ class IngredientController extends Controller
     {
         $ingredients = Ingredient::all();
         return view('admin.ingredients.index', compact('ingredients'));
-        /*         $id = auth()->user()->id;
-        //^PASSO TUTTI I PRODOTTI ASSOCIATI ALL'UTENTE CON I LORO RELATIVI INGREDIENTI, IN QUESTO MODO L'UTENTE
-        //^ VEDRA' SOLO GLI INGREDIENTI UTILIZZATI  DA LUI STESSO NEI SUOI PIATTI, E BASTA.
-        $products = Product::with('ingredients')->where('user_id', $id)->get(); */
     }
 
     /**
@@ -44,7 +40,7 @@ class IngredientController extends Controller
      */
     public function store(Request $request)
     {
-        //// Added validation for the fields of the 'ingredients' table for the 'store' function
+        // Added validation for the fields of the 'ingredients' table for the 'store' function
         $request->validate([
             'name' => ['required', 'string', 'max:100'],
             'url' => ['nullable', 'image'],
@@ -66,8 +62,6 @@ class IngredientController extends Controller
      */
     public function show(Ingredient $ingredient)
     {
-        //^QUI NON PENSO CI SIANO DA FARE CONTROLLI, PERCHE' TUTTI NELLA PIATTAFORMA POSSONO AVERE
-        //^ACCESSO AGLI INGREDIENTI ANCHE, SE MAGARI NON LI USANO LORO MA ALTRI RISTORATORI
         return view('admin.ingredients.show', compact('ingredient'));
     }
 
@@ -91,7 +85,7 @@ class IngredientController extends Controller
      */
     public function update(Request $request, Ingredient $ingredient)
     {
-        //// Added validation for the fields of the 'ingredients' table for the 'update' function
+        // Added validation for the fields of the 'ingredients' table for the 'update' function
         $request->validate([
             'name' => ['required', 'string', 'max:100'],
             'url' => ['nullable', 'image'],
@@ -101,10 +95,8 @@ class IngredientController extends Controller
         $ingredient->fill($data);
         if (array_key_exists('url', $data)) {
             if ($ingredient->url) Storage::delete($ingredient->url);
-
             $ingredient->url = Storage::put('uploads', $data['url']);
         }
-
         $ingredient->save($data);
         return redirect()->route('admin.ingredients.show', $ingredient->id);
     }

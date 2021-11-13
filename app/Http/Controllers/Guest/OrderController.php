@@ -31,7 +31,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //// Added validation for the fields of the 'orders' table for the 'store' function
+        // Added validation for the fields of the 'orders' table for the 'store' function
         $request->validate([
             'first_name' => ['required', 'string', 'max:100'],
             'last_name' => ['required', 'string', 'max:100'],

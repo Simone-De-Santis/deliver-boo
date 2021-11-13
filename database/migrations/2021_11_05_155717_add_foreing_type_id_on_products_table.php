@@ -14,7 +14,7 @@ class AddForeingTypeIdOnProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            ////Added 'foreign id' of table types
+            //Added 'foreign id' of table types
             $table->foreignId('type_id')->after('id')->nullable()->constrained()->onDelete('set null');
         });
     }
@@ -27,9 +27,9 @@ class AddForeingTypeIdOnProductsTable extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            ////Gate constraint and column
+            // Gate constraint and column
             $table->dropForeign('products_type_id_foreign');
-            //// Delete the 'type_id' column
+            // Delete the 'type_id' column
             $table->dropColumn('type_id');
         });
     }

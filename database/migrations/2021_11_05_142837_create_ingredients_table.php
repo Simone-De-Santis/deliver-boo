@@ -14,7 +14,7 @@ class CreateIngredientsTable extends Migration
     public function up()
     {
         Schema::create('ingredients', function (Blueprint $table) {
-            //// Creation of 'ingredients' table with relevant data
+            // Creation of 'ingredients' table with relevant data
             $table->id();
             $table->string('name', 100);
             $table->string('url')->nullable();
@@ -29,7 +29,7 @@ class CreateIngredientsTable extends Migration
      */
     public function down()
     {
-        //// Delete the 'ingredients' table
+        // Delete the 'ingredients' table
         Schema::dropIfExists('ingredients');
     }
 }

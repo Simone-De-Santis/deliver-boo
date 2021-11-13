@@ -4,7 +4,6 @@
 @section('content')
   <section class="container">
     <h1>Questa è la show dell'ingrediente {{ $ingredient->id }}</h1>
-
     <button class="btn btn-primary">
       <a class="text-white text-decoration-none" href="{{ route('admin.ingredients.index') }}">Indietro</a>
     </button>
@@ -15,7 +14,6 @@
         <a href="{{ route('admin.ingredients.index') }}" class="btn btn-primary">Indietro</a>
       </div>
     </div>
-
     <button class="btn btn-primary">
       <a class="text-white text-decoration-none" href="{{ route('admin.ingredients.index') }}">Indietro</a>
     </button>
