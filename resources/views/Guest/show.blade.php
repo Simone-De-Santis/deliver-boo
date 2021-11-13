@@ -51,29 +51,21 @@
                 <button class="btn btn-warning" v-on:click="addQuantity(item)">add quantity</button>
 
                 <button class="btn btn-danger" v-on:click="removeProduct(index)">remove</button>
-
-
-
               </li>
             </ul>
           </div>
-          <button class="btn btn-success" v-on:click="">vai al pagamento </button>
-
-
+          <a v-on:click="setLocalStorage()" href="{{ route('checkout.create') }}" class="btn btn-success">vai al
+            pagamento</a>
 
         </section>
-
       </section>
-
     </section>
   </div>
-
 @endsection
 
 @section('script-end')
   <script>
     Vue.config.devtools = true;
-
     console.log('vue', Vue)
     const app = new Vue({
       el: '#app',
@@ -82,6 +74,7 @@
       },
       methods: {
         addProduct(x) {
+
           var isInArray = false;
 
           if (this.cart.length > 0) {
@@ -113,7 +106,10 @@
               this.cart.splice(i, 1)
             }
           }
-        }
+        },
+        setLocalStorage() {
+          localStorage.setItem('cart', JSON.stringify(this.cart))
+        },
 
 
 
