@@ -1,4 +1,4 @@
-{{-- Added general layout  --}}
+{{-- Added general layout --}}
 @extends('layouts.app');
 {{-- Added cdn of 'vue' and 'axios' --}}
 @section('cdns')
@@ -9,7 +9,7 @@
 @endsection
 {{-- Content section with selected restaurant products --}}
 @section('content')
-{{-- Id app to add link with Vue --}}
+  {{-- Id app to add link with Vue --}}
   <div id="app">
     <section class="container">
       <h1>Prodotti del ristorante {{ $user->activity_name }} </h1>
@@ -51,10 +51,11 @@
             </ul>
           </div>
           <button class="btn btn-success">
-            <a class="text-white text-decoration-none" v-on:click="setLocalStorage()" href="{{ route('checkout.create') }}">Procedi con il pagamento</a>
-          </button>     
-        </section>
-      </section>
+            <a class="text-white text-decoration-none" v-on:click="setLocalStorage()"
+              href="{{ route('checkout.create') }}">Procedi con il pagamento</a>
+          </button>
+    </section>
+    </section>
     </section>
   </div>
 @endsection
@@ -103,10 +104,26 @@
             }
           }
         },
+
+
         setLocalStorage() {
           localStorage.setItem('cart', JSON.stringify(this.cart))
+          const x = localStorage.getItem('cart');
+          console.log(x);
         },
+      },
+      created() {
+        const x = JSON.parse(localStorage.getItem('cart'));
+        console.log(x);
+
+
+        this.cart = x;
+
+
+
+
       }
+
 
     })
   </script>
