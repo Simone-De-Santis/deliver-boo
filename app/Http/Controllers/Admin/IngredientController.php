@@ -43,6 +43,7 @@ class IngredientController extends Controller
         // Added validation for the fields of the 'ingredients' table for the 'store' function
         $request->validate([
             'name' => ['required', 'string', 'max:100'],
+            'classification' => ['required', 'string', 'max:100'],
             'url' => ['nullable', 'image'],
         ]);
         // Recover all data with 'request' and assign them to a new instance
@@ -88,6 +89,7 @@ class IngredientController extends Controller
         // Added validation for the fields of the 'ingredients' table for the 'update' function
         $request->validate([
             'name' => ['required', 'string', 'max:100'],
+            'classification' => ['required', 'string', 'max:100'],
             'url' => ['nullable', 'image'],
         ]);
         // Recover all data with 'request'
