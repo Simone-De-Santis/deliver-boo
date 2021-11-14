@@ -40,14 +40,14 @@
             <ul>
               <li>
                 @{{ item . name }}
-                <button class="btn btn-secondary" v-on:click="decreaseQuantity(item)">
+                <button class="btn btn-secondary" v-on:click="decreaseQuantity(item),setLocalStorage()">
                   <i class="fas fa-minus"></i>
                 </button>
                 @{{ item . quantity }}
-                <button class="btn btn-secondary" v-on:click="addQuantity(item)">
+                <button class="btn btn-secondary" v-on:click="addQuantity(item),setLocalStorage()">
                   <i class="fas fa-plus"></i>
                 </button>
-                <button class="btn btn-danger" v-on:click="removeProduct(index)">Rimuovi</button>
+                <button class="btn btn-danger" v-on:click="removeProduct(index),setLocalStorage()">Rimuovi</button>
               </li>
             </ul>
           </div>
@@ -67,81 +67,76 @@
     Vue.config.devtools = true;
     // Initialized a new instance of 'vue'
     const app = new Vue({
-          el: '#app',
-          data: {
-            cart: [],
-          },
-          computed: {
-            totalCart() {
-              let total = 0;
-              for (let i = 0; i < this.cart.length; i++) {
-                const product = this.cart[i];
-                total += product.price * product.quantity;
+      el: '#app',
+      data: {
+        cart: [],
+      },
+      computed: {
+        totalCart() {
+          let total = 0;
+          for (let i = 0; i < this.cart.length; i++) {
+            const product = this.cart[i];
+            total += product.price * product.quantity;
 
-              }
-              return total;
-            }
-          },
-          methods: {
-            // Function to add a new product to cart
-            addProduct(x) {
-              var isInArray = false;
-              if (this.cart.length > 0) {
-                for (i = 0; i < this.cart.length; i++) {
-                  if (x.id == this.cart[i].id) {
-                    isInArray = true;
-                  }
-                }
-              }
-              if (!isInArray) {
-                x.quantity = 1;
-                this.cart.push(x);
-              }
-            },
-            // Function to increase the quantity of the product
-            addQuantity(x) {
-              x.quantity++;
-            },
-            // Function to decrease the quantity of the product
-            decreaseQuantity(x) {
-              x.quantity--;
-              if (x.quantity <= 0) {
-                x.quantity = 1
-              }
-            },
-            // Function to delete the product
-            removeProduct(x) {
-              for (var i = 0; i < this.cart.length; i++) {
-                if (i === x) {
-                  this.cart.splice(i, 1)
-                }
-              }
-            },
-            setLocalStorage() {
-              localStorage.setItem('cart', JSON.stringify(this.cart))
-            },
           }
+          return total.toFixed(2);
         }
+
+      },
+      methods: {
+        // Function to add a new product to cart
+        addProduct(x) {
+          var isInArray = false;
+          if (this.cart.length > 0) {
+            for (i = 0; i < this.cart.length; i++) {
+              if (x.id == this.cart[i].id) {
+                isInArray = true;
+              }
+            }
+          }
+          if (!isInArray) {
+            x.quantity = 1;
+            this.cart.push(x);
+          }
+
+        },
+        // Function to increase the quantity of the product
+        addQuantity(x) {
+          x.quantity++;
+
+        },
+        // Function to decrease the quantity of the product
+        decreaseQuantity(x) {
+          x.quantity--;
+          if (x.quantity <= 0) {
+            x.quantity = 1
+          }
+
+        },
+        // Function to delete the product
+        removeProduct(x) {
+          for (var i = 0; i < this.cart.length; i++) {
+            if (i === x) {
+              this.cart.splice(i, 1)
+            }
+          }
+
+        },
+        setLocalStorage() {
+          localStorage.setItem('cart', JSON.stringify(this.cart))
+        },
       },
 
 
-      setLocalStorage() {
-        localStorage.setItem('cart', JSON.stringify(this.cart))
-        const x = localStorage.getItem('cart');
+
+
+
+      created() {
+        const x = JSON.parse(localStorage.getItem('cart'));
         console.log(x);
+        this.cart = x;
       },
-    },
-    created() {
-    const x = JSON.parse(localStorage.getItem('cart'));
-    console.log(x);
 
-
-    this.cart = x;
-
-
-
-
-    }
 
 
     })
