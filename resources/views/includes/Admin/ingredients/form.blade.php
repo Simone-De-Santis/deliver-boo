@@ -31,6 +31,9 @@
         <div class="invalid-feedback">{{ $message }}</div>
     @enderror
 </div>
+
+{{-- Aggiungere classificazione  --}}
+
 {{-- Ingredient image --}}
 <div class="form-group">
     <label for="url">Immagine dell'ingrediente:</label>

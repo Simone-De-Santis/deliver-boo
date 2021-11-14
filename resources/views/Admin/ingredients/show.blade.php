@@ -3,21 +3,19 @@
 {{-- Added 'content' section to add page content --}}
 @section('content')
   <section class="container">
-    <h1>Questa è la show dell'ingrediente {{ $ingredient->id }}</h1>
-    <button class="btn btn-primary">
-      <a class="text-white text-decoration-none" href="{{ route('admin.ingredients.index') }}">Indietro</a>
-    </button>
+    <h1>{{ $ingredient->name }}</h1>
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="{{ asset('storage/' . $ingredient->url) }}" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{ $ingredient->name }}</h5>
-        <a href="{{ route('admin.ingredients.index') }}" class="btn btn-primary">Indietro</a>
+        <ul>
+          <li>ID: {{ $ingredient->id }}</li>
+          <li>Nome ingrediente: {{ $ingredient->name }}</li>
+          <li>Classificazione{{ $ingredient->classification }}</li>
+        </ul>
       </div>
     </div>
-    <button class="btn btn-primary">
+    <button class="btn btn-primary mt-4">
       <a class="text-white text-decoration-none" href="{{ route('admin.ingredients.index') }}">Indietro</a>
     </button>
-
   </section>
-
 @endsection
