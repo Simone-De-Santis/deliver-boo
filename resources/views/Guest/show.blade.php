@@ -26,7 +26,8 @@
                 <p class="card-text">{{ $product->description }}</p>
                 <p class="card-text">€ {{ $product->price }}</p>
                 <a href="/" class="btn btn-primary">Indietro</a>
-                <button class="btn btn-warning" v-on:click="addProduct({{ $product }})">Aggiungi al carrello</button>
+                <button class="btn btn-warning" v-on:click="addProduct({{ $product }})">Aggiungi al
+                  carrello</button>
               </div>
             </div>
             <hr>
@@ -50,6 +51,7 @@
               </li>
             </ul>
           </div>
+          <span><strong>Totale:</strong>@{{ totalCart }}</span>
           <button class="btn btn-success">
             <a class="text-white text-decoration-none" v-on:click="setLocalStorage()"
               href="{{ route('checkout.create') }}">Procedi con il pagamento</a>
@@ -65,64 +67,81 @@
     Vue.config.devtools = true;
     // Initialized a new instance of 'vue'
     const app = new Vue({
-      el: '#app',
-      data: {
-        cart: [],
-      },
-      methods: {
-        // Function to add a new product to cart
-        addProduct(x) {
-          var isInArray = false;
-          if (this.cart.length > 0) {
-            for (i = 0; i < this.cart.length; i++) {
-              if (x.id == this.cart[i].id) {
-                isInArray = true;
+          el: '#app',
+          data: {
+            cart: [],
+          },
+          computed: {
+            totalCart() {
+              let total = 0;
+              for (let i = 0; i < this.cart.length; i++) {
+                const product = this.cart[i];
+                total += product.price * product.quantity;
+
               }
+              return total;
             }
+          },
+          methods: {
+            // Function to add a new product to cart
+            addProduct(x) {
+              var isInArray = false;
+              if (this.cart.length > 0) {
+                for (i = 0; i < this.cart.length; i++) {
+                  if (x.id == this.cart[i].id) {
+                    isInArray = true;
+                  }
+                }
+              }
+              if (!isInArray) {
+                x.quantity = 1;
+                this.cart.push(x);
+              }
+            },
+            // Function to increase the quantity of the product
+            addQuantity(x) {
+              x.quantity++;
+            },
+            // Function to decrease the quantity of the product
+            decreaseQuantity(x) {
+              x.quantity--;
+              if (x.quantity <= 0) {
+                x.quantity = 1
+              }
+            },
+            // Function to delete the product
+            removeProduct(x) {
+              for (var i = 0; i < this.cart.length; i++) {
+                if (i === x) {
+                  this.cart.splice(i, 1)
+                }
+              }
+            },
+            setLocalStorage() {
+              localStorage.setItem('cart', JSON.stringify(this.cart))
+            },
           }
-          if (!isInArray) {
-            x.quantity = 1;
-            this.cart.push(x);
-          }
-        },
-        // Function to increase the quantity of the product
-        addQuantity(x) {
-          x.quantity++;
-        },
-        // Function to decrease the quantity of the product
-        decreaseQuantity(x) {
-          x.quantity--;
-          if (x.quantity <= 0) {
-            x.quantity = 1
-          }
-        },
-        // Function to delete the product
-        removeProduct(x) {
-          for (var i = 0; i < this.cart.length; i++) {
-            if (i === x) {
-              this.cart.splice(i, 1)
-            }
-          }
-        },
-
-
-        setLocalStorage() {
-          localStorage.setItem('cart', JSON.stringify(this.cart))
-          const x = localStorage.getItem('cart');
-          console.log(x);
-        },
+        }
       },
-      created() {
-        const x = JSON.parse(localStorage.getItem('cart'));
+
+
+      setLocalStorage() {
+        localStorage.setItem('cart', JSON.stringify(this.cart))
+        const x = localStorage.getItem('cart');
         console.log(x);
+      },
+    },
+    created() {
+    const x = JSON.parse(localStorage.getItem('cart'));
+    console.log(x);
 
 
-        this.cart = x;
+    this.cart = x;
 
 
 
 
-      }
+    }
 
 
     })
