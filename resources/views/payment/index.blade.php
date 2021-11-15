@@ -1,112 +1,187 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Checkout</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-
-
-
-    <!-- Styles -->
-    <style>
-
-    </style>
 </head>
 
 <body>
-    {{-- TRANSACTION WORKING --}}
-    <div class="flex-center position-ref full-height">
-
-        {{-- I VARI FORM LI TROVI A QUESTO LINK:  https://developer.paypal.com/braintree/docs/guides/hosted-fields/examples/javascript/v3 --}}
-
-        @if (session('success_message'))
-            <div class="alert alert-success">
-                {{ session('success_message') }}
-            </div>
-        @endif
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-        <div class="wrapper">
-            <div class="checkout container">
-
-                <header>
-                    <h1>Hi, <br>Let's test a transaction</h1>
-                    <p>
-                        Make a test payment with Braintree using PayPal or a card
-                    </p>
-                </header>
-
-                <form method="post" id="payment-form" action="{{ route('payment.store') }}">
-                    {{-- CSRF FONDAMENTALE --}}
-                    @csrf
-                    <section>
-                        <label for="amount">
-                            <span class="input-label">Amount</span>
-                            <div class="input-wrapper amount-wrapper">
-                                <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="10">
-                            </div>
-                        </label>
-
-                        <div class="bt-drop-in-wrapper">
-                            <div id="bt-dropin"></div>
-                        </div>
-                    </section>
-
-                    <input id="nonce" name="payment_method_nonce" type="hidden" />
-                    <button class="button" type="submit"><span>Test Transaction</span></button>
-                </form>
-            </div>
+    {{-- ERROR ALERTS --}}
+    @if (session('success_message'))
+        <div class="alert alert-success">
+            {{ session('success_message') }}
         </div>
+    @endif
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    {{-- FORM --}}
+    <div class="container mt-5">
+        <h1>Payment Form</h1>
+        <form action="{{ route('hosted.store') }}" id="payment-form" method="POST">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="first-name">Name on Card</label>
+                <input type="text" class="form-control" id="first-name" name="name_on_card">
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="street-address">Address</label>
+                        <input type="text" class="form-control" id="street-address" name="address">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="locality">City</label>
+                        <input type="text" class="form-control" id="locality" name="city">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="region">Province</label>
+                        <input type="text" class="form-control" id="region" name="province">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="postal-code">Postal Code</label>
+                        <input type="text" class="form-control" id="postal-code" name="postalcode">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="country-name">Country</label>
+                        <input type="text" class="form-control" id="country-name" name="country">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" id="phone" name="phone">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="text" class="form-control" id="amount" name="amount">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group" id="card-number">
+                        {{-- <label for="card-number">Card Number</label>
+                        <input type="text" class="form-control"> --}}
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group" id="expiration-date">
+                        {{-- <label for="expiration-date">Expiry</label>
+                        <input type="text" class="form-control"> --}}
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group" id="cvv">
+                        {{-- <label for="cvv">CVV</label>
+                        <input type="text" class="form-control"> --}}
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Pay" disabled />
+        </form>
     </div>
-    {{-- SCRIPT PAGAMENTI BRANITREE --}}
-    <script src="https://js.braintreegateway.com/web/dropin/1.32.0/js/dropin.min.js"></script>
+
+    <script src="https://js.braintreegateway.com/web/3.82.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.82.0/js/hosted-fields.min.js"></script>
     <script>
         var form = document.querySelector('#payment-form');
-        var client_token = "{{ $token }}";
+        var submit = document.querySelector('input[type="submit"]');
 
-        braintree.dropin.create({
-            authorization: client_token,
-            selector: '#bt-dropin',
-            paypal: {
-                flow: 'vault'
-            }
-        }, function(createErr, instance) {
-            if (createErr) {
-                console.log('Create Error', createErr);
+        braintree.client.create({
+            //QUI VA IL TOKEN
+            authorization: '{{ $token }}'
+        }, function(clientErr, clientInstance) {
+            if (clientErr) {
+                console.error(clientErr);
                 return;
             }
-            form.addEventListener('submit', function(event) {
-                event.preventDefault();
 
-                instance.requestPaymentMethod(function(err, payload) {
-                    if (err) {
-                        console.log('Request Payment Method Error', err);
-                        console.log('Nonce is', payload.nonce);
-                        return;
+            // This example shows Hosted Fields, but you can also use this
+            // client instance to create additional components here, such as
+            // PayPal or Data Collector.
+
+            braintree.hostedFields.create({
+                client: clientInstance,
+                styles: {
+                    'input': {
+                        'font-size': '14px'
+                    },
+                    'input.invalid': {
+                        'color': 'red'
+                    },
+                    'input.valid': {
+                        'color': 'green'
                     }
+                },
+                //QUESTI SONO I CAMPI CHE BRAINTREE CERCA TRAMITE L'ID E LI VA A GENERARE IN AUTOMATICO
+                fields: {
+                    /* Il campo di braintree */
+                    number: {
+                        container: '#card-number',
+                        placeholder: '4111 1111 1111 1111'
+                    },
+                    /* Il campo di braintree */
+                    cvv: {
+                        container: '#cvv',
+                        placeholder: '123'
+                    },
+                    /* Il campo di braintree */
+                    expirationDate: {
+                        container: '#expiration-date',
+                        placeholder: '10/2022'
+                    }
+                }
+            }, function(hostedFieldsErr, hostedFieldsInstance) {
+                if (hostedFieldsErr) {
+                    console.error(hostedFieldsErr);
+                    return;
+                }
 
-                    // Add the nonce to the form and submit
-                    document.querySelector('#nonce').value = payload.nonce;
-                    form.submit();
-                });
+                /* NON NECESSARIO ADESSO  submit.removeAttribute('disabled'); */
+
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    hostedFieldsInstance.tokenize(function(tokenizeErr, payload) {
+                        if (tokenizeErr) {
+                            console.error(tokenizeErr);
+                            return;
+                        }
+
+                        // If this was a real integration, this is where you would
+                        // send the nonce to your server.
+                        console.log('Got a nonce: ' + payload.nonce);
+                    });
+                }, false);
             });
         });
     </script>
-
 </body>
 
 </html>

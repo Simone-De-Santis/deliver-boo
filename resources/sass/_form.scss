@@ -7,7 +7,17 @@ SHARED VARIABLES
 GENERAL
 --------------------*/
 
-*,
+//^FORM PERSONALIZZATO
+#card-number, #cvv, #expiration-date{
+  background-color: #fff;
+  height: 38px;
+  border: 1px solid #CED4DA;
+  padding: .375rem .75rem;
+  border-radius: .25rem
+}
+
+
+/* FIRST FORM *,
 *:before,
 *:after {
   box-sizing: inherit;
@@ -37,10 +47,6 @@ h1 {
   align-items: center;
 }
 
-
-/*--------------------
-PANEL FORM
---------------------*/
 
 .panel {
   background: $white;
@@ -139,10 +145,6 @@ svg {
 }
 
 
-/*--------------------
-BT HOSTED FIELDS SPECIFIC 
---------------------*/
-
 .braintree-hosted-fields-focused {
   border-bottom: 2px solid $blue;
   transition: all 200ms ease;
@@ -152,11 +154,6 @@ BT HOSTED FIELDS SPECIFIC
   border-bottom: 2px solid $red;
   transition: all 200ms ease;
 }
-
-
-/*---------------------
-Media Queries
-----------------------*/
 
 @media (max-width: 600px) {
   html {
@@ -178,4 +175,4 @@ Media Queries
   .pay-button {
     width: 100%;
   }
-}
+}  */
