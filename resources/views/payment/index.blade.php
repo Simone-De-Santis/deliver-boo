@@ -70,7 +70,7 @@
     <script src="https://js.braintreegateway.com/web/dropin/1.32.0/js/dropin.min.js"></script>
     <script>
         var form = document.querySelector('#payment-form');
-        var client_token = "";
+        var client_token = "{{ $token }}";
 
         braintree.dropin.create({
             authorization: client_token,
