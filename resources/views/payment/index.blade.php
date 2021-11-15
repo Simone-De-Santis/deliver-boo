@@ -22,20 +22,23 @@
 
 <body>
     <div class="flex-center position-ref full-height">
-        @if (Route::has('login'))
-            <div class="top-right links">
-                @auth
-                    <a href="{{ url('/home') }}">Home</a>
-                @else
-                    <a href="{{ route('login') }}">Login</a>
 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}">Register</a>
-                    @endif
-                @endauth
+        {{-- I VARI FORM LI TROVI A QUESTO LINK:  https://developer.paypal.com/braintree/docs/guides/hosted-fields/examples/javascript/v3 --}}
+
+        @if (session('success_message'))
+            <div class="alert alert-success">
+                {{ session('success_message') }}
             </div>
         @endif
-        {{-- I VARI FORM LI TROVI A QUESTO LINK:  https://developer.paypal.com/braintree/docs/guides/hosted-fields/examples/javascript/v3 --}}
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="wrapper">
             <div class="checkout container">
 
