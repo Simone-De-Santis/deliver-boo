@@ -24,7 +24,7 @@
                     </option>
                 </select>
             </nav>
-            <div v-for="restaurant in restaurants">
+            <div v-for="restaurant in selectedRestaurants">
                 @{{ restaurant . activity_name }}
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="" alt="Card image cap">
@@ -70,23 +70,30 @@
                     return selectCategories;
                 },
                 selectedRestaurants() {
+
+                    let selectedRestaurants = [];
                     const select = this.select;
                     if (select !== "All") {
-                        const selectedRestaurants = this.restaurants.filter((restaurant)function() {
+                        console.log(selectedRestaurants);
 
+                        for (var i = 0; i < this.restaurants.length; i++) {
+                            // console.log(this.restaurants[i]);
+                            var restaurant = this.restaurants[i];
+                            // console.log(restaurant.categories[0])
                             for (let i = 0; i < restaurant.categories.length; i++) {
                                 const category = restaurant.categories[i];
-
-                                category.includes(select)
+                                if (category.name == select) {
+                                    // console.log('nome categoria:', category.name);
+                                    // console.log('select:', select);
+                                    // console.log(restaurant);
+                                    selectedRestaurants.push(restaurant);
+                                }
                             }
-                            return
+                        }
 
-                        });
-                        return selectedRestaurants.sort((a, b) => b.year - a.year);
-                    }
-                },
-
-
+                    } else console.log('ALL');
+                    return selectedRestaurants;
+                }
             },
             methods: {
                 // Function that returns all restaurants
