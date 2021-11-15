@@ -27,6 +27,7 @@
     <div class="container mt-5">
         <h1>Payment Form</h1>
         <form action="{{ route('hosted.store') }}" id="payment-form" method="POST">
+            @csrf
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="email" class="form-control" id="email">
@@ -85,25 +86,24 @@
             </div>
             <div class="row">
                 <div class="col-3">
+                    <label for="card-number">Card Number</label>
                     <div class="form-group" id="card-number">
-                        {{-- <label for="card-number">Card Number</label>
-                        <input type="text" class="form-control"> --}}
                     </div>
                 </div>
                 <div class="col-3">
+                    <label for="expiration-date">Expiry</label>
                     <div class="form-group" id="expiration-date">
-                        {{-- <label for="expiration-date">Expiry</label>
-                        <input type="text" class="form-control"> --}}
                     </div>
                 </div>
                 <div class="col-3">
+                    <label for="cvv">CVV</label>
                     <div class="form-group" id="cvv">
-                        {{-- <label for="cvv">CVV</label>
-                        <input type="text" class="form-control"> --}}
                     </div>
                 </div>
             </div>
-            <input type="submit" value="Pay" disabled />
+            {{-- NONCE TYPE HIDDEN AGGIUNTO --}}
+            <input type="hidden" id="nonce" name="payment_method_nonce">
+            <input type="submit" value="Pay" />
         </form>
     </div>
 
@@ -176,7 +176,12 @@
 
                         // If this was a real integration, this is where you would
                         // send the nonce to your server.
-                        console.log('Got a nonce: ' + payload.nonce);
+                        /*console.log('Got a nonce: ' + payload.nonce); */
+
+
+                        //AGGIUNTO IL NONCE E FATTO SUBMIT AL FORM
+                        document.querySelector('#nonce').value = payload.nonce;
+                        form.submit();
                     });
                 }, false);
             });
