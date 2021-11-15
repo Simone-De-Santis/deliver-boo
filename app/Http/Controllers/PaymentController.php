@@ -23,9 +23,10 @@ class PaymentController extends Controller
             'publicKey' => config('services.braintree.publicKey'),
             'privateKey' => config('services.braintree.privateKey'),
         ]);
+        //^TOKEN
+        $token = $gateway->ClientToken()->generate();
 
-
-        return view('welcome', compact('gateway'));
+        return view('welcome', compact('token'));
     }
 
     /**
