@@ -1,4 +1,3 @@
-{{-- Added general layout --}}
 @extends('layouts.app')
 {{-- Added cdn of 'vue' and 'axios' --}}
 @section('cdns')
@@ -18,9 +17,11 @@
         <div class="col-6">
           {{-- Cycle foreach to print all the products of the restaurant --}}
           @foreach ($user->products as $product)
+
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" src="{{ asset('storage/' . $product->url) }}" alt="immagine-prodotto">
               <div class="card-body">
+
                 <h5 class="card-title">{{ $product->name }}</h5>
                 <h5 class="card-title">{{ $product->id }}</h5>
                 <p class="card-text">{{ $product->description }}</p>
@@ -30,6 +31,7 @@
                   v-on:click=" setModal(), addProduct({{ $product }}),setLocalStorage()">Aggiungi al
                   carrello</button>
               </div>
+
             </div>
             <hr>
           @endforeach
@@ -65,29 +67,33 @@
         <!-- Button trigger modal -->
 
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <h2> Hai un carrelo aperto nel ristorante : `@{{ cart[0] . name }}` . <br> Vuoi continuare con il
-                  vecchio ordine o vuoi proseguire con il corrente ? </h2>
-              </div>
-              <div class="modal-footer">
+        <div v-if='cart.length > 0'>
 
-                <a :href="'/user/'+`${cart[0].user_id}`" class="btn btn-secondary">vai al ristorante del carrello</a>
-                <button type="button" class="btn btn-primary" v-on:click="removeCart()" data-dismiss="modal">svuota il
-                  carrello </button>
+          <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2> Hai un carrelo aperto nel ristorante : `@{{ cart[0] . name }}` . <br> Vuoi continuare con il
+                    vecchio ordine o vuoi proseguire con il corrente ? </h2>
+                </div>
+                <div class="modal-footer">
+
+                  <a :href="'/user/'+`${cart[0].user_id}`" class="btn btn-secondary">vai al ristorante del carrello</a>
+                  <button type="button" class="btn btn-primary" v-on:click="removeCart()" data-dismiss="modal">svuota il
+                    carrello </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
 
 
 
@@ -186,7 +192,7 @@
               x = [];
             }
             this.cart = x;
-            console.log(x)
+            console.log()
           },
 
 
