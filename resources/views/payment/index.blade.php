@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    {{-- TRANSACTION WORKING --}}
     <div class="flex-center position-ref full-height">
 
         {{-- I VARI FORM LI TROVI A QUESTO LINK:  https://developer.paypal.com/braintree/docs/guides/hosted-fields/examples/javascript/v3 --}}
