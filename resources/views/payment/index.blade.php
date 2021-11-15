@@ -95,6 +95,7 @@
                 instance.requestPaymentMethod(function(err, payload) {
                     if (err) {
                         console.log('Request Payment Method Error', err);
+                        console.log('Nonce is', payload.nonce);
                         return;
                     }
 

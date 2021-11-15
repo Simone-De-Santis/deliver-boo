@@ -56,13 +56,22 @@ class PaymentController extends Controller
             'publicKey' => config('services.braintree.publicKey'),
             'privateKey' => config('services.braintree.privateKey'),
         ]);
-        /* Forse è con le quadre */
-        $amount = $request->amount;
-        $nonce = $request->payment_method_nonce;
 
+        $amount = $request->amount;
+        //^MI SALVO IL NONCE
+        //!MA FORSE IN CASO DI TRANSAZIONE NEGATA NE DEVO GENERARE UN ALTRO
+        $nonce = $request->payment_method_nonce;
+        //^E' POSSIBILE AGGIUNGERE ULTERIORI INFORMAZIONI CHE IL RICEVENTE VEDRA' NELLA PAYMENT INFORMATION
+        //^SI TROVANO NELLA DOCUMENTAZIONE CERCANDO SALE
         $result = $gateway->transaction()->sale([
             'amount' => $amount,
             'paymentMethodNonce' => $nonce,
+            //^AGGIUNTE INFORMAZIONI AGGIUNTIVE CLIENTE
+            /*             'customer' => [
+                'firstName' => 'first_name',
+                'lastName' => 'last_name',
+                'email' => 'email@gmail.com',
+            ], */
             'options' => [
                 'submitForSettlement' => true
             ]
@@ -72,7 +81,8 @@ class PaymentController extends Controller
             $transaction = $result->transaction;
             /*  NON VA SCRITTO COSI MA COME SOTTO header("Location: " . $baseUrl . "transaction.php?id=" . $transaction->id); */
             //^IN CASO DI TRANSAZIONE ANDATA A BUON FINE MOSTRO ANCHE L'ID
-            return back()->with('success_message', "Transaction successful. The ID is: $transaction->id");
+            return back()->with('success_message', "Transaction successful. The ID is: $transaction->id
+            The nonce is $nonce");
         } else {
             $errorString = "";
 
@@ -83,7 +93,7 @@ class PaymentController extends Controller
             $_SESSION["errors"] = $errorString;
             header("Location: " . $baseUrl . "index.php"); */
             //^IN CASO DI TRANSAZIONE ANDATA MALE
-            return back()->withErrors("An error occurred with the message: $result->message");
+            return back()->withErrors("An error occurred with the message: $result->message, nonce is $nonce");
         }
     }
 
