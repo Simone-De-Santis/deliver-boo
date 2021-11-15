@@ -73,7 +73,7 @@
 
                     let selectedRestaurants = [];
                     const select = this.select;
-                    if (select !== "All") {
+                    if (select !== "") {
                         console.log(selectedRestaurants);
 
                         for (var i = 0; i < this.restaurants.length; i++) {
@@ -91,7 +91,7 @@
                             }
                         }
 
-                    } else console.log('ALL');
+                    } else selectedRestaurants = this.restaurants;
                     return selectedRestaurants;
                 }
             },
