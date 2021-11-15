@@ -46,6 +46,24 @@
                 search_bar: '',
             },
             computed: {
+                selectCategories() {
+                    var selectCategories = [];
+                    for (var i = 0; i < this.restaurants.length; i++) {
+                        // console.log(this.restaurants[i]);
+                        var restaurant = this.restaurants[i];
+                        console.log(restaurant.categories[0])
+                        for (let i = 0; i < restaurant.categories.length; i++) {
+                            const category = restaurant.categories[i];
+                            if (!selectCategories.includes(category.name)) {
+                                selectCategories.push(category.name);
+                            }
+                        }
+
+
+                    }
+                    // console.log(selectCategories);
+                    return selectCategories;
+                },
 
             },
             methods: {
