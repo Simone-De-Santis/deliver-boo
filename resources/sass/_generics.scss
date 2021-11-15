@@ -1,0 +1,90 @@
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar {
+    background-color: black;
+    border-radius: 50px;
+    padding: 0;
+    a {
+        color: orange;
+    }
+}
+
+.logo {
+    width: 100px;
+    height: 80px;
+    padding: 0px;
+    margin: 0;
+}
+
+.btn {
+    box-shadow: rgb(135, 89, 2);
+}
+
+.scroll-cards div {
+    display: inline-block;
+}
+
+.rest-row{
+    max-height: 150px;
+}
+
+/*---------------------------------*/
+
+.carosel {
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+}
+
+.carosel ul {
+   
+   list-style-type: none;
+    
+}
+
+.carosel-two {
+    display: flex;
+    transform: translateX(0px);
+    transition: transform 0.6s ease-out;
+    -webkit-transform: 0.6s ease-out;
+    transform: translateX(-716px);
+}
+
+
+.silde-two {
+    display: inline-flex;
+    position: relative;
+    padding-left: 0;
+    transition: opacity 0.5s;
+    padding-left: 16 px;
+}
+.short-cut-title {
+    width: 167px;
+    min-width: 167px;
+
+    position: relative;
+    display: inline-block;
+    height: 88 px;
+    width: 88 px;
+    border-radius: 4 px;
+    overflow: hidden;
+    padding: 8 px;
+    border: none;
+    text-align: left;
+    margin-bottom: 4 px;
+}
+
+/*-------------*/
+
+.cart{
+    height: 100vh;
+    background-image: url();
+    text-align: center;
+
+    ul{
+        list-style-type: none;
+    }
+
+}
