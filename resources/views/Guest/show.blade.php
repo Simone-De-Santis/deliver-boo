@@ -136,7 +136,9 @@
 
                     created() {
                         const x = JSON.parse(localStorage.getItem('cart'));
-                        console.log(x);
+                        if (!x) {
+                            x = [];
+                        }
                         this.cart = x;
                     },
 
