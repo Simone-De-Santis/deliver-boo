@@ -49,7 +49,7 @@
                     </p>
                 </header>
 
-                <form method="post" id="payment-form" action="">
+                <form method="post" id="payment-form" action="{{ route('payment.store') }}">
                     <section>
                         <label for="amount">
                             <span class="input-label">Amount</span>
