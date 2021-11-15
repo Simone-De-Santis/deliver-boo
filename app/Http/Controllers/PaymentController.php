@@ -26,7 +26,7 @@ class PaymentController extends Controller
         //^TOKEN
         $token = $gateway->ClientToken()->generate();
 
-        return view('welcome', compact('token'));
+        return view('payment.index', compact('token'));
     }
 
     /**
