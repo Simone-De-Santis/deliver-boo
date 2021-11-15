@@ -1,5 +1,5 @@
 {{-- Added general layout --}}
-@extends('layouts.app');
+@extends('layouts.app')
 {{-- Added cdn of 'vue' and 'axios' --}}
 @section('cdns')
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
@@ -136,9 +136,7 @@
 
                     created() {
                         const x = JSON.parse(localStorage.getItem('cart'));
-                        if (!x) {
-                            x = [];
-                        }
+                        if (!x) x = [];
                         this.cart = x;
                     },
 
