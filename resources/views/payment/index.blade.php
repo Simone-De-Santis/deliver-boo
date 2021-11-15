@@ -50,6 +50,8 @@
                 </header>
 
                 <form method="post" id="payment-form" action="{{ route('payment.store') }}">
+                    {{-- CSRF FONDAMENTALE --}}
+                    @csrf
                     <section>
                         <label for="amount">
                             <span class="input-label">Amount</span>
