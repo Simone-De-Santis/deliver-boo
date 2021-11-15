@@ -32,6 +32,10 @@ class TypesTableSeeder extends Seeder
                 "url" => "https://banner2.cleanpng.com/20200102/ex/transparent-salad-5e0dca2732a3a9.8466030215779620232074.jpg"
             ],
             [
+                "name" => "Dolci",
+                "url" => "https://cdn.pixabay.com/photo/2018/04/18/12/06/dessert-3330261_960_720.png"
+            ],
+            [
                 "name" => "Bevande",
                 "url" => "http://www.distributori-automatici-bevande.it/wp-content/uploads/2018/07/bevande.png"
             ],
