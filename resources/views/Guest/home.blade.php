@@ -17,6 +17,12 @@
                         placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+                <select v-model="select" name="" id="">
+                    <option value="" selected>All</option>
+                    <option v-for="(selectCategory, index) in selectCategories">
+                        @{{ selectCategory }}
+                    </option>
+                </select>
             </nav>
             <div v-for="restaurant in restaurants">
                 @{{ restaurant . activity_name }}
