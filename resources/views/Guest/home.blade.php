@@ -45,6 +45,9 @@
                 restaurants: [],
                 search_bar: '',
             },
+            computed: {
+
+            },
             methods: {
                 // Function that returns all restaurants
                 getRestaurants() {
