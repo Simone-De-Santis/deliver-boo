@@ -26,7 +26,8 @@
                 <p class="card-text">{{ $product->description }}</p>
                 <p class="card-text">€ {{ $product->price }}</p>
                 <a href="/" class="btn btn-primary">Indietro</a>
-                <button class="btn btn-warning" v-on:click=" setModal(),addProduct({{ $product }})">Aggiungi al
+                <button class="btn btn-warning"
+                  v-on:click=" setModal(), addProduct({{ $product }}),setLocalStorage()">Aggiungi al
                   carrello</button>
               </div>
             </div>
@@ -75,11 +76,14 @@
                 </button>
               </div>
               <div class="modal-body">
-                ...
+                <h2> Hai un carrelo aperto nel ristorante : `@{{ cart[0] . name }}` . <br> Vuoi continuare con il
+                  vecchio ordine o vuoi proseguire con il corrente ? </h2>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" v-on:click="removeCart()">svuota il carrello </button>
+
+                <a :href="'/user/'+`${cart[0].user_id}`" class="btn btn-secondary">vai al ristorante del carrello</a>
+                <button type="button" class="btn btn-primary" v-on:click="removeCart()" data-dismiss="modal">svuota il
+                  carrello </button>
               </div>
             </div>
           </div>
@@ -163,7 +167,6 @@
             },
             setModal() {
               const thisUserCart = JSON.parse(localStorage.getItem('cart'));
-              console.log(thisUserCart);
               if (thisUserCart && thisUserCart.length > 0) {
                 console.log('entrato')
                 if (thisUserCart[0].user_id != {{ $user->id }}) {
@@ -183,6 +186,7 @@
               x = [];
             }
             this.cart = x;
+            console.log(x)
           },
 
 
