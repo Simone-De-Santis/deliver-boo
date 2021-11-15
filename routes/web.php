@@ -34,6 +34,8 @@ Route::middleware('auth')->name('admin.')->prefix('admin')->namespace('Admin')->
 // Routes guest
 Route::resource('checkout', 'Guest\OrderController');
 Route::resource('user', 'Guest\UserController');
+//Braintree
+Route::resource('/payment', 'PaymentController');
 
 
 Route::get('{any?}', function () {
