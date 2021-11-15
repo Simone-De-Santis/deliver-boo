@@ -13,10 +13,12 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        // Added 'for loop' to generate data within the 'categories' table
-        for ($i = 0; $i < 20; $i++) {
-            $new_category = new Category();
-            $new_category->name = $faker->word();
+        // array 
+        $categories_name = ["Ristorante", "Trattoria", "Pizzeria", "Cinese", "Dolci", "Vegan", "Messicano", "Osteria", "Enoteca", "Giapponese", "Fast Food", "Pub", "Gelateria"];
+
+        foreach ($categories_name as $category) {
+            $new_category  = new Category();
+            $new_category->name = $category;
             $new_category->url = $faker->imageUrl(640, 680, 'animals', true);
             $new_category->save();
         }
