@@ -26,7 +26,7 @@
     {{-- FORM --}}
     <div class="container mt-5">
         <h1>Payment Form</h1>
-        <form action="{{ route('hosted.store') }}" id="payment-form" method="POST">
+        <form action="{{ route('payment.store') }}" id="payment-form" method="POST">
             @csrf
             <div class="form-group">
                 <label for="email">Email Address</label>
