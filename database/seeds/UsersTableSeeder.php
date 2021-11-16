@@ -24,23 +24,23 @@ class UsersTableSeeder extends Seeder
         $user->name = 'admin';
         $user->email = 'admin@admin.it';
         $user->password = bcrypt('password');
-        $user->activity_name = 'Ristorante6';
+        $user->activity_name = 'Trattoria Il Pollaio';
         $user->province = 'FIRENZE';
         $user->municipality = 'FIRENZE';
         $user->address = 'Via Grande, 28';
         $user->city = 'FIRENZE';
         $user->zip = '50121';
         $user->vat = '11111111111';
-        $user->telephone = '3333333333';
-        $user->description = 'Siamo il ristorante piu bello di tutti!!!!';
+        $user->telephone = '055289835';
+        $user->description = "Situato nel cuore della parte più antica della città, a pochi passi dalle Cappelle Medicee e dalle caratteristiche bancarelle dei mercatini di San Lorenzo, il locale si apre con spirito cosmopolita a una clientela sempre più internazionale, pur conservando intatte le proprie radici storiche. L'ambiente, rustico ed elegante grazie agli altissimi soffitti con archi a legno e travi a vista, crea un'atmosfera suggestiva, perfetta per pranzi tra amici o per cene speciali, nelle quali è possibile ricevere fino a trecentocinquanta ospiti. Il locale dispone anche di un dehors esterno in legno che viene allestito durante i mesi caldi.";
         $user->url = 'ttps://via.placeholder.com/640x680.png/00ff33?text=animals+deleniti';
         $user->longitude = '43.76954';
         $user->latitude = '11.23788';
         $user->save();
         // Attaching category id to pivot table
-        $user->categories()->attach(1);
-        // Import all users 
+        $user->categories()->attach(2);
 
+        // Import all users 
         $restaurants = [
             [
                 "municipality" => "Firenze",
@@ -1348,9 +1348,6 @@ class UsersTableSeeder extends Seeder
                 "category" => 9
             ],
         ];
-
-
-
         foreach ($restaurants as $restaurant) {
             $new_user  = new User();
             $new_user->name = $restaurant['activity_name'];
