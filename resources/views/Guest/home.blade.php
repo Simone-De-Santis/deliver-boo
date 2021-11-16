@@ -70,22 +70,14 @@
                     return selectCategories;
                 },
                 selectedRestaurants() {
-
                     let selectedRestaurants = [];
                     const select = this.select;
                     if (select !== "") {
-                        console.log(selectedRestaurants);
-
                         for (var i = 0; i < this.restaurants.length; i++) {
-                            // console.log(this.restaurants[i]);
                             var restaurant = this.restaurants[i];
-                            // console.log(restaurant.categories[0])
                             for (let i = 0; i < restaurant.categories.length; i++) {
                                 const category = restaurant.categories[i];
                                 if (category.name == select) {
-                                    // console.log('nome categoria:', category.name);
-                                    // console.log('select:', select);
-                                    // console.log(restaurant);
                                     selectedRestaurants.push(restaurant);
                                 }
                             }
