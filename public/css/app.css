@@ -10026,7 +10026,6 @@ h3 {
 }
 
 body {
-  background-image: url("/images/yel.jpg");
   height: 100vh;
   background-size: cover;
 }
@@ -10036,12 +10035,24 @@ body {
 }
 
 .navbar {
-  background-color: black;
+  background-color: #f0f0f0;
   border-radius: 50px;
   padding: 0;
 }
 .navbar a {
-  color: orange;
+  color: #6d0808;
+}
+
+.jubotrone {
+  background-color: #e5e5e5;
+  border-radius: 50%;
+}
+.jubotrone img {
+  border-radius: 50%;
+}
+.jubotrone span {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .logo {
@@ -10064,6 +10075,11 @@ body {
 }
 
 /*---------------------------------*/
+.search-buttom {
+  background-color: #7d0a0a;
+  color: #f8fafc;
+}
+
 .carosel {
   border-radius: 3px;
   overflow: hidden;
@@ -10074,26 +10090,9 @@ body {
   list-style-type: none;
 }
 
-.carosel-two {
-  display: flex;
-  transform: translateX(0px);
-  transition: transform 0.6s ease-out;
-  transform: translateX(-716px);
-}
-
-.silde-two {
-  display: inline-flex;
-  position: relative;
-  padding-left: 0;
-  transition: opacity 0.5s;
-  padding-left: 16 px;
-}
-
 .short-cut-title {
   width: 167px;
   min-width: 167px;
-  position: relative;
-  display: inline-block;
   height: 88 px;
   width: 88 px;
   border-radius: 4 px;

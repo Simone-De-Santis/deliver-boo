@@ -10,24 +10,33 @@
 {{-- Content section with all restaurant --}}
 @section('content')
 <div id="app">
+  <div class="jubotrone mb-4">
+    <img src="/images/Fast Delivery.jpg" alt="">
+    <span class=" justify-contente-center">
+      Dove vuoi Quando vuoi
+    </span>
+
+  </div>
+
+
   <section class="container">
-    <nav class="">
+    <nav class="navbar">
       <form class="form-inline mb-4">
         <input v-model='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2" type="search"
           placeholder="Search" aria-label="Search">
-        <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn my-2  my-sm-0 search-buttom" type="submit">Search</button>
       </form>
     </nav>
 
 
 
-
+    {{--
     <div class="carosel carousel slide" data-ride="carousel" id="carouselExampleIndicators">
-      <ul v-for="restaurant in restaurants" class=" carosel-two " style="transform:translateX(0px);">
+      <ul v-for="restaurant in restaurants" class=" d-flex carosel-two " style="transform:translateX(0px);">
         <li class="slide  slide-two ">
           <button class="short-cut-title" type="button">
             <div class="" role="presentation">
-              <div class="ccl"></div>
+
               <div class=""><span class="">Offerte</span></div>
             </div>
           </button>
@@ -35,16 +44,69 @@
       </ul>
       <a class="left carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        
+
       </a>
       <a class="right carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+      </a>
+    </div> --}}
+
+
+
+
+    <div id="carouselExampleIndicators" class="carousel sz-slide" data-type="carousel" data-height="300px"
+      data-animation="dragX" data-width="100%">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" class="active"></li>
+        <li data-target="#carouselExampleIndicators"></li>
+        <li data-target="#carouselExampleIndicators"></li>
+        <li data-target="#carouselExampleIndicators"></li>
+        <li data-target="#carouselExampleIndicators"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+
+          <img src="/images/logo.jpg" class="d-block h-100 w-auto mx-auto" alt="">
       
+
+        </div>
+
+
+        <div class="carousel-item ">
+          <img src="/images/Fast Delivery.jpg" class="d-block h-100 w-auto mx-auto" alt="">
+
+        </div>
+
+        <div class="carousel-item ">
+          <img src="/images/Urban.jpg" class="d-block h-100 w-auto mx-auto" alt="">
+
+        </div>
+        <div class="carousel-item ">
+          <img src="/images/Fast Delivery.jpg" class="d-block h-100 w-auto mx-auto" alt="">
+
+        </div>
+        <div class="carousel-item ">
+          <img src="/images/Urban.jpg" class="d-block h-100 w-auto mx-auto" alt="">
+
+        </div>
+
+
+      </div>
+      <a class="carousel-control-prev carousel-control-btn" href="#carouselExampleIndicators" role="button"
+        >
+        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next carousel-control-btn" href="#carouselExampleIndicators" role="button"
+       >
+        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
       </a>
     </div>
 
 
-   
+
 
 
 

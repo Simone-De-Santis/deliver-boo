@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-md  shadow-sm nav-bool">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img class="logo" src="/images/logo.jpg"  alt="">
+                    <img class="logo" src="/images/Urban.png"  alt="">
                 <strong>DeliverBoo</strong> 
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
