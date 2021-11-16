@@ -23,7 +23,7 @@ class EditTableUsers extends Migration
             $table->string('city', 100)->after('address');
             $table->char('zip', 5)->after('city');
             $table->char('vat', 11)->unique()->after('zip');
-            $table->string('telephone', 20)->unique()->nullable()->after('vat');
+            $table->string('telephone', 30)->unique()->nullable()->after('vat');
             $table->text('description')->after('telephone');
             $table->string('url')->nullable()->after('description');
             $table->string('longitude')->nullable()->after('url');
