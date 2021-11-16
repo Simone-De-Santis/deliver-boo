@@ -28,76 +28,54 @@
         <h1>Payment Form</h1>
         <form action="{{ route('payment.store') }}" id="payment-form" method="POST">
             @csrf
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" class="form-control" id="email">
-            </div>
-            <div class="form-group">
-                <label for="first-name">Name on Card</label>
-                <input type="text" class="form-control" id="first-name" name="name_on_card">
-            </div>
             <div class="row">
                 <div class="col-3">
                     <div class="form-group">
-                        <label for="street-address">Address</label>
-                        <input type="text" class="form-control" id="street-address" name="address">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                            placeholder="es: mario.rossi@gmail.com">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="form-group">
-                        <label for="locality">City</label>
-                        <input type="text" class="form-control" id="locality" name="city">
+                        <label for="first-name">Name on Card</label>
+                        <input type="text" class="form-control" id="first-name" name="name_on_card"
+                            placeholder="es: Mario Rossi">
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="form-group">
-                        <label for="region">Province</label>
-                        <input type="text" class="form-control" id="region" name="province">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="form-group">
-                        <label for="postal-code">Postal Code</label>
-                        <input type="text" class="form-control" id="postal-code" name="postalcode">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="form-group">
-                        <label for="country-name">Country</label>
-                        <input type="text" class="form-control" id="country-name" name="country">
-                    </div>
-                </div>
-                <div class="col-3">
+                {{-- <div class="col-3">
                     <div class="form-group">
                         <label for="phone">Phone</label>
                         <input type="text" class="form-control" id="phone" name="phone">
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
+                </div> --}}
+                <div class="col-3 d-none">
                     <div class="form-group">
                         <label for="amount">Amount</label>
-                        <input type="text" class="form-control" id="amount" name="amount">
+                        <input type="hidden" class="form-control" id="amount" name="amount">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <label for="card-number">Card Number</label>
-                    <div class="form-group" id="card-number">
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <div class="form-control" id="card-number">
+                        </div>
                     </div>
                 </div>
                 <div class="col-3">
-                    <label for="expiration-date">Expiry</label>
-                    <div class="form-group" id="expiration-date">
+                    <div class="form-group">
+                        <label for="expiration-date">Expiry</label>
+                        <div class="form-control" id="expiration-date">
+                        </div>
                     </div>
                 </div>
                 <div class="col-3">
-                    <label for="cvv">CVV</label>
-                    <div class="form-group" id="cvv">
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <div class="form-control" id="cvv">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,12 +117,15 @@
                         'color': 'green'
                     }
                 },
-                //QUESTI SONO I CAMPI CHE BRAINTREE CERCA TRAMITE L'ID E LI VA A GENERARE IN AUTOMATICO
+                //QUESTI SONO I CAMPI CHE BRAINTREE CERCA TRAMITE L'ID
                 fields: {
                     /* Il campo di braintree */
                     number: {
                         container: '#card-number',
-                        placeholder: '4111 1111 1111 1111'
+                        placeholder: '4111 1111 1111 1111',
+                        //Attributi che posso associarli anche da qui
+
+                        /* type: 'hidden' */
                     },
                     /* Il campo di braintree */
                     cvv: {
@@ -186,6 +167,24 @@
                 }, false);
             });
         });
+    </script>
+    <script>
+        Vue.config.devtools = true;
+        // Initialized a new instance of 'vue'
+        const app = new Vue({
+            el: '#app',
+            data: {
+                price: 0,
+            },
+            created() {
+                const x = JSON.parse(localStorage.getItem('cart'));
+                if (!x) x = [];
+                this.price = x;
+            },
+
+
+
+        })
     </script>
 </body>
 

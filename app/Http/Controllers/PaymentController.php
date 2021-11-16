@@ -48,7 +48,7 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
 
-
+        /* dd($request); */
         $gateway = new Braintree\Gateway([
             //^Li prendono dal file .env
             'environment' => config('services.braintree.environment'),
@@ -66,12 +66,12 @@ class PaymentController extends Controller
         $result = $gateway->transaction()->sale([
             'amount' => $amount,
             'paymentMethodNonce' => $nonce,
+            /* 'expirationDate' => $nonce, */
             //^AGGIUNTE INFORMAZIONI AGGIUNTIVE CLIENTE
-            /*             'customer' => [
-                'firstName' => 'first_name',
-                'lastName' => 'last_name',
-                'email' => 'email@gmail.com',
-            ], */
+            'customer' => [
+                'firstName' => $request->name_on_card,
+                'email' => $request->email,
+            ],
             'options' => [
                 'submitForSettlement' => true
             ]
