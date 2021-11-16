@@ -184,6 +184,8 @@
 
 
 
+          <<
+          << << < HEAD
 
 
           created() {
@@ -200,3 +202,8 @@
         })
       </script>
     @endsection
+    =======
+    })
+    </script>
+  @endsection
+  >>>>>>> origin/style-changes
