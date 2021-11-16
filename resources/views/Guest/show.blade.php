@@ -1,197 +1,227 @@
 @extends('layouts.app')
 {{-- Added cdn of 'vue' and 'axios' --}}
 @section('cdns')
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
-    integrity='sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ=='
-    crossorigin='anonymous'></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
+        integrity='sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ=='
+        crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 @endsection
 {{-- Content section with selected restaurant products --}}
 @section('content')
-  {{-- Id app to add link with Vue --}}
-  <div id="app">
-    <section class="container">
-      <h1>Prodotti del ristorante {{ $user->activity_name }} </h1>
-      <div id="products-section" class="row">
-        {{-- Products section --}}
-        <div class="col-6">
-          {{-- Cycle foreach to print all the products of the restaurant --}}
-          @foreach ($user->products as $product)
+    {{-- Id app to add link with Vue --}}
+    <div id="app">
+        <section class="container">
+            <h1>Prodotti del ristorante {{ $user->activity_name }} </h1>
+            <div id="products-section" class="row">
+                {{-- Products section --}}
+                <div class="col-6">
+                    {{-- Cycle foreach to print all the products of the restaurant --}}
+                    @foreach ($user->products as $product)
 
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="{{ asset('storage/' . $product->url) }}" alt="immagine-prodotto">
-              <div class="card-body">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="{{ asset('storage/' . $product->url) }}"
+                                alt="immagine-prodotto">
+                            <div class="card-body">
 
-                <h5 class="card-title">{{ $product->name }}</h5>
-                <h5 class="card-title">{{ $product->id }}</h5>
-                <p class="card-text">{{ $product->description }}</p>
-                <p class="card-text">€ {{ $product->price }}</p>
-                <a href="/" class="btn btn-primary">Indietro</a>
-                <button class="btn btn-warning"
-                  v-on:click=" setModal(), addProduct({{ $product }}),setLocalStorage()">Aggiungi al
-                  carrello</button>
-              </div>
+                                <h5 class="card-title">{{ $product->name }}</h5>
+                                <h5 class="card-title">{{ $product->id }}</h5>
+                                <p class="card-text">{{ $product->description }}</p>
+                                <p class="card-text">€ {{ $product->price }}</p>
+                                <a href="/" class="btn btn-primary">Indietro</a>
+                                <button class="btn btn-warning"
+                                    v-on:click=" setModal(), addProduct({{ $product }}),setLocalStorage()">Aggiungi al
+                                    carrello</button>
+                            </div>
+
+                        </div>
+                        <hr>
+                    @endforeach
+                </div>
+                {{-- Cart section --}}
+                <div v-if="cart.length > 0">
+                    <div id="cart-section" class="col" v-if="cart[0].user_id == {{ $user->id }}">
+                        <h1>Il mio carrello:</h1>
+                        <div v-for="(item,index) in cart">
+                            <ul>
+                                <li>
+                                    @{{ item . name }}
+                                    <button class="btn btn-secondary" v-on:click="decreaseQuantity(item),setLocalStorage()">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    @{{ item . quantity }}
+                                    <button class="btn btn-secondary" v-on:click="addQuantity(item),setLocalStorage()">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                    <button class="btn btn-danger"
+                                        v-on:click="removeProduct(index),setLocalStorage()">Rimuovi</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <span><strong>Totale:</strong>@{{ totalCart }}</span>
+                        <button class="btn btn-success">
+                            <a class="text-white text-decoration-none" v-on:click="setLocalStorage()"
+                                href="{{ route('payment.index') }}">Procedi con il pagamento</a>
+                        </button>
+                    </div>
+                </div>
+
+                {{-- modal --}}
+                <!-- Button trigger modal -->
+
+                <!-- Modal -->
+                <div v-if='cart.length > 0'>
+
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h2> Hai un carrelo aperto nel ristorante : `@{{ cart[0] . name }}` . <br> Vuoi
+                                        continuare con il
+                                        vecchio ordine o vuoi proseguire con il corrente ? </h2>
+                                </div>
+                                <div class="modal-footer">
+
+                                    <a v-on:click="removeLast" :href="`/user/${cart[0].user_id}`"
+                                        class="btn btn-secondary">vai al ristorante del
+                                        carrello</a>
+                                    <button type="button" class="btn btn-primary" v-on:click="removeCart()"
+                                        data-dismiss="modal">svuota il
+                                        carrello </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
 
             </div>
-            <hr>
-          @endforeach
-        </div>
-        {{-- Cart section --}}
-        <div v-if="cart.length > 0">
-          <div id="cart-section" class="col" v-if="cart[0].user_id == {{ $user->id }}">
-            <h1>Il mio carrello:</h1>
-            <div v-for="(item,index) in cart">
-              <ul>
-                <li>
-                  @{{ item . name }}
-                  <button class="btn btn-secondary" v-on:click="decreaseQuantity(item),setLocalStorage()">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  @{{ item . quantity }}
-                  <button class="btn btn-secondary" v-on:click="addQuantity(item),setLocalStorage()">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                  <button class="btn btn-danger" v-on:click="removeProduct(index),setLocalStorage()">Rimuovi</button>
-                </li>
-              </ul>
-            </div>
-            <span><strong>Totale:</strong>@{{ totalCart }}</span>
-            <button class="btn btn-success">
-              <a class="text-white text-decoration-none" v-on:click="setLocalStorage()"
-                href="{{ route('checkout.create') }}">Procedi con il pagamento</a>
-            </button>
-          </div>
-        </div>
+        @endsection
+        {{-- Added the script section for the Vue logic --}}
+        @section('script-end')
+            <script>
+                Vue.config.devtools = true;
+                // Initialized a new instance of 'vue'
+                const app = new Vue({
+                    el: '#app',
+                    data: {
+                        cart: [],
+                        total: 0,
+                    },
+                    computed: {
+                        totalCart() {
+                            let total = 0;
+                            for (let i = 0; i < this.cart.length; i++) {
+                                const product = this.cart[i];
+                                total += product.price * product.quantity;
 
-        {{-- modal --}}
-        <!-- Button trigger modal -->
+                            }
+                            this.total = total.toFixed(2);
+                            return total.toFixed(2);
+                        }
 
-        <!-- Modal -->
-        <div v-if='cart.length > 0'>
+                    },
+                    methods: {
+                        // Function to add a new product to cart
+                        addProduct(x) {
+                            var isInArray = false;
+                            if (this.cart.length > 0) {
+                                for (i = 0; i < this.cart.length; i++) {
+                                    if (x.id == this.cart[i].id) {
+                                        isInArray = true;
+                                    }
+                                }
+                            }
+                            if (!isInArray) {
+                                x.quantity = 1;
+                                this.cart.push(x);
+                                this.total = this.total + x.price.toFixed(2);
+                            }
 
-          <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <h2> Hai un carrelo aperto nel ristorante : `@{{ cart[0] . name }}` . <br> Vuoi continuare con il
-                    vecchio ordine o vuoi proseguire con il corrente ? </h2>
-                </div>
-                <div class="modal-footer">
+                        },
+                        // Function to increase the quantity of the product
+                        addQuantity(x) {
+                            x.quantity++;
+                            this.total = this.total + parseFloat(x.price.toFixed(2));
 
-                  <a :href="'/user/'+`${cart[0].user_id}`" class="btn btn-secondary">vai al ristorante del carrello</a>
-                  <button type="button" class="btn btn-primary" v-on:click="removeCart()" data-dismiss="modal">svuota il
-                    carrello </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                        },
+                        // Function to decrease the quantity of the product
+                        decreaseQuantity(x) {
+                            x.quantity--;
+                            if (x.quantity <= 0) {
+                                x.quantity = 1
+                            } else {
+                                this.total -= x.price.toFixed(2);
+                            }
+
+                        },
+                        // Function to delete the product
+                        removeProduct(x) {
+                            for (var i = 0; i < this.cart.length; i++) {
+                                if (i === x) {
+                                    this.cart.splice(i, 1)
+                                    this.total -= x.price;
+                                }
+                                if (!this.total) this.total = 0;
+                            }
+
+                        },
+                        removeLast() {
+                            cart = JSON.parse(localStorage.getItem('cart'));
+                            cart.splice((cart.length - 1), 1);
+                            localStorage.setItem('cart', JSON.stringify(cart));
+                            /* this.total -= x.price; */
+                        },
+                        setLocalStorage() {
+                            //Setto il carrello nello storage
+                            localStorage.setItem('cart', JSON.stringify(this.cart));
+
+                            //Setto il totale nello storage
+                            localStorage.setItem('total', JSON.stringify(this.total));
+                        },
+                        removeCart() {
+                            localStorage.clear();
+                            this.cart = [];
+                            this.total = 0;
+
+                            localStorage.setItem('cart', JSON.stringify([]));
+                            localStorage.setItem('total', JSON.stringify(this.total));
 
 
-
-
-
-
-      </div>
-    @endsection
-    {{-- Added the script section for the Vue logic --}}
-    @section('script-end')
-      <script>
-        Vue.config.devtools = true;
-        // Initialized a new instance of 'vue'
-        const app = new Vue({
-          el: '#app',
-          data: {
-            cart: [],
-          },
-          computed: {
-            totalCart() {
-              let total = 0;
-              for (let i = 0; i < this.cart.length; i++) {
-                const product = this.cart[i];
-                total += product.price * product.quantity;
-
-              }
-              return total.toFixed(2);
-            }
-
-          },
-          methods: {
-            // Function to add a new product to cart
-            addProduct(x) {
-              var isInArray = false;
-              if (this.cart.length > 0) {
-                for (i = 0; i < this.cart.length; i++) {
-                  if (x.id == this.cart[i].id) {
-                    isInArray = true;
-                  }
-                }
-              }
-              if (!isInArray) {
-                x.quantity = 1;
-                this.cart.push(x);
-              }
-
-            },
-            // Function to increase the quantity of the product
-            addQuantity(x) {
-              x.quantity++;
-
-            },
-            // Function to decrease the quantity of the product
-            decreaseQuantity(x) {
-              x.quantity--;
-              if (x.quantity <= 0) {
-                x.quantity = 1
-              }
-
-            },
-            // Function to delete the product
-            removeProduct(x) {
-              for (var i = 0; i < this.cart.length; i++) {
-                if (i === x) {
-                  this.cart.splice(i, 1)
-                }
-              }
-
-            },
-            setLocalStorage() {
-              localStorage.setItem('cart', JSON.stringify(this.cart))
-            },
-            removeCart() {
-              localStorage.clear();
-              localStorage.setItem('cart', JSON.stringify([]))
-              this.cart = [];
-
-            },
-            setModal() {
-              const thisUserCart = JSON.parse(localStorage.getItem('cart'));
-              if (thisUserCart && thisUserCart.length > 0) {
-                console.log('entrato')
-                if (thisUserCart[0].user_id != {{ $user->id }}) {
-                  $('#staticBackdrop').modal('toggle')
-                }
-              }
-            }
-          },
-          created() {
-            let x = JSON.parse(localStorage.getItem('cart'));
-            if (!x) {
-              x = [];
-            }
-            this.cart = x;
-            console.log()
-          },
+                        },
+                        setModal() {
+                            const thisUserCart = JSON.parse(localStorage.getItem('cart'));
+                            if (thisUserCart && thisUserCart.length > 0) {
+                                console.log('entrato')
+                                if (thisUserCart[0].user_id != {{ $user->id }}) {
+                                    $('#staticBackdrop').modal('toggle')
+                                }
+                            }
+                        }
+                    },
+                    created() {
+                        let x = JSON.parse(localStorage.getItem('cart'));
+                        let total = localStorage.getItem('total');
+                        if (!x) {
+                            x = [];
+                            total = 0;
+                        }
+                        this.cart = x;
+                        this.total = parseFloat(total);
+                    },
 
 
 
-        })
-      </script>
-    @endsection
+                })
+            </script>
+        @endsection
