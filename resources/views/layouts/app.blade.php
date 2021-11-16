@@ -28,10 +28,11 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm nav-bool">
+        <nav class="navbar navbar-expand-md  shadow-sm nav-bool">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    DeliverBoo
+                    <img class="logo" src="/images/Urban.png"  alt="">
+                <strong>DeliverBoo</strong> 
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -70,16 +71,16 @@
                                 </div> --}}
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('admin.home') }}">
-                                        My restaurant
+                                        Il mio ristorante 
                                     </a>
                                     <a class="dropdown-item" href="{{ route('admin.products.index') }}">
-                                        My products
+                                        Prodotti 
                                     </a>
                                     <a class="dropdown-item" href="{{ route('admin.ingredients.index') }}">
-                                        Ingredients
+                                        Ingredienti
                                     </a>
                                     <a class="dropdown-item" href="{{ route('admin.orders.index') }}">
-                                        Orders
+                                        Ordini
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
