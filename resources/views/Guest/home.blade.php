@@ -10,6 +10,14 @@
 {{-- Content section with all restaurant --}}
 @section('content')
   <div id="app">
+    <section id="jumbotrone">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Deliverboo</h1>
+          <p class="lead">breve descrizione </p>
+        </div>
+      </div>
+    </section>
     <nav class="navbar navbar-light bg-light">
       <form class="form-inline mb-4">
         <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2" type="search"
@@ -23,24 +31,28 @@
         </option>
       </select>
     </nav>
+
+
+
+
     <div class="container d-flex align-items-center flex-wrap">
       <div class="row">
         <div v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)" class="col-md-4 col-sm-12 mb-3">
-          <div>
-            <div class="card bg-dark text-white">
-              <a :href="'/user/'+restaurant.id" class="text-white">
-                <img src="/images/fresh.jpg" alt="..." class="card-img" alt="...">
-                <div class="card-img-overlay">
-                  <h5 class="card-title">@{{ restaurant . activity_name }}</h5>
-                  <p class="card-text">inserire inizio descrizione</p>
-                  <p class="card-text">se vogliamo un footer</p>
-                </div>
-              </a>
-            </div>
+
+          <div class="card bg-dark text-white">
+            <a :href="'/user/'+restaurant.id" class="text-white">
+              <img src="/images/fresh.jpg" alt="..." class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title">@{{ restaurant . activity_name }}</h5>
+                <p class="card-text">inserire inizio descrizione</p>
+                <p class="card-text">se vogliamo un footer</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   </section>
 @endsection
