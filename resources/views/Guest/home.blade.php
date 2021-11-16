@@ -10,57 +10,35 @@
 {{-- Content section with all restaurant --}}
 @section('content')
   <div id="app">
-    <section class="container">
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline mb-4">
+        <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2" type="search"
+          placeholder="Search" aria-label="Search">
+        <button class="btn btn my-2  my-sm-0 search-buttom" type="submit">Search</button>
+      </form>
+      <select v-model="select" name="" id="">
+        <option value="" selected>All</option>
+        <option v-for="(selectCategory, index) in selectCategories">
+          @{{ selectCategory }}
+        </option>
+      </select>
+    </nav>
 
-
-      <nav class="navbar">
-        <form class="form-inline mb-4">
-          <input v-model='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2" type="search"
-            placeholder="Search" aria-label="Search">
-          <button class="btn btn my-2  my-sm-0 search-buttom" type="submit">Search</button>
-        </form>
-      </nav>
-
-
-
-
-
-
-
-
-
-
-      <nav class="navbar navbar-light bg-light">
-        <form class="form-inline">
-          <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2" type="search"
-            placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <select v-model="select" name="" id="">
-          <option value="" selected>All</option>
-          <option v-for="(selectCategory, index) in selectCategories">
-            @{{ selectCategory }}
-          </option>
-        </select>
-      </nav>
+    <div class="container">
       <div v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)">
         @{{ restaurant . activity_name }}
-
         <div id="carouselExampleIndicators" class="carousel sz-slide" data-type="carousel" data-height="300px"
           data-animation="dragX" data-width="100%">
-          <ol class="carousel-indicators">
+          {{-- <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" class="active"></li>
             <li data-target="#carouselExampleIndicators"></li>
             <li data-target="#carouselExampleIndicators"></li>
             <li data-target="#carouselExampleIndicators"></li>
             <li data-target="#carouselExampleIndicators"></li>
-          </ol>
-          <div class="carousel-inner">
+          </ol> --}}
+          {{-- <div class="carousel-inner">
             <div class="carousel-item active">
-
               <img src="/images/logo.jpg" class="d-block h-100 w-auto mx-auto" alt="">
-
-
             </div>
 
 
@@ -83,7 +61,7 @@
             </div>
 
 
-          </div>
+          </div> --}}
           <a class="carousel-control-prev carousel-control-btn" href="#carouselExampleIndicators" role="button">
             <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -124,6 +102,7 @@
         </div>
 
       </div>
+    </div>
   </div>
   </div>
   </section>

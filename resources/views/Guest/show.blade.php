@@ -181,13 +181,6 @@
               }
             }
           },
-
-
-
-          <<
-          << << < HEAD
-
-
           created() {
             let x = JSON.parse(localStorage.getItem('cart'));
             if (!x) {
@@ -202,8 +195,3 @@
         })
       </script>
     @endsection
-    =======
-    })
-    </script>
-  @endsection
-  >>>>>>> origin/style-changes
