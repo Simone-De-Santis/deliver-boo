@@ -25,6 +25,8 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   @yield('sass')
   @yield('cdns')
+  {{-- CDN for stato statistics graph --}}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   @yield('script-header')
 </head>
 
@@ -83,7 +85,7 @@
                       Ordini
                     </a>
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
+                                                                     document.getElementById('logout-form').submit();">
                       {{ __('Logout') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
