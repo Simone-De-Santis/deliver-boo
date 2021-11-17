@@ -31,7 +31,7 @@
 <body>
     <div id="app">
         <div id="guest-nav">
-            <nav class="navbar navbar-expand-md">
+            <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <img class="logo" src="/images/Logo-nav.png" alt="">
@@ -84,7 +84,7 @@
                                                 Ordini
                                             </a>
                                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
+                                                                 document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}
                                             </a>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -100,7 +100,7 @@
             </nav>
         </div>
 
-        <main class="py-4">
+        <main class="pb-4">
             @yield('content')
         </main>
     </div>
