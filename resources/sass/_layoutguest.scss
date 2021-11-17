@@ -6,13 +6,6 @@
 }
 
 #guest-nav {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-
-    width: 100%;
-
     .navbar {
         background-color: transparent;
         .nav-link {
@@ -30,4 +23,15 @@
     width: auto;
     padding: 0px;
     margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #guest-nav {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+
+        width: 100%;
+    }
 }

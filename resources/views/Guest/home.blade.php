@@ -11,7 +11,7 @@
 @section('content')
     <div id="app">
 
-        <div id="carouselExampleControls " class="carousel slide " data-ride="carousel">
+        <div id="carouselExampleControls " class="carousel slide d-none d-md-block" data-ride="carousel">
             <div class="carousel-inner " id="carousel">
                 <div class="carousel-item active">
                     <img class="d-block w-100  " src="/images/img1.jpg" alt="First slide">
