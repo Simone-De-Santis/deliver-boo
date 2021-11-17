@@ -25,13 +25,13 @@
                     </div>
                 </div>
             </div>
-            <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center">
-                <form class="form-inline mr-3">
+            <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center my-4">
+                <form class="form-inline ml-2 mr-3">
                     <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2"
                         type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn search-buttom" type="submit">Search</button>
                 </form>
-                <div class="select-filter">
+                <div class="select-filter mr-2">
                     <select class="form-select rounded py-1" v-model="select" name="" id="">
                         <option value="" selected>All</option>
                         <option v-for="(selectCategory, index) in selectCategories">
