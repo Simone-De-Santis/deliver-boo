@@ -2,22 +2,34 @@
 @extends('layouts.app')
 {{-- Added cdn of 'vue' and 'axios' --}}
 @section('cdns')
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
-    integrity='sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ=='
-    crossorigin='anonymous'></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
+  integrity='sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ=='
+  crossorigin='anonymous'></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 @endsection
 {{-- Content section with all restaurant --}}
 @section('content')
-  <div id="app">
-    <section id="jumbotrone">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Deliverboo</h1>
-          <p class="lead">breve descrizione </p>
-        </div>
+<div id="app">
+
+  <div id="carouselExampleControls " class="carousel slide " data-ride="carousel">
+    <div class="carousel-inner " id="carousel">
+      <div class="carousel-item active">
+        <img class="d-block w-100  " src="/images/img1.jpg" alt="First slide">
       </div>
-    </section>
+      <div class="carousel-item">
+        <img class=" d-block w-100  " src="/images/img4.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100  " src="/images/img3.jpg" alt="Third slide">
+      </div>
+    </div>
+  </div>
+
+
+
+  <section class="container">
+
+
     <nav class="navbar navbar-light bg-light">
       <form class="form-inline mb-4">
         <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2" type="search"
@@ -37,7 +49,8 @@
 
     <div class="container d-flex align-items-center flex-wrap">
       <div class="row">
-        <div v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)" class="col-md-4 col-sm-12 mb-3">
+        <div v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)"
+          class="col-md-4 col-sm-12 mb-3">
 
           <div class="card bg-dark text-white">
             <a :href="'/user/'+restaurant.id" class="text-white">
@@ -52,14 +65,14 @@
         </div>
       </div>
     </div>
-  </div>
-  </div>
+
   </section>
+</div>
 @endsection
 {{-- Added the script section for the Vue logic --}}
 @section('script-end')
-  <script>
-    Vue.config.devtools = true;
+<script>
+  Vue.config.devtools = true;
     // Initialized a new instance of 'vue'
     const app = new Vue({
       el: '#app',
@@ -124,5 +137,5 @@
         this.getRestaurants();
       },
     })
-  </script>
+</script>
 @endsection

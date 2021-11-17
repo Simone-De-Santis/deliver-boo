@@ -3,10 +3,25 @@
 }
 
 #guest-nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    
+    width: 100%;
+   
+
     .navbar {
         background-color: transparent;
         a {
             color: #6d0808;
         }
     }
+}
+
+.logo {
+    width: 100px;
+    height: 80px;
+    padding: 0px;
+    margin: 0;
 }
