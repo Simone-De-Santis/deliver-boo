@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center my-4">
+            <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center mt-4">
                 <form class="form-inline ml-2 mr-3">
                     <div class="row">
                         <div class="col-6">
@@ -47,9 +47,8 @@
             </div>
         </div>
 
-        <section class="container">
-
-
+        <section class="container" id="restaurants">
+            <h2 class="text-center mb-5 mt-5 mt-md-0">LA NOSTRA SELEZIONE</h2>
 
             <div class="container d-flex align-items-center flex-wrap">
                 <div class="row">
