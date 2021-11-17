@@ -17,10 +17,10 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        $order = new Order();
-        return view('guest.checkout.create', compact('order'));
+        /*         $order = new Order();
+        return view('guest.checkout.create', compact('order')); */
     }
 
     /**

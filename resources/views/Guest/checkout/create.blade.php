@@ -1,4 +1,5 @@
 {{-- Added general layout --}}
+
 @extends('layouts.app')
 {{-- Added cdn of 'vue' and 'axios' --}}
 @section('cdns')
@@ -50,6 +51,7 @@
                 totalPrice: 0,
                 arrayProductIds: [],
                 arrayProductsQuantity: [],
+                transactionId: "",
             },
             methods: {
                 getStorage() {
@@ -91,6 +93,7 @@
                 this.getStorage(),
                     this.getTotalPrice(),
                     this.getArrayStorage()
+                /* this.transactionId = $transaction.id; */
             }
 
         })
