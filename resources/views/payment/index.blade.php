@@ -42,12 +42,9 @@
                                 placeholder="es: Mario Rossi">
                         </div>
                     </div>
-                    {{-- <div class="col-3">
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="text" class="form-control" id="phone" name="phone">
+                    <div>
+                        Price: @{{ price }}
                     </div>
-                </div> --}}
                     <div class="col-3 d-none">
                         <div class="form-group">
                             <label for="amount">Amount</label>
