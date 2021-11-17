@@ -31,78 +31,80 @@
 </head>
 
 <body>
-  <div id="app">
-    <div id="admin-nav">
+  <div id="app" class="admin-bck">
+    <div id="content_admin">
 
-      <nav class="navbar navbar-expand-md">
 
-        <a class="navbar-brand" href="{{ url('/') }}">
-          <img class="logo" src="/images/Logo-nav.png" alt="">
-          <strong>DeliverBoo</strong>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left Side Of Navbar -->
-          <ul class="navbar-nav mr-auto">
-          </ul>
-          <!-- Right Side Of Navbar -->
-          <ul class="navbar-nav ml-auto">
-            <!-- Authentication Links -->
-            @guest
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-              </li>
-              @if (Route::has('register'))
+      <div id="admin-nav">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light ">
+
+          <a class="navbar-brand" href="{{ url('/') }}">
+            <img class="logo" src="/images/Logo-nav.png" alt="">
+            <strong>DeliverBoo</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Authentication Links -->
+              @guest
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
-              @endif
-            @else
-              <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" v-pre>
-                  {{ Auth::user()->name }}
-                </a>
-                <div>
-                  {{-- Added item to the product list --}}
-                  {{-- </div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                @if (Route::has('register'))
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                  </li>
+                @endif
+              @else
+                <li class="nav-item dropdown">
+
+                  <div class="d-flex">
+                    {{-- Added item to the product list --}}
+                    {{-- </div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a href="{{ route('admin.products') }}">My products</a>
                                     </div> --}}
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('admin.home') }}">
+                    {{-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> --}}
+                    <a class="dropdown-item btn  " href="{{ route('admin.home') }}">
                       Il mio ristorante
                     </a>
-                    <a class="dropdown-item" href="{{ route('admin.products.index') }}">
+                    <a class="dropdown-item btn btn-outline-secondary" href="{{ route('admin.products.index') }}">
                       Prodotti
                     </a>
-                    <a class="dropdown-item" href="{{ route('admin.ingredients.index') }}">
+                    <a class="dropdown-item btn btn-outline-success" href="{{ route('admin.ingredients.index') }}">
                       Ingredienti
                     </a>
-                    <a class="dropdown-item" href="{{ route('admin.orders.index') }}">
+                    <a class="dropdown-item btn btn-outline-warning" href="{{ route('admin.orders.index') }}">
                       Ordini
                     </a>
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                     document.getElementById('logout-form').submit();">
+                    <a class="dropdown-item btn btn-outline-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
                       {{ __('Logout') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                       @csrf
                     </form>
-                  </div>
-              </li>
-            @endguest
-          </ul>
-        </div>
+                    {{-- </div> --}}
+                </li>
+              @endguest
+            </ul>
+          </div>
 
-      </nav>
+        </nav>
+      </div>
+
+      <main class="py-4">
+        @yield('content')
+      </main>
     </div>
-
-    <main class="py-4">
-      @yield('content')
-    </main>
   </div>
   @yield('script-end')
 </body>

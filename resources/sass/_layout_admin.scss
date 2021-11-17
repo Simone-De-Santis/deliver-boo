@@ -1,3 +1,11 @@
+.admin-bck {
+    height: 100vh;
+    background-image: url("/images/bck_admin.jpg");
+    background-image: -webkit-linear-gradient(left top, rgba(247, 241, 241, 0.651), rgba(193, 223, 243, 0.76)),
+        url("/images/bck_admin.jpg"); /* Chrome 10+, Saf5.1+ */
+
+    // background: url("/images/bck_admin.jpg");
+}
 .navbar-brand {
     padding: 0;
 }
@@ -6,7 +14,7 @@
     .navbar {
         background-color: transparent;
         a {
-            color: #a5a313;
+            color: black;
         }
     }
 }
