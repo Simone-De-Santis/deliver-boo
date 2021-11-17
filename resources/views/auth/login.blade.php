@@ -43,7 +43,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                         <label class="form-check-label text-white" for="remember">
-                                            {{ __('Remember Me') }}
+                                            Salva password
                                         </label>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
     
                                     @if (Route::has('password.request'))
                                         <a class="btn ancor-login" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
+                                            Hai dimenticato la tua password?
                                         </a>
                                     @endif
                                 </div>

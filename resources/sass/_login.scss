@@ -1,7 +1,5 @@
 .login-section {
     background-image: url("/images/Cuoco-i-retroscena-di-una-professione-fonte-di-grandi-livelli-di-stress.webp");
-    // background-image: -webkit-linear-gradient(left top, rgba(226, 226, 226, 0.096), rgba(69, 76, 80, 0.377)),
-    // url("/images/Cuoco-i-retroscena-di-una-professione-fonte-di-grandi-livelli-di-stress.webp");
     background-position: right;
     background-repeat: no-repeat;
     height: 100vh;
@@ -17,23 +15,15 @@
             color: white;
         }
         .card {
-            // background-image: -webkit-linear-gradient(left top, rgba(226, 226, 226, 0.349), rgba(69, 76, 80, 0.795));
-            // background-color: transparent;
             background-color: rgba(255, 255, 255, 0.062);
-            // background-color: rgba(0, 0, 0, 0.425);
             border: none;
         }
             .card-header-login {
                 color: white;
                 background-color: $primary-color;
-
                 text-align: center;
-                text-transform: uppercase;
-                
-            }
-
-        
-        
+                text-transform: uppercase;        
+            }   
         .btn-login {
             background-color: $primary-color;
             color: white;
