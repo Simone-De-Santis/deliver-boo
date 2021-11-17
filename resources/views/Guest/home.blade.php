@@ -11,39 +11,38 @@
 @section('content')
     <div id="app">
 
-        <div id="carouselExampleControls " class="carousel slide d-none d-md-block" data-ride="carousel">
-            <div class="carousel-inner " id="carousel">
-                <div class="carousel-item active">
-                    <img class="d-block w-100  " src="/images/img1.jpg" alt="First slide">
+        <div id="jumbotron">
+            <div id="carouselExampleControls " class="carousel slide d-none d-md-block" data-ride="carousel">
+                <div class="carousel-inner " id="carousel">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100  " src="/images/img1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class=" d-block w-100  " src="/images/img5.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100  " src="/images/img3.jpg" alt="Third slide">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img class=" d-block w-100  " src="/images/img5.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100  " src="/images/img3.jpg" alt="Third slide">
+            </div>
+            <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center">
+                <form class="form-inline mr-3">
+                    <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2"
+                        type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn search-buttom" type="submit">Search</button>
+                </form>
+                <div class="select-filter">
+                    <select class="form-select rounded py-1" v-model="select" name="" id="">
+                        <option value="" selected>All</option>
+                        <option v-for="(selectCategory, index) in selectCategories">
+                            @{{ selectCategory }}
+                        </option>
+                    </select>
                 </div>
             </div>
         </div>
 
-
-
         <section class="container">
-
-
-            <nav class="navbar navbar-light bg-light">
-                <form class="form-inline mb-4">
-                    <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2"
-                        type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn my-2  my-sm-0 search-buttom" type="submit">Search</button>
-                </form>
-                <select v-model="select" name="" id="">
-                    <option value="" selected>All</option>
-                    <option v-for="(selectCategory, index) in selectCategories">
-                        @{{ selectCategory }}
-                    </option>
-                </select>
-            </nav>
-
 
 
 

@@ -26,6 +26,13 @@
 }
 
 @media screen and (min-width: 768px) {
+    #jumbotron {
+        .search-bar {
+            transform: translatey(-240px);
+            justify-content: center;
+        }
+    }
+
     #guest-nav {
         position: absolute;
         top: 0px;
