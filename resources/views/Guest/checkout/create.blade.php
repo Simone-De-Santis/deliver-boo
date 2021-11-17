@@ -34,13 +34,9 @@
                     </div>
                     <h1>@{{ totalPrice }}</h1>
                 </div>
-
-
-
             </section>
         </section>
     </section>
-
 @endsection
 
 @section('script-end')
@@ -80,8 +76,16 @@
                     }
                     return this.totalPrice = total.toFixed(2);
                 },
+                removeCart() {
+                    localStorage.clear();
+                    this.cart = [];
+                    this.total = 0;
+
+                    localStorage.setItem('cart', JSON.stringify([]));
+                    localStorage.setItem('total', JSON.stringify(this.total));
 
 
+                },
             },
             created() {
                 this.getStorage(),
