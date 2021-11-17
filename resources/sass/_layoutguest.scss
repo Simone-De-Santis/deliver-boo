@@ -1,5 +1,8 @@
 .navbar-brand {
     padding: 0;
+    strong {
+        font-size: 25px;
+    }
 }
 
 #guest-nav {
@@ -7,12 +10,15 @@
     top: 0px;
     left: 0px;
     z-index: 1;
-    
+
     width: 100%;
-   
 
     .navbar {
         background-color: transparent;
+        .nav-link {
+            font-size: 22px;
+            font-weight: 700;
+        }
         a {
             color: #6d0808;
         }
@@ -20,8 +26,8 @@
 }
 
 .logo {
-    width: 100px;
-    height: 80px;
+    height: 100px;
+    width: auto;
     padding: 0px;
     margin: 0;
 }

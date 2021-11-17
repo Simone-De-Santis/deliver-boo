@@ -1,13 +1,12 @@
 /*jumbotron slider*/
 
-
-#carousel{
-    max-height: 500px;
+#carousel {
+    max-height: 600px;
+    img {
+        object-fit: contain;
+        opacity: 0.8;
+    }
 }
-
-
-
-
 
 /*---------------------------------*/
 
@@ -15,7 +14,6 @@
     background-color: $primary-color;
     color: $body-bg;
 }
-
 
 /*-------------*/
 

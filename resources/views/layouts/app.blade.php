@@ -34,7 +34,7 @@
         <main class="pb-4">
             <div id="guest-nav">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <div class="container">
+                    <div class="container-fluid">
                         <a class="navbar-brand" href="{{ url('/') }}">
                             <img class="logo" src="/images/Logo-nav.png" alt="">
                             <strong>DeliverBoo</strong>
@@ -85,8 +85,9 @@
                                                 <a class="dropdown-item" href="{{ route('admin.orders.index') }}">
                                                     Ordini
                                                 </a>
-                                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                         document.getElementById('logout-form').submit();">
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
+                                                                             document.getElementById('logout-form').submit();">
                                                     {{ __('Logout') }}
                                                 </a>
                                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
