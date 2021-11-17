@@ -90,12 +90,25 @@
             el: '#app',
             data: {
                 price: 0,
+                cart: [],
             },
             created() {
-                const x = JSON.parse(localStorage.getItem('total'));
-                if (!x) x = [];
-                this.price = x;
+                const x = JSON.parse(localStorage.getItem('cart'));
+                if (!x) {
+                    x = [];
+                }
+                this.cart = x;
+                let total = 0;
+                for (let i = 0; i < x.length; i++) {
+                    const product = x[i];
+                    total += product.price * product.quantity;
+                }
+                this.price = total.toFixed(2);
+                localStorage.setItem('total', JSON.stringify(total))
             },
+            /* DA FARE FUNZIONE CHE PREVENGA IL SUBMIT DEL BUTTON,
+            FACCIA UN CONTROLLO SUL PREZZO CHE ARRIVA DAL FORM E
+            SE NON E' UGUALE BLOCCHI TUTTO */
 
 
 
@@ -160,8 +173,6 @@
                     return;
                 }
 
-                /* NON NECESSARIO ADESSO  submit.removeAttribute('disabled'); */
-
                 form.addEventListener('submit', function(event) {
                     event.preventDefault();
 
@@ -170,12 +181,6 @@
                             console.error(tokenizeErr);
                             return;
                         }
-
-                        // If this was a real integration, this is where you would
-                        // send the nonce to your server.
-                        /*console.log('Got a nonce: ' + payload.nonce); */
-
-
                         //AGGIUNTO IL NONCE E FATTO SUBMIT AL FORM
                         document.querySelector('#nonce').value = payload.nonce;
                         form.submit();
