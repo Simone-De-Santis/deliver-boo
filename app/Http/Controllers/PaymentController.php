@@ -81,7 +81,7 @@ class PaymentController extends Controller
             $transaction = $result->transaction;
             /*  NON VA SCRITTO COSI MA COME SOTTO header("Location: " . $baseUrl . "transaction.php?id=" . $transaction->id); */
             //^IN CASO DI TRANSAZIONE ANDATA A BUON FINE MOSTRO ANCHE L'ID
-            return back()->with('success_message', "Transaction successful. The ID is: $transaction->id
+            return redirect()->route('checkout.create')->with('success_message', "Transaction successful. The ID is: $transaction->id
             The nonce is $nonce");
         } else {
             $errorString = "";
