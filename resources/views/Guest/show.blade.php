@@ -1,9 +1,6 @@
 @extends('layouts.app')
-{{-- Added cdn of 'vue' and 'axios' --}}
+{{-- Added cdn of 'vue' --}}
 @section('cdns')
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
-        integrity='sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ=='
-        crossorigin='anonymous'></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 @endsection
 {{-- Content section with selected restaurant products --}}
@@ -32,7 +29,6 @@
                                     v-on:click=" setModal(), addProduct({{ $product }}),setLocalStorage()">Aggiungi al
                                     carrello</button>
                             </div>
-
                         </div>
                         <hr>
                     @endforeach
@@ -64,13 +60,11 @@
                         </button>
                     </div>
                 </div>
-
                 {{-- modal --}}
                 <!-- Button trigger modal -->
 
                 <!-- Modal -->
                 <div v-if='cart.length > 0'>
-
                     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -87,7 +81,6 @@
                                         vecchio ordine o vuoi proseguire con il corrente ? </h2>
                                 </div>
                                 <div class="modal-footer">
-
                                     <a v-on:click="removeLast" :href="`/user/${cart[0].user_id}`"
                                         class="btn btn-secondary">vai al ristorante del
                                         carrello</a>
@@ -99,12 +92,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
             </div>
         @endsection
         {{-- Added the script section for the Vue logic --}}
@@ -219,9 +206,6 @@
                         this.cart = x;
                         this.total = parseFloat(total);
                     },
-
-
-
                 })
             </script>
         @endsection
