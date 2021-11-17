@@ -12,6 +12,7 @@
     <div id="app">
 
         <div id="carouselExampleControls " class="carousel slide " data-ride="carousel">
+            
             <div class="carousel-inner " id="carousel">
                 <div class="carousel-item active">
                     <img class="d-block w-100  " src="/images/img1.jpg" alt="First slide">
@@ -23,6 +24,7 @@
                     <img class="d-block w-100  " src="/images/img3.jpg" alt="Third slide">
                 </div>
             </div>
+            
         </div>
 
 
@@ -32,7 +34,7 @@
 
             <nav class="navbar navbar-light bg-light">
                 <form class="form-inline mb-4">
-                    <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2"
+                    <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2 text-muted"
                         type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn my-2  my-sm-0 search-buttom" type="submit">Search</button>
                 </form>
@@ -43,10 +45,6 @@
                     </option>
                 </select>
             </nav>
-
-
-
-
             <div class="container d-flex align-items-center flex-wrap">
                 <div class="row">
                     <div v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)"
@@ -80,6 +78,7 @@
                 restaurants: [],
                 search_bar: '',
                 select: '',
+                imageLogin: 0,
             },
             computed: {
                 selectCategories() {

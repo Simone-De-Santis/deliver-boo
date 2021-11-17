@@ -30,13 +30,12 @@
 
 <body>
     <div id="app">
-
         <main class="pb-4">
             <div id="guest-nav">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="{{ url('/') }}">
-                            <img class="logo" src="/images/Logo-nav.png" alt="">
+                            <img class="logo" :src=" imageLogin ? '/images/logo-white.png' : '/images/Logo-nav.png'" alt="">
                             <strong>DeliverBoo</strong>
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -53,12 +52,12 @@
                                 <!-- Authentication Links -->
                                 @guest
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                        <a class="nav-link" href="{{ route('login') }}">Accedi</a>
                                     </li>
                                     @if (Route::has('register'))
                                         <li class="nav-item">
                                             <a class="nav-link"
-                                                href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                href="{{ route('register') }}">Registrati</a>
                                         </li>
                                     @endif
                                 @else
