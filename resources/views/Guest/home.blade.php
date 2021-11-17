@@ -27,9 +27,14 @@
             </div>
             <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center my-4">
                 <form class="form-inline ml-2 mr-3">
-                    <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2"
-                        type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn search-buttom" type="submit">Search</button>
+                    <div class="row">
+                        <div class="col-6">
+                            <input v-model.trim='search_bar' @keyup.enter="getRestaurants()"
+                                class="form-control mr-sm-2 w-100" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                        <div class="col-3"><button class="btn btn search-buttom" type="submit">Search</button>
+                        </div>
+                    </div>
                 </form>
                 <div class="select-filter mr-2">
                     <select class="form-select rounded py-1" v-model="select" name="" id="">
