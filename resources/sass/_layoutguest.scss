@@ -6,13 +6,6 @@
 }
 
 #guest-nav {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-
-    width: 100%;
-
     .navbar {
         background-color: transparent;
         .nav-link {
@@ -20,7 +13,7 @@
             font-weight: 700;
         }
         a {
-            color: #6d0808;
+            color: $primary-color;
         }
     }
 }
@@ -30,4 +23,22 @@
     width: auto;
     padding: 0px;
     margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #jumbotron {
+        .search-bar {
+            transform: translatey(-240px);
+            justify-content: center;
+        }
+    }
+
+    #guest-nav {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+
+        width: 100%;
+    }
 }

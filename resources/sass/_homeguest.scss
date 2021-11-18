@@ -18,12 +18,10 @@
 
 /*-------------*/
 
-.cart {
-    height: 100vh;
-    background-image: url();
-    text-align: center;
-
-    ul {
-        list-style-type: none;
+#restaurants {
+    h2 {
+        font-family: "Roboto";
+        color: $primary-color;
+        font-weight: 700;
     }
 }
