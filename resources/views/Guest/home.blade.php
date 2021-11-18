@@ -25,7 +25,8 @@
           </div>
         </div>
       </div>
-      <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center mt-4">
+      {{-- barra centrale --}}
+      {{-- <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center mt-4">
         <form class="form-inline ml-2 mr-3">
           <div class="row">
             <div class="col-6">
@@ -44,11 +45,11 @@
             </option>
           </select>
         </div>
-      </div>
+      </div> --}}
 
     </div>
 
-    <<<<<<< HEAD <section class="container">
+    <section class="container">
 
 
       <nav class="navbar navbar-light bg-light">
@@ -64,11 +65,11 @@
           </option>
         </select>
       </nav>
-      =======
+
       <section class="container" id="restaurants">
         <h2 class="text-center mb-5 mt-5 mt-md-0">LA NOSTRA SELEZIONE</h2>
 
-        >>>>>>> origin/slider-search-filters
+
         <div class="container d-flex align-items-center flex-wrap">
           <div class="row">
             <div v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)"
@@ -87,8 +88,9 @@
             </div>
           </div>
         </div>
+  </div>
 
-      </section>
+  </section>
   </div>
 @endsection
 {{-- Added the script section for the Vue logic --}}
