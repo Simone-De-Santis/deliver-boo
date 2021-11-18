@@ -1,9 +1,10 @@
 .login-section {
-    background-image: url("/images/Cuoco-i-retroscena-di-una-professione-fonte-di-grandi-livelli-di-stress.webp");
+    background-image: none;
     background-position: right;
     background-repeat: no-repeat;
     height: 100vh;
     background-size: cover;
+    background-color: black;
     
 
     #login {
@@ -40,4 +41,10 @@
         }
     }
 
+}
+
+@media (min-width: 768px) { 
+    .login-section {
+        background-image: url("/images/Cuoco-i-retroscena-di-una-professione-fonte-di-grandi-livelli-di-stress.webp");
+    }
 }

@@ -10134,11 +10134,12 @@ body {
 }
 
 .login-section {
-  background-image: url("/images/Cuoco-i-retroscena-di-una-professione-fonte-di-grandi-livelli-di-stress.webp");
+  background-image: none;
   background-position: right;
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
+  background-color: black;
 }
 .login-section #login {
   height: 100vh;
@@ -10174,6 +10175,11 @@ body {
   text-decoration: underline;
 }
 
+@media (min-width: 768px) {
+  .login-section {
+    background-image: url("/images/Cuoco-i-retroscena-di-una-professione-fonte-di-grandi-livelli-di-stress.webp");
+  }
+}
 #register-section {
   min-height: 100vh;
   background-image: none;
@@ -10191,9 +10197,11 @@ body {
 #register-section .form-register {
   max-width: 800px;
   padding-left: 20px;
+  min-height: 100vh;
 }
 #register-section .form-register .card-body {
   height: 100px;
+  min-height: 100vh;
 }
 #register-section .form-register .card-body .form-group {
   margin-bottom: 0;

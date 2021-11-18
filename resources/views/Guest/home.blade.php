@@ -1,6 +1,9 @@
 {{-- Added general layout --}}
 @extends('layouts.app')
-@section('img-logo', "/images/Logo-nav.png")
+@section('img-logo')
+<img class="logo " src="/images/Logo-nav.png" alt="logo-black">    
+@endsection
+
 {{-- Added cdn of 'vue' and 'axios' --}}
 @section('cdns')
   <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js'
