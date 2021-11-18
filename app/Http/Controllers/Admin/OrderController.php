@@ -17,12 +17,13 @@ class OrderController extends Controller
     public function index()
     {
         $id = auth()->user()->id;
-        $products = Product::with('orders')->where('user_id', $id)->get();
-        $orderIds = [];
+
+        $products = Order::with('products')->where('user_id', '=', $id)->get();
+        /*         $orderIds = [];
         foreach ($products as $product) {
             $orderIds[] = $product->orders->pluck('id')->toArray();
-        }
-        return view('admin.orders.index', compact('orderIds'));
+        } */
+        return view('admin.orders.index', compact('products'));
     }
 
     /**
