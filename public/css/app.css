@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap);@charset "UTF-8";
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10019,6 +10019,22 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/*--------------------
+SHARED VARIABLES
+--------------------*/
+/*--------------------
+GENERAL
+--------------------*/
+#card-number,
+#cvv,
+#expiration-date {
+  background-color: #fff;
+  height: 38px;
+  border: 1px solid #ced4da;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
 #ingredients-list .ingredient-item {
   margin-bottom: 100px;
   height: 300px;
@@ -10026,52 +10042,22 @@ h3 {
 }
 
 body {
+  font-family: "Alegreya", serif;
+  font-weight: 700;
   height: 100vh;
   background-size: cover;
 }
 
-.navbar-brand {
-  padding: 0;
+/*jumbotron slider*/
+#carousel {
+  height: 500px;
 }
-
-.navbar {
-  background-color: #f0f0f0;
-  border-radius: 50px;
-  padding: 0;
-}
-.navbar a {
-  color: #6d0808;
-}
-
-.jubotrone {
-  background-color: #e5e5e5;
-  border-radius: 50%;
-}
-.jubotrone img {
-  border-radius: 50%;
-}
-.jubotrone span {
-  font-size: 50px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.logo {
-  width: 100px;
-  height: 80px;
-  padding: 0px;
-  margin: 0;
-}
-
-.btn {
-  box-shadow: #875902;
-}
-
-.scroll-cards div {
-  display: inline-block;
-}
-
-.rest-row {
-  max-height: 150px;
+#carousel img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.8;
+  height: 500;
+  width: auto;
 }
 
 /*---------------------------------*/
@@ -10080,35 +10066,160 @@ body {
   color: #f8fafc;
 }
 
-.carosel {
-  border-radius: 3px;
-  overflow: hidden;
-  display: flex;
-}
-
-.carosel ul {
-  list-style-type: none;
-}
-
-.short-cut-title {
-  width: 167px;
-  min-width: 167px;
-  height: 88 px;
-  width: 88 px;
-  border-radius: 4 px;
-  overflow: hidden;
-  padding: 8 px;
-  border: none;
-  text-align: left;
-  margin-bottom: 4 px;
-}
-
 /*-------------*/
-.cart {
-  height: 100vh;
-  background-image: url();
-  text-align: center;
+#restaurants h2 {
+  font-family: "Roboto";
+  color: #7d0a0a;
+  font-weight: 700;
 }
-.cart ul {
-  list-style-type: none;
+
+.navbar-brand {
+  padding: 0;
+}
+.navbar-brand strong {
+  font-size: 25px;
+}
+
+#guest-nav .navbar {
+  background-color: transparent;
+}
+#guest-nav .navbar .nav-link {
+  font-size: 22px;
+  font-weight: 700;
+}
+#guest-nav .navbar a {
+  color: #7d0a0a;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  padding: 0px;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #jumbotron .search-bar {
+    transform: translatey(-240px);
+    justify-content: center;
+  }
+
+  #guest-nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+  }
+}
+.admin-bck {
+  height: 100vh;
+  background-image: url("/images/bck_admin.jpg");
+  background-image: -webkit-linear-gradient(left top, rgba(247, 241, 241, 0.651), rgba(193, 223, 243, 0.76)), url("/images/bck_admin.jpg");
+  /* Chrome 10+, Saf5.1+ */
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+#admin-nav .navbar {
+  background-color: transparent;
+}
+#admin-nav .navbar a {
+  color: black;
+}
+
+.bg-statistics-graph {
+  background-color: #fefefe94;
+}
+
+.login-section {
+  background-image: url("/images/Cuoco-i-retroscena-di-una-professione-fonte-di-grandi-livelli-di-stress.webp");
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+}
+.login-section #login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-section #login .label-text {
+  color: white;
+}
+.login-section #login .card {
+  background-color: rgba(255, 255, 255, 0.062);
+  border: none;
+}
+.login-section #login .card-header-login {
+  color: white;
+  background-color: #7d0a0a;
+  text-align: center;
+  text-transform: uppercase;
+}
+.login-section #login .btn-login {
+  background-color: #7d0a0a;
+  color: white;
+  text-transform: uppercase;
+}
+.login-section #login .btn-login:hover {
+  transform: scale(1.02);
+}
+.login-section #login .ancor-login {
+  color: #7d0a0a;
+}
+.login-section #login .ancor-login:hover {
+  text-decoration: underline;
+}
+
+#register-section {
+  background-image: url("/images/pasta.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  height: 100vh;
+  background-color: black;
+}
+#register-section .card-header {
+  color: #7d0a0a;
+  padding-top: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+#register-section .form-register {
+  width: 800px;
+  padding-left: 20px;
+}
+#register-section .form-register .card-body {
+  height: 100px;
+}
+#register-section .form-register .card-body .form-group {
+  margin-bottom: 0;
+}
+#register-section .form-register .card-body .form-group .text-label {
+  color: white;
+  text-transform: capitalize;
+}
+#register-section .form-register .card-body .form-group #category-btn {
+  margin-top: 38px;
+  color: #7d0a0a;
+}
+#register-section .form-register .card-body .form-group #category-btn:hover {
+  background-color: #7d0a0a;
+  color: white;
+}
+#register-section .form-register .card-body .form-group .btn-register {
+  background-color: #7d0a0a;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+#register-section .form-register .card-body .form-group .btn-register:hover {
+  background-color: white;
+  color: #7d0a0a;
+  border: 1px solid #7d0a0a;
 }
