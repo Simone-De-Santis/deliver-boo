@@ -4,27 +4,34 @@
     background-size:contain;
     background-position: right;
     height: 100vh;
+    background-color: black;
+
     .card-header {
-        color: white;
-        background-color: $primary-color;
-        margin-right: 200px;
+        color: $primary-color;
+        // background-color: $primary-color;
+        // margin-right: 200px;
+        padding-top: 42px;
         text-align: center;
         text-transform: uppercase;
+        background-color: transparent;
     }
     .form-register {
         width: 800px;
        padding-left: 20px;
-       padding-top: 50px;
+    //    padding-top: 50px;
        .card-body {
            height: 100px;
+
            .form-group {
             margin-bottom: 0;
+            
+
             .text-label {
-                color: $primary-color;
+                color: white;
                 text-transform: capitalize;
             }
             #category-btn {
-                margin-top: 40px;
+                margin-top: 38px;
                 color: $primary-color;
                 &:hover {
                     background-color: $primary-color;
@@ -35,7 +42,8 @@
             .btn-register {
                 background-color: $primary-color;
                 color: white;
-                margin-top: 6px;
+                margin-top: 30px;
+                margin-bottom: 100px;
                 &:hover {
                     background-color:white;
                     color: $primary-color;

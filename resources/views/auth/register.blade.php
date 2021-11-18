@@ -6,12 +6,13 @@
 @section('content')
 <section id="register-section">
     <div class="form-register">
+        <div class="col-md-12 card-header card-header-login">Rigistra il tuo ristorante</div> 
+        <div class="card-body">
+           
 
-                    <div class="card-body">
-                        <form id="form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-                            @csrf
-                            <div class="form-group row ">
-                                <div class="col-md-12 card-header card-header-login">Rigistra il tuo ristorante</div> 
+            <form id="form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+            @csrf
+                            <div class="form-group row shadow-lg p-3 mb-5  rounded">
                                 {{-- Name  --}}
                                 <div class="col-md-6 mt-2">
                                     <label for="name" class="text-label col-form-label text-md-right">Nome</label>    
@@ -158,6 +159,7 @@
                                 </div>
                                               
                             </div>
+
                             <div class="form-group row align-items-center">
                                 {{-- Url da cambiare in upload image --}}
                                 <div class="col-md-6">
@@ -176,51 +178,58 @@
                                         Seleziona una categoria
                                     </button> 
                                     <!-- Modal -->
-                                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
+                                    <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Seleziona una categoria</h5>
+                                            <h5 class="modal-title" id="staticBackdropLabel">Seleziona una categoria</h5>    
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                             </div>
                                             <div class="modal-body">
-                                                <label for="category"
-                                                class="text-label col-md-4 col-form-label text-md-right">Categoria</label>
-                                            <div class="col-md-6">
-                                                @foreach ($categories as $category)
-                                                    <input class="form-control" type="checkbox" id="category-{{ $category->id }}"
-                                                        value="{{ $category->id }}" name="categories[]">
-                                                    <label for="category-{{ $category->id }}"
-                                                        class="col-md-4 col-form-label text-md-right">{{ $category->name }}</label>
-                                                @endforeach
-                                                </select>
-                                            </div>
+                                            <div class="row">
+                                                    @foreach ($categories as $category)
+                                                        <div class="col-md-6">
+                                                            <input  type="checkbox" id="category-{{ $category->id }}"
+                                                            value="{{ $category->id }}" name="categories[]">
+                                                            <label for="category-{{ $category->id }}"
+                                                                class=" col-form-label text-md-right">{{ $category->name }}
+                                                            </label>
+
+
+                                                        </div>
+                                                                                            
+                                                    @endforeach
+                                                   
+                                            </div>   
+                             
                                             </div>
                                             <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Understood</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Salva</button>
                                             </div>
                                         </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                             <div  class="form-group row">
                                 {{-- Description --}}
-                            <div class="col-md-12">
-                                <label for="description"
-                                    class="text-label col-form-label text-md-right">Descrizione
-                                </label>                     
-                                <textarea class="form-control @error('description') is-invalid @enderror"
-                                    id="description" rows="4" name="description">{{ old('description') }}
-                                </textarea>
+                                <div class="col-md-12">
+                                    <label for="description"
+                                        class="text-label col-form-label text-md-right">Descrizione
+                                    </label>                     
+                                    <textarea class="form-control @error('description') is-invalid @enderror"
+                                        id="description" rows="4" name="description">{{ old('description') }}
+                                    </textarea>
                                     @error('description')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
 
                             <div class="form-group row">
@@ -270,15 +279,13 @@
 
                             <div class="form-group row ">
                                 <div class="col-md-12  ">
-                                    <button type="submit" class="btn-register btn ">
+                                    <button type="submit" class="btn-register btn w-100">
                                         Registrati
                                     </button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-             
-       
+            </form>
+        </div>
     </div>
 </section>
 
