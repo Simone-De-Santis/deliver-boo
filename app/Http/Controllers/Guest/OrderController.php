@@ -56,6 +56,6 @@ class OrderController extends Controller
         for ($i = 0; $i < count($request->productIds); $i++) {
             $order->products()->attach($request->productIds[$i], ['quantity' => $request->arrayProductsQuantity[$i]]);
         }
-        return redirect()->route('/', compact('order'));
+        return redirect()->route('home');
     }
 }
