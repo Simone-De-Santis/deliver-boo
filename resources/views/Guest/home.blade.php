@@ -25,6 +25,7 @@
           </div>
         </div>
       </div>
+      {{-- barra centrale --}}
       {{-- <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center mt-4">
         <form class="form-inline ml-2 mr-3">
           <div class="row">
