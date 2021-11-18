@@ -19,7 +19,7 @@ class OrdersTableSeeder extends Seeder
     public function run(Faker $faker, FakerAddress $faker_address, FakerPerson $faker_person, FakerNumber $faker_number)
     {
         // Creating array of products ids
-        $products = Product::pluck('id')->toArray();
+
         // For cycle to generate faker data for 'orders' table
         for ($i = 0; $i < 20; $i++) {
             $new_order = new Order();
@@ -34,8 +34,12 @@ class OrdersTableSeeder extends Seeder
             $new_order->message_to_users = $faker->paragraph(2);
             $new_order->save();
             // Attaching product id to pivot table
-            for ($x = 0; $x < 5; $x++) {
-                $new_order->products()->attach(Arr::random($products), ['quantity' => rand(1, 5)]);
+
+            $products = Product::where('user_id', '=', $i)->pluck('id')->toArray();
+            if (count($products)) {
+                for ($x = 0; $x < 15; $x++) {
+                    $new_order->products()->attach(Arr::random($products), ['quantity' => rand(1, 5)]);
+                }
             }
         }
     }
