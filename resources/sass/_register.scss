@@ -18,13 +18,13 @@
     .form-register {
         width: 800px;
        padding-left: 20px;
-    //    padding-top: 50px;
+
        .card-body {
            height: 100px;
 
            .form-group {
             margin-bottom: 0;
-            
+            margin-left: 100px;
 
             .text-label {
                 color: white;
@@ -43,7 +43,6 @@
                 background-color: $primary-color;
                 color: white;
                 margin-top: 30px;
-                margin-bottom: 100px;
                 &:hover {
                     background-color:white;
                     color: $primary-color;
