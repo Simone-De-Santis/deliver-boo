@@ -1,8 +1,11 @@
 .admin-bck {
-    height: 100vh;
-    background-image: url("/images/bck_admin.jpg");
-    background-image: -webkit-linear-gradient(left top, rgba(247, 241, 241, 0.651), rgba(193, 223, 243, 0.76)),
-        url("/images/bck_admin.jpg"); /* Chrome 10+, Saf5.1+ */
+    min-height: 100vh;
+
+    background-image: -webkit-linear-gradient(
+        left top,
+        rgb(28 26 26 / 59%),
+        rgb(244 67 54 / 53%)
+    ); /* Chrome 10+, Saf5.1+ */
 
     // background: url("/images/bck_admin.jpg");
 }
@@ -19,5 +22,5 @@
     }
 }
 .bg-statistics-graph {
-    background-color: #fefefe94;
+    background-color: #fefefed4;
 }

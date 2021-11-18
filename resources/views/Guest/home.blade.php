@@ -48,47 +48,31 @@
 
     </div>
 
-    <<<<<<< HEAD <section class="container">
+
+    <section class="container" id="restaurants">
+      <h2 class="text-center mb-5 mt-5 mt-md-0">LA NOSTRA SELEZIONE</h2>
 
 
-      <nav class="navbar navbar-light bg-light">
-        <form class="form-inline mb-4">
-          <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2 text-muted"
-            type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn my-2  my-sm-0 search-buttom" type="submit">Search</button>
-        </form>
-        <select v-model="select" name="" id="">
-          <option value="" selected>All</option>
-          <option v-for="(selectCategory, index) in selectCategories">
-            @{{ selectCategory }}
-          </option>
-        </select>
-      </nav>
-      =======
-      <section class="container" id="restaurants">
-        <h2 class="text-center mb-5 mt-5 mt-md-0">LA NOSTRA SELEZIONE</h2>
+      <div class="container d-flex align-items-center flex-wrap">
+        <div class="row">
+          <div v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)"
+            class="col-md-4 col-sm-12 mb-3">
 
-        >>>>>>> origin/slider-search-filters
-        <div class="container d-flex align-items-center flex-wrap">
-          <div class="row">
-            <div v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)"
-              class="col-md-4 col-sm-12 mb-3">
-
-              <div class="card bg-dark text-white">
-                <a :href="'/user/'+restaurant.id" class="text-white">
-                  <img src="/images/fresh.jpg" alt="..." class="card-img" alt="...">
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">@{{ restaurant . activity_name }}</h5>
-                    <p class="card-text">inserire inizio descrizione</p>
-                    <p class="card-text">se vogliamo un footer</p>
-                  </div>
-                </a>
-              </div>
+            <div class="card bg-dark text-white">
+              <a :href="'/user/'+restaurant.id" class="text-white">
+                <img src="/images/fresh.jpg" alt="..." class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">@{{ restaurant . activity_name }}</h5>
+                  <p class="card-text">inserire inizio descrizione</p>
+                  <p class="card-text">se vogliamo un footer</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
+      </div>
 
-      </section>
+    </section>
   </div>
 @endsection
 {{-- Added the script section for the Vue logic --}}
