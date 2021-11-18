@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('img-logo', "/images/logo-white.png")
 @section('content')
 <section class="login-section">
     <div class="container" >

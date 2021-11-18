@@ -36,7 +36,7 @@
         <nav class="navbar navbar-expand-md navbar-light">
           <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
-              <img class="logo" :src=" imageLogin ? '/images/logo-white.png' : '/images/Logo-nav.png'" alt="">
+              <img class="logo" src=" @yield('img-logo')" alt="">
               <strong>DeliverBoo</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

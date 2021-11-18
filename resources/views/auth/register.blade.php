@@ -2,6 +2,7 @@
 {{-- @section('sass')
 <link href="{{ resource_path('sass/_registerform.scss') }}" rel="stylesheet">
 @endsection --}}
+@section('img-logo', "/images/logo-white.png")
 
 @section('content')
 <section id="register-section">
