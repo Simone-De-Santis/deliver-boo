@@ -120,14 +120,7 @@
         @enderror
     </div>
 
-    <div class="mt-4">
-        <button type="button" class="btn btn-dark"><a class="text-white text-decoration-none"
-                href="#">Indietro</a></button>
-        <button type="submit" class="btn btn-primary">Conferma ordine</button>
-    </div>
 
-
-
-
+    <button type="submit" class="btn btn-primary mt-4" v-on:click="removeCart()">Conferma ordine</button>
 
 </form>

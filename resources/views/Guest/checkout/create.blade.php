@@ -1,4 +1,5 @@
 {{-- Added general layout --}}
+
 @extends('layouts.app')
 {{-- Added cdn of 'vue' and 'axios' --}}
 @section('cdns')
@@ -34,13 +35,9 @@
                     </div>
                     <h1>@{{ totalPrice }}</h1>
                 </div>
-
-
-
             </section>
         </section>
     </section>
-
 @endsection
 
 @section('script-end')
@@ -54,6 +51,7 @@
                 totalPrice: 0,
                 arrayProductIds: [],
                 arrayProductsQuantity: [],
+                transactionId: "",
             },
             methods: {
                 getStorage() {
@@ -80,13 +78,22 @@
                     }
                     return this.totalPrice = total.toFixed(2);
                 },
+                removeCart() {
+                    localStorage.clear();
+                    this.cart = [];
+                    this.total = 0;
+
+                    localStorage.setItem('cart', JSON.stringify([]));
+                    localStorage.setItem('total', JSON.stringify(this.total));
 
 
+                },
             },
             created() {
                 this.getStorage(),
                     this.getTotalPrice(),
                     this.getArrayStorage()
+                /* this.transactionId = $transaction.id; */
             }
 
         })

@@ -17,10 +17,10 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        $order = new Order();
-        return view('guest.checkout.create', compact('order'));
+        /*         $order = new Order();
+        return view('guest.checkout.create', compact('order')); */
     }
 
     /**
@@ -56,6 +56,6 @@ class OrderController extends Controller
         for ($i = 0; $i < count($request->productIds); $i++) {
             $order->products()->attach($request->productIds[$i], ['quantity' => $request->arrayProductsQuantity[$i]]);
         }
-        return redirect()->route('login', compact('order'));
+        return redirect()->route('/', compact('order'));
     }
 }

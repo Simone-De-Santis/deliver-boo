@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Order;
 //^FONDAMENTALE
 use Braintree;
 
@@ -81,8 +82,10 @@ class PaymentController extends Controller
             $transaction = $result->transaction;
             /*  NON VA SCRITTO COSI MA COME SOTTO header("Location: " . $baseUrl . "transaction.php?id=" . $transaction->id); */
             //^IN CASO DI TRANSAZIONE ANDATA A BUON FINE MOSTRO ANCHE L'ID
-            return back()->with('success_message', "Transaction successful. The ID is: $transaction->id
-            The nonce is $nonce");
+            /*             $transaction_id = $transaction->id;
+ */
+            $order = new Order();
+            return view('guest.checkout.create', compact('order'));
         } else {
             $errorString = "";
 
