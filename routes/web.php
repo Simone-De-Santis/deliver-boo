@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
 
     return view('guest.home');
-});
+})->name('home');
 //// Auth routes for registration and login pages
 Auth::routes();
 
