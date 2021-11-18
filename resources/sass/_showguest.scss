@@ -1,5 +1,8 @@
 #restaurant {
     font-family: "Roboto";
+    ul {
+        list-style-type: none;
+    }
     h1,
     h5 {
         color: $primary-color;
@@ -13,6 +16,21 @@
             font-size: 1.5rem;
             color: $primary-color;
             margin-right: 5px;
+        }
+    }
+    #cart-section {
+        border: 8px solid $primary-color;
+        border-radius: 10px;
+        .cart-header {
+            background-color: $primary-color;
+            color: white;
+        }
+        .cart-content {
+            border-radius: 20px;
+            background-color: white;
+            ul {
+                padding-left: 0;
+            }
         }
     }
 }

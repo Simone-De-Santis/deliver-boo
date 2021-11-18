@@ -18,8 +18,7 @@
 
                         <div class="card my-3 shadow-lg" style="width: 18rem;">
                             @if ($product->url != '#')
-                                <img class=" card-img-top" src="{{ asset('storage/' . $product->url) }}"
-                                    alt="immagine-prodotto">
+                                <img class=" card-img-top" src="{{ $product->url }}" alt="immagine-prodotto">
                             @endif
 
                             <div class="card-body">
@@ -43,29 +42,34 @@
                 </div>
                 {{-- Cart section --}}
                 <div v-if="cart.length > 0">
-                    <div id="cart-section" class="col" v-if="cart[0].user_id == {{ $user->id }}">
-                        <h3>Il mio carrello:</h3>
-                        <div v-for="(item,index) in cart">
-                            <ul>
-                                <li>
-                                    @{{ item . name }}
-                                    <button class="btn btn-secondary" v-on:click="decreaseQuantity(item),setLocalStorage()">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                    @{{ item . quantity }}
-                                    <button class="btn btn-secondary" v-on:click="addQuantity(item),setLocalStorage()">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                    <button class="btn btn-danger"
-                                        v-on:click="removeProduct(index),setLocalStorage()">Rimuovi</button>
-                                </li>
-                            </ul>
+                    <div id="cart-section" v-if="cart[0].user_id == {{ $user->id }}">
+                        <div class="cart-header py-1">
+                            <h3 class="text-center"><i class="fas fa-shopping-cart text-center"></i></h3>
                         </div>
-                        <span><strong>Totale:</strong>@{{ totalCart }}</span>
-                        <button class="btn btn-success">
-                            <a class="text-white text-decoration-none" v-on:click="setLocalStorage()"
-                                href="{{ route('payment.index') }}">Procedi con il pagamento</a>
-                        </button>
+                        <div class="cart-content p-3">
+                            <div v-for="(item,index) in cart">
+                                <ul>
+                                    <li>
+                                        @{{ item . name }}
+                                        <button class="btn btn-secondary"
+                                            v-on:click="decreaseQuantity(item),setLocalStorage()">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        @{{ item . quantity }}
+                                        <button class="btn btn-secondary" v-on:click="addQuantity(item),setLocalStorage()">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                        <button class="btn btn-danger"
+                                            v-on:click="removeProduct(index),setLocalStorage()">Rimuovi</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span><strong>Totale:</strong>@{{ totalCart }}</span>
+                            <button class="btn btn-success">
+                                <a class="text-white text-decoration-none" v-on:click="setLocalStorage()"
+                                    href="{{ route('payment.index') }}">Procedi con il pagamento</a>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 {{-- modal --}}
