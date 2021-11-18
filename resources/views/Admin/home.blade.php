@@ -10,7 +10,7 @@
       Statistiche di tutte cose
     </h2>
     {{-- div delle statistiche --}}
-    <div>
+    <div class="shadow-lg rounded bg-statistics-graph">
       <canvas id="myChart"></canvas>
     </div>
   </div>
