@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 */
 //// Route for home page by logged-in user
 Route::get('/', function () {
+
     return view('guest.home');
 });
 //// Auth routes for registration and login pages

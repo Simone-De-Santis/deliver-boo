@@ -4,36 +4,30 @@
 @endsection --}}
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Register') }}</div>
+<section id="register-section">
+    <div class="form-register">
+        <div class="col-md-12 card-header card-header-login">Rigistra il tuo ristorante</div> 
+        <div class="card-body">
+           
 
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-                            @csrf
-
-                            <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                                <div class="col-md-6">
+            <form id="form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+            @csrf
+                            <div class="form-group row shadow-lg p-3 mb-5  rounded">
+                                {{-- Name  --}}
+                                <div class="col-md-6 mt-2">
+                                    <label for="name" class="text-label col-form-label text-md-right">Nome</label>    
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
                                         name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
-                            {{-- Activity name --}}
-
-                            <div class="form-group row">
-                                <label for="activity_name"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('activity_name') }}</label>
-                                <div class="col-md-6">
+                                {{-- Activity name --}}
+                                <div class="col-md-6 mt-2">
+                                    <label for="activity_name"
+                                    class="text-label col-form-label text-md-right">Nome attività</label>                     
                                     <input id="activity_name" type="text"
                                         class="form-control @error('activity_name') is-invalid @enderror"
                                         name="activity_name" value="{{ old('activity_name') }}">
@@ -42,13 +36,14 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                </div>
+                                </div>                    
                             </div>
-                            {{-- Province --}}
+                           
                             <div class="form-group row">
-                                <label for="province"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('province') }}</label>
-                                <div class="col-md-6">
+                                {{-- Province --}}
+                                <div class="col-md-4">
+                                    <label for="province"
+                                        class="text-label col-form-label text-md-right">Provincia</label>
                                     <input id="province" type="text"
                                         class="form-control @error('province') is-invalid @enderror" name="province"
                                         value="{{ old('province') }}">
@@ -58,12 +53,10 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
-                            {{-- Municipality --}}
-                            <div class="form-group row">
-                                <label for="municipality"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('municipality') }}</label>
-                                <div class="col-md-6">
+                                {{-- Municipality --}}
+                                <div class="col-md-4">
+                                    <label for="municipality"
+                                        class="text-label col-form-label text-md-right">Comune</label>
                                     <input id="municipality" type="text"
                                         class="form-control @error('municipality') is-invalid @enderror" name="municipality"
                                         value="{{ old('municipality') }}">
@@ -73,26 +66,9 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
-                            {{-- Address --}}
-                            <div class="form-group row">
-                                <label for="address"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('address') }}</label>
-                                <div class="col-md-6">
-                                    <input id="address" type="text"
-                                        class="form-control @error('address') is-invalid @enderror" name="address"
-                                        value="{{ old('address') }}">
-                                    @error('address')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            {{-- City --}}
-                            <div class="form-group row">
-                                <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('city') }}</label>
-                                <div class="col-md-6">
+                                 {{-- City --}}
+                                <div class="col-md-4">
+                                    <label for="city" class="text-label col-form-label text-md-right">Città</label>
                                     <input id="city" type="text" class="form-control @error('city') is-invalid @enderror"
                                         name="city" value="{{ old('city') }}">
                                     @error('city')
@@ -102,10 +78,24 @@
                                     @enderror
                                 </div>
                             </div>
-                            {{-- Zip --}}
+
                             <div class="form-group row">
-                                <label for="zip" class="col-md-4 col-form-label text-md-right">{{ __('zip') }}</label>
-                                <div class="col-md-6">
+                                {{-- Address --}}
+                                <div class="col-md-4">
+                                    <label for="address"
+                                        class="text-label col-form-label text-md-right">Indirizzo</label>
+                                    <input id="address" type="text"
+                                        class="form-control @error('address') is-invalid @enderror" name="address"
+                                        value="{{ old('address') }}">
+                                    @error('address')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                {{-- Zip --}}
+                                <div class="col-md-4">
+                                    <label for="zip" class="text-label col-form-label text-md-right">Cap</label>
                                     <input id="zip" type="text" class="form-control @error('zip') is-invalid @enderror"
                                         name="zip" value="{{ old('zip') }}">
                                     @error('zip')
@@ -114,25 +104,39 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
-                            {{-- Vat --}}
-                            <div class="form-group row">
-                                <label for="vat" class="col-md-4 col-form-label text-md-right">{{ __('vat') }}</label>
-                                <div class="col-md-6">
-                                    <input id="vat" type="text" class="form-control @error('vat') is-invalid @enderror"
-                                        name="vat" value="{{ old('vat') }}">
-                                    @error('vat')
+                                {{-- longitude --}}
+                                <div class="col-md-2">
+                                    <label for="longitude"
+                                        class="text-label  col-form-label text-md-right">Longitudine</label>
+                                    <input id="longitude" type="text"
+                                        class="form-control @error('longitude') is-invalid @enderror" name="longitude"
+                                        value="{{ old('longitude') }}">
+                                    @error('longitude')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror      
+                                </div>
+                                {{-- latitude --}}
+                                <div class="col-md-2">
+                                    <label for="latitude"
+                                        class="text-label col-form-label text-md-right">Latitudine</label>
+                                    <input id="latitude" type="text"
+                                        class="form-control @error('latitude') is-invalid @enderror" name="latitude"
+                                        value="{{ old('latitude') }}">
+                                    @error('latitude')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                </div>
+                                </div>             
                             </div>
-                            {{-- Telephone --}}
+
                             <div class="form-group row">
-                                <label for="telephone"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('telephone') }}</label>
+                                {{-- Telephone --}}
                                 <div class="col-md-6">
+                                    <label for="telephone"
+                                    class="text-label col-form-label text-md-right">Telefono</label>
                                     <input id="telephone" type="text"
                                         class="form-control @error('telephone') is-invalid @enderror" name="telephone"
                                         value="{{ old('telephone') }}">
@@ -142,25 +146,24 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
-                            {{-- Description --}}
-                            <div class="form-group row">
-                                <label for="description"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('description') }}</label>
+                                {{-- Vat --}}
                                 <div class="col-md-6">
-                                    <textarea class="form-control @error('description') is-invalid @enderror"
-                                        id="description" rows="4" name="description">{{ old('description') }}</textarea>
-                                    @error('description')
+                                    <label for="vat" class="text-label col-form-label text-md-right">Partita IVA</label>
+                                    <input id="vat" type="text" class="form-control @error('vat') is-invalid @enderror"
+                                        name="vat" value="{{ old('vat') }}">
+                                    @error('vat')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
+                                              
                             </div>
-                            {{-- Url da cambiare in upload image --}}
-                            <div class="form-group row">
-                                <label for="url" class="col-md-4 col-form-label text-md-right">{{ __('url') }}</label>
+
+                            <div class="form-group row align-items-center">
+                                {{-- Url da cambiare in upload image --}}
                                 <div class="col-md-6">
+                                    <label for="url" class="text-label col-form-label text-md-right">Immagine ristorante</label>
                                     <input id="url" type="file" class="form-control @error('url') is-invalid @enderror"
                                         name="url" value="{{ old('url') }}">
                                     @error('url')
@@ -168,67 +171,60 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+                                </div>   
+                                <div class="col-md-6 ">
+                                    <!-- Button trigger modal -->
+                                    <button id="category-btn" type="button" class="form-control  col-form-label" data-toggle="modal" data-target="#staticBackdrop">
+                                        Seleziona una categoria
+                                    </button> 
+                                    <!-- Modal -->
+                                    <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Seleziona una categoria</h5>    
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <div class="row">
+                                                    @foreach ($categories as $category)
+                                                        <div class="col-md-6">
+                                                            <input  type="checkbox" id="category-{{ $category->id }}"
+                                                            value="{{ $category->id }}" name="categories[]">
+                                                            <label for="category-{{ $category->id }}"
+                                                                class=" col-form-label text-md-right">{{ $category->name }}
+                                                            </label>
+
+
+                                                        </div>
+                                                                                            
+                                                    @endforeach
+                                                   
+                                            </div>   
+                             
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Salva</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            {{-- Categories --}}
-                            <div class="form-group row">
-                                <label for="category"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('category') }}</label>
-                                <div class="col-md-6">
-                                    @foreach ($categories as $category)
-                                        <input class="form-control" type="checkbox" id="category-{{ $category->id }}"
-                                            value="{{ $category->id }}" name="categories[]">
-                                        <label for="category-{{ $category->id }}"
-                                            class="col-md-4 col-form-label text-md-right">{{ $category->name }}</label>
-                                    @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-                            {{-- BOOTSTRAP CATEGORY DA FARCI IL MENU A SCOMPARSA --}}
-
-                            {{-- <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-expanded="false">
-                                    Dropdown button
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div> --}}
-
-
-
-
-
-
-                            {{-- longitude --}}
-                            <div class="form-group row">
-                                <label for="longitude"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('longitude') }}</label>
-                                <div class="col-md-6">
-                                    <input id="longitude" type="text"
-                                        class="form-control @error('longitude') is-invalid @enderror" name="longitude"
-                                        value="{{ old('longitude') }}">
-                                    @error('longitude')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            {{-- latitude --}}
-                            <div class="form-group row">
-                                <label for="latitude"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('latitude') }}</label>
-                                <div class="col-md-6">
-                                    <input id="latitude" type="text"
-                                        class="form-control @error('latitude') is-invalid @enderror" name="latitude"
-                                        value="{{ old('latitude') }}">
-                                    @error('latitude')
+                            <div  class="form-group row">
+                                {{-- Description --}}
+                                <div class="col-md-12">
+                                    <label for="description"
+                                        class="text-label col-form-label text-md-right">Descrizione
+                                    </label>                     
+                                    <textarea class="form-control @error('description') is-invalid @enderror"
+                                        id="description" rows="4" name="description">{{ old('description') }}
+                                    </textarea>
+                                    @error('description')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -237,26 +233,23 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="email"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                                <div class="col-md-6">
+                                {{-- email --}}
+                                <div class="col-md-4"> 
+                                    <label for="email"
+                                    class="text-label  col-form-label text-md-right">E-mail</label>                   
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                         name="email" value="{{ old('email') }}" required autocomplete="email">
-
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
+                                {{-- password --}}
+                                <div class="col-md-4">
+                                    <label for="password"
+                                    class="text-label  col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="form-group row">
-                                <label for="password"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                                <div class="col-md-6">
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
                                         required autocomplete="new-password">
@@ -266,30 +259,34 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+
                                 </div>
-                            </div>
 
-                            <div class="form-group row">
-                                <label for="password-confirm"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                {{-- conferma password --}}
+                                <div class="col-md-4">
+                                    <label for="password-confirm"
+                                    class="text-label col-form-label text-md-right">Conferma password</label>
 
-                                <div class="col-md-6">
+         
                                     <input id="password-confirm" type="password" class="form-control"
                                         name="password_confirmation" required autocomplete="new-password">
-                                </div>
-                            </div>
+                            
 
-                            <div class="form-group row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Register') }}
+                                </div>
+
+                            </div>
+                            
+
+                            <div class="form-group row ">
+                                <div class="col-md-12  ">
+                                    <button type="submit" class="btn-register btn w-100">
+                                        Registrati
                                     </button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
+</section>
+
 @endsection
