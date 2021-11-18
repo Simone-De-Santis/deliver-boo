@@ -1,15 +1,14 @@
 @extends('layouts.app')
-{{-- @section('sass')
-<link href="{{ resource_path('sass/_registerform.scss') }}" rel="stylesheet">
-@endsection --}}
-@section('img-logo', "/images/logo-white.png")
+
+@section('img-logo')
+    <img class="logo d-none d-md-inline-block" src="/images/logo-white.png" alt="logo">
+    <img class="logo d-inline-block d-md-none" src="/images/Logo-nav.png" alt="logo-black">
+    
+@endsection
 
 @section('content')
 <section id="register-section">
     <div class="form-register">
-
-
-
         <form id="form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
             @csrf
 
@@ -17,7 +16,7 @@
             <div class="card-body">
                 <div class="form-group row shadow-lg   rounded">
                     {{-- Name --}}
-                    <div class="col-md-6 mt-2">
+                    <div class="col-12 col-md-6 mt-2">
                         <label for="name" class="text-label col-form-label text-md-right">Nome</label>
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
                             name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -28,7 +27,7 @@
                         @enderror
                     </div>
                     {{-- Activity name --}}
-                    <div class="col-md-6 mt-2">
+                    <div class="col-12 col-md-6 mt-2">
                         <label for="activity_name" class="text-label col-form-label text-md-right">Nome attività</label>
                         <input id="activity_name" type="text"
                             class="form-control @error('activity_name') is-invalid @enderror" name="activity_name"
@@ -43,7 +42,7 @@
 
                 <div class="form-group row">
                     {{-- Province --}}
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-4">
                         <label for="province" class="text-label col-form-label text-md-right">Provincia</label>
                         <input id="province" type="text" class="form-control @error('province') is-invalid @enderror"
                             name="province" value="{{ old('province') }}">
@@ -54,7 +53,7 @@
                         @enderror
                     </div>
                     {{-- Municipality --}}
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-4">
                         <label for="municipality" class="text-label col-form-label text-md-right">Comune</label>
                         <input id="municipality" type="text"
                             class="form-control @error('municipality') is-invalid @enderror" name="municipality"
@@ -66,7 +65,7 @@
                         @enderror
                     </div>
                     {{-- City --}}
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-4">
                         <label for="city" class="text-label col-form-label text-md-right">Città</label>
                         <input id="city" type="text" class="form-control @error('city') is-invalid @enderror"
                             name="city" value="{{ old('city') }}">
@@ -80,7 +79,7 @@
 
                 <div class="form-group row">
                     {{-- Address --}}
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-4">
                         <label for="address" class="text-label col-form-label text-md-right">Indirizzo</label>
                         <input id="address" type="text" class="form-control @error('address') is-invalid @enderror"
                             name="address" value="{{ old('address') }}">
@@ -91,7 +90,7 @@
                         @enderror
                     </div>
                     {{-- Zip --}}
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-4">
                         <label for="zip" class="text-label col-form-label text-md-right">Cap</label>
                         <input id="zip" type="text" class="form-control @error('zip') is-invalid @enderror" name="zip"
                             value="{{ old('zip') }}">
@@ -102,7 +101,7 @@
                         @enderror
                     </div>
                     {{-- longitude --}}
-                    <div class="col-md-2">
+                    <div class="col-12 col-md-2">
                         <label for="longitude" class="text-label  col-form-label text-md-right">Longitudine</label>
                         <input id="longitude" type="text" class="form-control @error('longitude') is-invalid @enderror"
                             name="longitude" value="{{ old('longitude') }}">
@@ -113,7 +112,7 @@
                         @enderror
                     </div>
                     {{-- latitude --}}
-                    <div class="col-md-2">
+                    <div class="col-12 col-md-2">
                         <label for="latitude" class="text-label col-form-label text-md-right">Latitudine</label>
                         <input id="latitude" type="text" class="form-control @error('latitude') is-invalid @enderror"
                             name="latitude" value="{{ old('latitude') }}">
@@ -127,7 +126,7 @@
 
                 <div class="form-group row">
                     {{-- Telephone --}}
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6">
                         <label for="telephone" class="text-label col-form-label text-md-right">Telefono</label>
                         <input id="telephone" type="text" class="form-control @error('telephone') is-invalid @enderror"
                             name="telephone" value="{{ old('telephone') }}">
@@ -138,7 +137,7 @@
                         @enderror
                     </div>
                     {{-- Vat --}}
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6">
                         <label for="vat" class="text-label col-form-label text-md-right">Partita IVA</label>
                         <input id="vat" type="text" class="form-control @error('vat') is-invalid @enderror" name="vat"
                             value="{{ old('vat') }}">
@@ -152,18 +151,8 @@
                 </div>
 
                 <div class="form-group row align-items-center">
-                    {{-- Url da cambiare in upload image --}}
-                    <div class="col-md-6">
-                        <label for="url" class="text-label col-form-label text-md-right">Immagine ristorante</label>
-                        <input id="url" type="file" class="form-control @error('url') is-invalid @enderror" name="url"
-                            value="{{ old('url') }}">
-                        @error('url')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="col-md-6 ">
+                    
+                    <div class="col-12 col-md-6 ">
                         <!-- Button trigger modal -->
                         <button id="category-btn" type="button" class="form-control  col-form-label" data-toggle="modal"
                             data-target="#staticBackdrop">
@@ -208,11 +197,22 @@
                             </div>
                         </div>
                     </div>
+                    {{-- Url da cambiare in upload image --}}
+                    <div class="col-12 col-md-6">
+                        <label for="url" class="text-label col-form-label text-md-right">Immagine ristorante</label>
+                        <input id="url" type="file" class="form-control @error('url') is-invalid @enderror" name="url"
+                            value="{{ old('url') }}">
+                        @error('url')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
                 </div>
 
                 <div class="form-group row">
                     {{-- Description --}}
-                    <div class="col-md-12">
+                    <div class="col-12 ">
                         <label for="description" class="text-label col-form-label text-md-right">Descrizione
                         </label>
                         <textarea class="form-control @error('description') is-invalid @enderror" id="description"
@@ -228,7 +228,7 @@
 
                 <div class="form-group row">
                     {{-- email --}}
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-4 ">
                         <label for="email" class="text-label  col-form-label text-md-right">E-mail</label>
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                             name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -239,7 +239,7 @@
                         @enderror
                     </div>
                     {{-- password --}}
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-4">
                         <label for="password" class="text-label  col-form-label text-md-right">{{ __('Password')
                             }}</label>
 
@@ -256,7 +256,7 @@
                     </div>
 
                     {{-- conferma password --}}
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-4">
                         <label for="password-confirm" class="text-label col-form-label text-md-right">Conferma
                             password</label>
 

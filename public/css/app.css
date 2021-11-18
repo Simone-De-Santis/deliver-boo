@@ -10175,22 +10175,21 @@ body {
 }
 
 #register-section {
-  background-image: url("/images/pasta.jpg");
+  min-height: 100vh;
+  background-image: none;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-  height: 100vh;
   background-color: black;
 }
 #register-section .card-header {
-  color: #7d0a0a;
-  padding-top: 42px;
+  color: white;
+  padding-top: 44px;
   text-align: center;
   text-transform: uppercase;
-  background-color: transparent;
 }
 #register-section .form-register {
-  width: 800px;
+  max-width: 800px;
   padding-left: 20px;
 }
 #register-section .form-register .card-body {
@@ -10198,7 +10197,10 @@ body {
 }
 #register-section .form-register .card-body .form-group {
   margin-bottom: 0;
-  margin-left: 100px;
+}
+#register-section .form-register .card-body .form-group .form-control {
+  background-color: transparent;
+  color: white;
 }
 #register-section .form-register .card-body .form-group .text-label {
   color: white;
@@ -10206,11 +10208,14 @@ body {
 }
 #register-section .form-register .card-body .form-group #category-btn {
   margin-top: 38px;
-  color: #7d0a0a;
-}
-#register-section .form-register .card-body .form-group #category-btn:hover {
   background-color: #7d0a0a;
   color: white;
+  border: 1px solid #7d0a0a;
+}
+#register-section .form-register .card-body .form-group #category-btn:hover {
+  background-color: white;
+  color: #7d0a0a;
+  border: 1px solid #7d0a0a;
 }
 #register-section .form-register .card-body .form-group .btn-register {
   background-color: #7d0a0a;
@@ -10221,4 +10226,10 @@ body {
   background-color: white;
   color: #7d0a0a;
   border: 1px solid #7d0a0a;
+}
+
+@media (min-width: 768px) {
+  #register-section {
+    background-image: url("/images/pasta.jpg");
+  }
 }
