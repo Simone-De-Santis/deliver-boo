@@ -19,16 +19,12 @@
         }
     }
     #cart-section {
-        border: 8px solid $primary-color;
         max-width: 400px;
         border-radius: 10px;
-        .cart-header {
-            background-color: $primary-color;
-            color: white;
+        .card-header {
+            border-radius: 10px 10px 0 0;
         }
         .cart-content {
-            border-radius: 20px;
-            background-color: white;
             ul {
                 padding-left: 0;
             }

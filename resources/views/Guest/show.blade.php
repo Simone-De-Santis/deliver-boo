@@ -8,20 +8,17 @@
     {{-- Id app to add link with Vue --}}
     <div id="app">
         <section class="container my-5 pt-4" id="restaurant">
-            <h1 class="text-center"> {{ $user->activity_name }} </h1>
+            <h1 class="text-center my-3"> {{ $user->activity_name }} </h1>
             <div id="products-section" class="row justify-content-center">
                 {{-- Products section --}}
-                <div class="col-6 d-flex flex-column align-items-center">
+                <div class="col-12 col-md-6 d-flex flex-column align-items-center order-5 order-md-0">
                     {{-- Cycle foreach to print all the products of the restaurant --}}
                     @foreach ($user->products as $product)
-
-                        <div class="card my-3 shadow-lg" style="width: 18rem;">
+                        <div class="card mb-3 shadow-lg" style="width: 18rem;">
                             @if ($product->url != '#')
                                 <img class=" card-img-top" src="{{ $product->url }}" alt="immagine-prodotto">
                             @endif
-
                             <div class="card-body">
-
                                 <h5 class="card-title text-center">{{ $product->name }}</h5>
                                 <p class="card-text">{{ $product->description }}</p>
                                 <div class="d-flex align-items-center mb-3">
@@ -40,11 +37,11 @@
                     @endforeach
                 </div>
                 {{-- Cart section --}}
-                <div class="col-6 d-flex justify-content-center">
-                    <div v-if="cart.length > 0">
-                        <div id="cart-section" v-if="cart[0].user_id == {{ $user->id }}">
-                            <div class="cart-header py-1">
-                                <h3 class="text-center"><i class="fas fa-shopping-cart text-center"></i></h3>
+                <div class="col-12 col-md-6 d-flex justify-content-center order-1">
+                    <div class="w-100 h-100" v-if="cart.length > 0">
+                        <div class="card shadow-lg mb-5" id="cart-section" v-if="cart[0].user_id == {{ $user->id }}">
+                            <div class="card-header primary-color-bg text-white">
+                                <h3 class="text-center my-1"><i class="fas fa-shopping-cart text-center"></i></h3>
                             </div>
                             <div class="cart-content p-3">
                                 <div v-for="(item,index) in cart">
