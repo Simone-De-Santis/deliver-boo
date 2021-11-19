@@ -2,9 +2,6 @@
 @extends('layouts.app')
 @section('img-logo')
   <img class="logo " src="/images/Logo-nav.png" alt="logo-black">
-
-  <img class="logo " src="/images/Logo-nav.png" alt="logo-black">
-
 @endsection
 
 {{-- Added cdn of 'vue' and 'axios' --}}
