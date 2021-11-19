@@ -20,7 +20,7 @@ class OrderController extends Controller
     {
         $id = auth()->user()->id;
 
-        $user_orders = DB::select("SELECT DISTINCT `first_name`,`last_name`,`address`,`city`,`message_to_users`,`orders`.`created_at`,`orders`.`id` FROM `orders`
+        $user_orders = DB::select("SELECT DISTINCT `first_name`,`last_name`,`address`,`city`,`message_to_users`,`orders`.`created_at`,`orders`.`id`,`total_price` FROM `orders`
           INNER JOIN order_product
           ON orders.id = order_product.order_id 
           INNER JOIN products 
