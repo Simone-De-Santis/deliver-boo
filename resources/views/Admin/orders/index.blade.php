@@ -9,7 +9,7 @@
   <ul>
     @foreach ($user_orders as $order)
       {{-- <li>order id: {{ $order->id }}</li> --}}
-      <li>order name: {{ $order->first_name }}</li>
+      <li>order name: {{ $order->first_name }} - as{{ $order->last_name }}</li>
       <li>order address: {{ $order->address }}</li>
       <li>order city: {{ $order->city }}</li>
       <li>price ordfer total: {{ $order->total_price }}</li>
