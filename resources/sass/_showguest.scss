@@ -1,0 +1,33 @@
+#restaurant {
+    font-family: "Roboto";
+    ul {
+        list-style-type: none;
+    }
+    h1,
+    h5 {
+        color: $primary-color;
+    }
+    .card {
+        border-radius: 10px;
+        .product-price {
+            font-size: 2rem;
+        }
+        span {
+            font-size: 1.5rem;
+            color: $primary-color;
+            margin-right: 5px;
+        }
+    }
+    #cart-section {
+        max-width: 400px;
+        border-radius: 10px;
+        .card-header {
+            border-radius: 10px 10px 0 0;
+        }
+        .cart-content {
+            ul {
+                padding-left: 0;
+            }
+        }
+    }
+}
