@@ -10035,10 +10035,18 @@ GENERAL
   border-radius: 0.25rem;
 }
 
+#buttom {
+  background-color: #7d0a0a;
+}
+
 #ingredients-list .ingredient-item {
   margin-bottom: 100px;
   height: 300px;
   overflow-y: scroll;
+  list-style-type: none;
+}
+#ingredients-list h1 {
+  color: white;
 }
 
 .ingredient-item::-webkit-scrollbar-track {
@@ -10046,11 +10054,12 @@ GENERAL
   border-radius: 10px;
 }
 
-.ingredients-table ul {
-  list-style-type: none;
+.ingredients-table h2 {
+  color: white;
 }
-.ingredients-table ul a {
+.ingredients-table a {
   color: black;
+  font-size: 20px;
 }
 
 body {
