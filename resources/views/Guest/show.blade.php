@@ -44,9 +44,9 @@
                                 <h3 class="text-center my-1"><i class="fas fa-shopping-cart text-center"></i></h3>
                             </div>
                             <div class="cart-content p-3">
-                                <div v-for="(item,index) in cart">
-                                    <ul>
-                                        <li>
+                                <ul>
+                                    <div v-for="(item,index) in cart">
+                                        <li class="mb-2">
                                             <div class="row">
                                                 <div class="col-5"><span>@{{ item . name }}</span></div>
                                                 <div class="col-7">
@@ -65,8 +65,8 @@
                                                 </div>
                                             </div>
                                         </li>
-                                    </ul>
-                                </div>
+                                    </div>
+                                </ul>
                                 <div class="d-flex justify-content-center mb-2">
                                     <span class="mx-1">Totale:</span>
                                     <span class="mx-1">@{{ totalCart }}€ </span>
