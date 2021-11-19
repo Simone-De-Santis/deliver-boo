@@ -30,7 +30,7 @@
         </div>
       </div>
       {{-- barra centrale --}}
-      {{-- <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center mt-4">
+       <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center mt-4 container">
         <form class="form-inline ml-2 mr-3">
           <div class="row">
             <div class="col-6">
@@ -49,29 +49,16 @@
             </option>
           </select>
         </div>
-      </div> --}}
+      </div> 
 
     </div>
 
     <section class="container">
 
 
-      <nav class="navbar navbar-light bg-light">
-        <form class="form-inline mb-4">
-          <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2 text-muted"
-            type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn my-2  my-sm-0 search-buttom" type="submit">Search</button>
-        </form>
-        <select v-model="select" name="" id="">
-          <option value="" selected>All</option>
-          <option v-for="(selectCategory, index) in selectCategories">
-            @{{ selectCategory }}
-          </option>
-        </select>
-      </nav>
-
+     
       <section class="container" id="restaurants">
-        <h2 class="text-center mb-5 mt-5 mt-md-0">LA NOSTRA SELEZIONE</h2>
+        <h2 class="text-center mb-5  mt-md-0">LA NOSTRA SELEZIONE</h2>
 
 
         <div class="container d-flex align-items-center flex-wrap">
