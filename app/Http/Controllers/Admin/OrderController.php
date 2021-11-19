@@ -20,13 +20,13 @@ class OrderController extends Controller
     {
         $id = auth()->user()->id;
 
-        $user_orders = DB::select("SELECT `first_name`,`last_name`,`address`,`city`,`message_to_users`,`orders`.`created_at` FROM `orders`
+        $user_orders = DB::select("SELECT DISTINCT `first_name`,`last_name`,`address`,`city`,`message_to_users`,`orders`.`created_at`,`orders`.`id` FROM `orders`
           INNER JOIN order_product
           ON orders.id = order_product.order_id 
           INNER JOIN products 
           ON products.id = order_product.product_id 
           WHERE products.user_id = $id
-          GROUP BY orders.id");
+          ");
 
         /* $products = Order::with('products')->where('user_id', '=', $id)->get(); */
         /*         $orderIds = [];
@@ -43,23 +43,28 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id_order)
     {
 
-        // $id_users = auth()->user()->id;
+        $id_users = auth()->user()->id;
 
-        // $user_orders = DB::select("SELECT `first_name`,`last_name`,`address`,`city`,`message_to_users`,`orders`.`created_at` FROM `orders`
-        //   INNER JOIN order_product
-        //   ON orders.id = order_product.order_id 
-        //   INNER JOIN products 
-        //   ON products.id = order_product.product_id 
-        //   WHERE products.user_id = $id_users
-        //   WHERE products.user_id = $id
+        $details_product_orders = DB::select("SELECT `name`,`products`.`description`,`quantity`,`price`,`products`.`discount` FROM `orders`
+          INNER JOIN order_product
+          ON orders.id = order_product.order_id 
+          INNER JOIN products 
+          ON products.id = order_product.product_id 
+          WHERE products.user_id = $id_users AND order_id = $id_order
+         ");
+        $details_guest_order = DB::select("SELECT DISTINCT `first_name`,`last_name`,`address`,`city`,`message_to_users`,`orders`.`created_at`,`orders`.`id`  FROM `orders`
+          INNER JOIN order_product
+          ON orders.id = order_product.order_id 
+          INNER JOIN products 
+          ON products.id = order_product.product_id 
+          WHERE products.user_id = $id_users AND order_id = $id_order
 
-        //   GROUP BY orders.id");
+          ");
 
 
-
-        return view('admin.orders.show');
+        return view('admin.orders.show', compact('details_product_orders', 'details_guest_order'));
     }
 }

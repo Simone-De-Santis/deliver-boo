@@ -14,6 +14,8 @@
       <li>order city: {{ $order->city }}
       <li>order message to users: {{ $order->message_to_users }}
       <li>order ordine creato il :{{ $order->created_at }}
+        <button type="button" class="btn btn-dark"><a class="text-white text-decoration-none"
+            href="{{ route('admin.orders.show', $order->id) }}"> Details</a></button>
 
         {{-- <h5 class="mt-4">Ingredienti:</h5> --}}
         {{-- @foreach ($order->ingredients as $ingredient)

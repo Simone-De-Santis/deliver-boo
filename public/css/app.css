@@ -10038,7 +10038,19 @@ GENERAL
 #ingredients-list .ingredient-item {
   margin-bottom: 100px;
   height: 300px;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+.ingredient-item::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+.ingredients-table ul {
+  list-style-type: none;
+}
+.ingredients-table ul a {
+  color: black;
 }
 
 body {
@@ -10046,6 +10058,14 @@ body {
   font-weight: 700;
   height: 100vh;
   background-size: cover;
+}
+
+.primary-color {
+  color: #7d0a0a;
+}
+
+.primary-color-bg {
+  background-color: #7d0a0a;
 }
 
 /*jumbotron slider*/
@@ -10071,6 +10091,38 @@ body {
   font-family: "Roboto";
   color: #7d0a0a;
   font-weight: 700;
+}
+
+#restaurant {
+  font-family: "Roboto";
+}
+#restaurant ul {
+  list-style-type: none;
+}
+#restaurant h1,
+#restaurant h5 {
+  color: #7d0a0a;
+}
+#restaurant .card {
+  border-radius: 10px;
+}
+#restaurant .card .product-price {
+  font-size: 2rem;
+}
+#restaurant .card span {
+  font-size: 1.5rem;
+  color: #7d0a0a;
+  margin-right: 5px;
+}
+#restaurant #cart-section {
+  max-width: 400px;
+  border-radius: 10px;
+}
+#restaurant #cart-section .card-header {
+  border-radius: 10px 10px 0 0;
+}
+#restaurant #cart-section .cart-content ul {
+  padding-left: 0;
 }
 
 .navbar-brand {
@@ -10110,6 +10162,10 @@ body {
     left: 0px;
     z-index: 1;
     width: 100%;
+  }
+
+  #restaurant #cart-section {
+    position: fixed;
   }
 }
 .admin-bck {
