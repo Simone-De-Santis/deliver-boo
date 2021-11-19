@@ -16,7 +16,7 @@
       <ul class="ingredient-item container-fluid ">
 
         @foreach ($ingredients as $ingredient)
-        @if ($ingredient->classification == 'Carni rossi')
+        @if ($ingredient->classification == 'Carni rosse')
         <li>
           <a href="{{ route('admin.ingredients.show', $ingredient->id) }}">{{ $ingredient->name }}</a>
         </li>

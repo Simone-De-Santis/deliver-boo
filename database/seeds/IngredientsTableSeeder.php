@@ -17,1332 +17,1333 @@ class IngredientsTableSeeder extends Seeder
         $ingredients_list = [
             [
                 "name" => "Arista",
-                "url" => "",
-                "classification" => "Carni rossi"
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
+                "classification" => "Carni rosse"
             ],
             [
                 "name" => "Carne macinata",
-                "url" => "",
-                "classification" => "Carni rossi"
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
+                "classification" => "Carni rosse"
             ],
             [
                 "name" => "Filetto",
-                "url" => "",
-                "classification" => "Carni rossi"
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
+                "classification" => "Carni rosse"
             ],
             [
                 "name" => "Manzo",
-                "url" => "",
-                "classification" => "Carni rossi"
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
+                "classification" => "Carni rosse"
             ],
             [
                 "name" => "Ossobuco",
-                "url" => "",
-                "classification" => "Carni rossi"
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
+                "classification" => "Carni rosse"
             ],
             [
                 "name" => "Agnello",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Carni bianche"
             ],
             [
                 "name" => "Alette di pollo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
+                
                 "classification" => "Carni bianche"
             ],
             [
                 "name" => "Coniglio ",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Carni bianche"
             ],
             [
                 "name" => "Cosce di pollo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Carni bianche"
             ],
             [
                 "name" => "Petto di pollo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Carni bianche"
             ],
             [
                 "name" => "Salsicce",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Carni bianche"
             ],
             [
                 "name" => "Tacchino",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Carni bianche"
             ],
             [
                 "name" => "Vitello",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Carni bianche"
             ],
             [
                 "name" => "Costolette",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Carni bianche"
             ],
             [
                 "name" => "Avena",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Cereali e derivati"
             ],
             [
                 "name" => "Mais",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Cereali e derivati"
             ],
             [
                 "name" => "Cous Cous",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Cereali e derivati"
             ],
             [
                 "name" => "Orzo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Cereali e derivati"
             ],
             [
                 "name" => "Quinoa",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Cereali e derivati"
             ],
             [
                 "name" => "Seitan",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Cereali e derivati"
             ],
             [
                 "name" => "Riso",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredientshttps://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Cereali e derivati"
             ],
             [
                 "name" => "Riso soffiato",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Cereali e derivati"
             ],
             [
                 "name" => "Aragosta",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Astice",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Calamari",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Cozze",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Frutti di mare",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Gamberetti",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Gamberoni",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Capesante",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Moscardini",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Polipetti",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Polpa di granchio",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Polpo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Tartufi di maere",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Volgole",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Seppioline",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Scampi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Crostacei e molluschi"
             ],
             [
                 "name" => "Dado",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Additivi alimentari"
             ],
             [
                 "name" => "Glucosio",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Additivi alimentari"
             ],
             [
                 "name" => "Lecitina",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Additivi alimentari"
             ],
             [
                 "name" => "Coloranti alimentari",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Additivi alimentari"
             ],
             [
                 "name" => "Fiochhi di patate",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Additivi alimentari"
             ],
             [
                 "name" => "Alloro",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Aneto",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Basilico",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Coriandolo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Ginepro",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Erba cipollina",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Menta",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Prezzemolo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Origano",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Salvia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Rosmarino",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Timo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Erbe aromatiche"
             ],
             [
                 "name" => "Farina 0",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Farina 00",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Farina di canapa",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Farina di ceci",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Farina di cocco",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Farina di farro",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Farina di mandorle",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Farina di segale",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Farina di riso",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Farina integrale",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Semola",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Fecola di patate",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Farine"
             ],
             [
                 "name" => "Brie",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Caciocavallo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Caprino",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Cheddar",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Crescenza",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Emmental",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Feta",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Fontina",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Asiago",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Gruviera",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Gorgonzola",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Grana",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Galbanino",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Mascarpone",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Pecorino",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Parmigiano",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Robiola",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Sottilette",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Scamorza",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Stracchino",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Taleggio",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Tofu",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Formaggi"
             ],
             [
                 "name" => "Barbabietole rosse",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Funghi e tuberi"
             ],
             [
                 "name" => "Carote",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Funghi e tuberi"
             ],
             [
                 "name" => "Funghi secchi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Funghi e tuberi"
             ],
             [
                 "name" => "Funghi porcini",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Funghi e tuberi"
             ],
             [
                 "name" => "Funghi champignon",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Funghi e tuberi"
             ],
             [
                 "name" => "Patate dolci",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Funghi e tuberi"
             ],
             [
                 "name" => "Tartufo nero",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Funghi e tuberi"
             ],
             [
                 "name" => "Tartufo bianco",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Funghi e tuberi"
             ],
             [
                 "name" => "Ravanelli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Funghi e tuberi"
             ],
             [
                 "name" => "Besciamella",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Burro",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Fiocchi di latte",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Latte",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Gelato",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Latte di cocco",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Latte di mandorla",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Latte di soia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Panna acida",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Panna da cucina",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Panna per dolci",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Yogurt",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Yogurt greco",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latte e derivati"
             ],
             [
                 "name" => "Burrata",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latticini"
             ],
             [
                 "name" => "Mozzarella",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latticini"
             ],
             [
                 "name" => "Provola",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latticini"
             ],
             [
                 "name" => "Ricotta",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Latticini"
             ],
             [
                 "name" => "Ceci",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Legumi"
             ],
             [
                 "name" => "Fagioli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Legumi"
             ],
             [
                 "name" => "Fave",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Legumi"
             ],
             [
                 "name" => "Lenticchie",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Legumi"
             ],
             [
                 "name" => "Lupini",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Legumi"
             ],
             [
                 "name" => "Piselli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Legumi"
             ],
             [
                 "name" => "Soia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Legumi"
             ],
             [
                 "name" => "Taccole",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Legumi"
             ],
             [
                 "name" => "Aceto balsamico",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Burro di arachidi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Ketchup",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Maionese",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Nero di seppia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Olio di oliva",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Olio di semi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Sale",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Salsa di soia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Senape",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Tahina",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Oli e condimenti"
             ],
             [
                 "name" => "Aglio",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Asparagi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Carciofi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Cavolfiore",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Cavolini di Bruxelles",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Cavolini di Bruxelles",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Cavolo rosso",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Cetrioli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Cime di rapa",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Cipolla di Tropea",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Finocchi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Friggitelli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Melenzane",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Peperoni",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Pomodori",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Pomodorini",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Porro",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Scalogno",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Sedano",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Zucca",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Zucchine",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Ortaggi"
             ],
             [
                 "name" => "Bucatini",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Cannelloni",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Fettuccine",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Fusilli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Gnocchi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Lasagne",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Linguine",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Orecchiette",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Paccheri",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Pappardelle",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Penne",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Scialatielli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Spaghetti",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Tagliatelle",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Trofie",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Vermicelli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pasta"
             ],
             [
                 "name" => "Acciughe",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Baccalà",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Cernia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Merluzzo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Orata",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Pesce persico",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Pesce spada",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Rana pescatrice",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Rombo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Salmone",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Spigola",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Surimi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Tonno",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Triglie",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Trota salmonata",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce"
             ],
             [
                 "name" => "Alici",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce azzurro"
             ],
             [
                 "name" => "Pesce spatola",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce azzurro"
             ],
             [
                 "name" => "Sarde",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce azzurro"
             ],
             [
                 "name" => "Sgombro",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Pesce azzurro"
             ],
             [
                 "name" => "Biscotti",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti da forno"
             ],
             [
                 "name" => "Pancarrè",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti da forno"
             ],
             [
                 "name" => "Pane",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti da forno"
             ],
             [
                 "name" => "Pane carasau",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti da forno"
             ],
             [
                 "name" => "Pane per tramezzini",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti da forno"
             ],
             [
                 "name" => "Panini",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti da forno"
             ],
             [
                 "name" => "Piadina",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti da forno"
             ],
             [
                 "name" => "Pangrattato",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti da forno"
             ],
             [
                 "name" => "Pane arabo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti da forno"
             ],
             [
                 "name" => "Bacon",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Bresaola",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Capicollo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Culatello",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Fesa di tacchino",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Guanciale",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Mortadella",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Pancetta",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Prosciutto cotto",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Prosciutto crudo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Salame",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Speck",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Wurstel",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Salumi"
             ],
             [
                 "name" => "Capperi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Semi e germogli"
             ],
             [
                 "name" => "Germogli di soia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Semi e germogli"
             ],
             [
                 "name" => "Semi di chia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Semi e germogli"
             ],
             [
                 "name" => "Semi di papavero",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Semi e germogli"
             ],
             [
                 "name" => "Semi di lino",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Semi e germogli"
             ],
             [
                 "name" => "Semi di finocchio",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Semi e germogli"
             ],
             [
                 "name" => "Semi di sesamo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Semi e germogli"
             ],
             [
                 "name" => "Semi di zucca",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Semi e germogli"
             ],
             [
                 "name" => "Anice",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Cannella",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Chiodi di garofano",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Curcuma",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Curry",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Liquirizia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Noce moscata",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Paprica",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Pepe",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Pepe rosa",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Peperoncino",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Vaniglia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Zafferano",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Zenzero",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Spezie"
             ],
             [
                 "name" => "Albumi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Uova"
             ],
             [
                 "name" => "Bottarga",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Uova"
             ],
             [
                 "name" => "Caviale",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Uova"
             ],
             [
                 "name" => "Tuorli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Uova"
             ],
             [
                 "name" => "Uova",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Uova"
             ],
             [
                 "name" => "Uova di quaglia",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Uova"
             ],
             [
                 "name" => "Uova di struzzo",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Uova"
             ],
             [
                 "name" => "Albumi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Uova"
             ],
             [
                 "name" => "Alga kombu",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Alga spirulina",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Alga wakame",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Alghe",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Bietole",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Broccoli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Cavolo nero",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Fiori di zucca",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Cicoria",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Fiori di zucca",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Friarelli",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Lattuga",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Ortica",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Radicchio",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Rucola",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Verza",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Spinaci",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Verdure"
             ],
             [
                 "name" => "Canditi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti alimentari"
             ],
             [
                 "name" => "Cetriolini",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti alimentari"
             ],
             [
                 "name" => "Concentrato di pomodoro",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti alimentari"
             ],
             [
                 "name" => "Lievito di birra",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti alimentari"
             ],
             [
                 "name" => "Passata di pomodoro",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti alimentari"
             ],
             [
                 "name" => "Pomodori secchi",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti alimentari"
             ],
             [
                 "name" => "Marzapane",
-                "url" => "",
+                "url" => "https://images.squarespace-cdn.com/content/v1/518ea9e4e4b0eb1ecff22776/1480450074024-LTJO255BUA2ODWGZDNJI/Quality+Ingredients",
                 "classification" => "Prodotti alimentari"
             ],
         ];
