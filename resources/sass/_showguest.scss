@@ -25,9 +25,23 @@
             border-radius: 10px 10px 0 0;
         }
         .cart-content {
+            .product-name {
+                font-size: 1rem;
+            }
             ul {
                 padding-left: 0;
             }
+        }
+    }
+    #scroll-button {
+        a {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            padding: 10px 12px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: $primary-color;
         }
     }
 }
