@@ -3,22 +3,31 @@
 
 {{-- Added 'content' section to add page content --}}
 @section('content')
+
   <h1>questa è la index dei ordini </h1>
   <h3 class="mt-5">Ordini associati all'utente attuale:</h3>
   <ul>
-    @foreach ($orderIds as $order)
-      @foreach ($order as $orderId)
-        <li>order id: {{ $orderId }}</li>
-        <li>order name: {{ $orderId }}
-          <h5 class="mt-4">Ingredienti:</h5>
-          {{-- @foreach ($order->ingredients as $ingredient)
+    @foreach ($user_orders as $order)
+      {{-- <li>order id: {{ $order->id }}</li> --}}
+      <li>order name: {{ $order->first_name }}
+      <li>order address: {{ $order->address }}
+      <li>order city: {{ $order->city }}
+      <li>order message to users: {{ $order->message_to_users }}
+      <li>order ordine creato il :{{ $order->created_at }}
+
+        {{-- <h5 class="mt-4">Ingredienti:</h5> --}}
+        {{-- @foreach ($order->ingredients as $ingredient)
         <div>{{ $ingredient->id }}</div>
         <div>{{ $ingredient->name }}</div>
         <br>
     @endforeach --}}
-        </li>
-        <br>
-      @endforeach
+      </li>
+      <br>
     @endforeach
   </ul>
+@endsection
+@section('script-end')
+  <script>
+
+  </script>
 @endsection
