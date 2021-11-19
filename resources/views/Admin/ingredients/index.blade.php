@@ -10,7 +10,7 @@
         ingrediente</a>
     </button>
     <hr>
-    <div class="row">
+    <div class="row  ingredients-table">
       <ul class="col-4 ingredient-item ">
         <h2>Carni rosse</h2>
         @foreach ($ingredients as $ingredient)
