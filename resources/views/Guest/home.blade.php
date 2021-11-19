@@ -1,7 +1,7 @@
 {{-- Added general layout --}}
 @extends('layouts.app')
 @section('img-logo')
-<img class="logo " src="/images/Logo-nav.png" alt="logo-black">    
+  <img class="logo " src="/images/Logo-nav.png" alt="logo-black">
 @endsection
 
 {{-- Added cdn of 'vue' and 'axios' --}}
@@ -30,7 +30,7 @@
         </div>
       </div>
       {{-- barra centrale --}}
-       <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center mt-4 container">
+      <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center mt-4 container">
         <form class="form-inline ml-2 mr-3">
           <div class="row">
             <div class="col-6">
@@ -49,14 +49,14 @@
             </option>
           </select>
         </div>
-      </div> 
+      </div>
 
     </div>
 
     <section class="container">
 
 
-     
+
       <section class="container" id="restaurants">
         <h2 class="text-center mb-5  mt-md-0">LA NOSTRA SELEZIONE</h2>
 
