@@ -48,21 +48,23 @@
                                     <div v-for="(item,index) in cart">
                                         <li class="mb-2">
                                             <div class="row">
-                                                <div class="col-5"><span>@{{ item . name }}</span></div>
-                                                <div class="col-7">
-                                                    <button class="btn btn-secondary"
+                                                <div class="col-7"><span
+                                                        class="product-name">@{{ item . name }}</span></div>
+                                                <div class="col-5 d-flex align-items-center justify-content-end">
+                                                    <button class="btn btn-sm btn-secondary ml-3"
                                                         v-on:click="decreaseQuantity(item),setLocalStorage()">
                                                         <i class="fas fa-minus"></i>
                                                     </button>
-                                                    @{{ item . quantity }}
-                                                    <button class="btn btn-secondary"
+                                                    <span class="mx-1">@{{ item . quantity }}</span>
+                                                    <button class="btn btn-sm btn-secondary"
                                                         v-on:click="addQuantity(item),setLocalStorage()">
                                                         <i class="fas fa-plus"></i>
                                                     </button>
-                                                    <button class="btn btn-danger"
+                                                    <button class="btn btn-sm btn-danger ml-1"
                                                         v-on:click="removeProduct(index),setLocalStorage()"><i
                                                             class="fas fa-trash-alt"></i></button>
                                                 </div>
+                                                <hr class="w-100">
                                             </div>
                                         </li>
                                     </div>
@@ -81,6 +83,12 @@
                         </div>
                     </div>
                 </div>
+                {{-- bottone scroll --}}
+                <div id="scroll-button" class="d-none">
+                    <a href="#" class="text-decoration-none">
+                        <i class="fas fa-shopping-cart text-center text-white"></i>
+                    </a>
+                </div>
                 {{-- modal --}}
                 <!-- Button trigger modal -->
 
@@ -97,7 +105,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <h2> Hai un carrelo aperto nel ristorante : `@{{ cart[0] . name }}` . <br> Vuoi
+                                    <h2> Hai un carrelo aperto nel ristorante "@{{ cart[0] . name }}" <br> Vuoi
                                         continuare con il
                                         vecchio ordine o vuoi proseguire con il corrente ? </h2>
                                 </div>
@@ -105,7 +113,7 @@
                                     <a v-on:click="removeLast" :href="`/user/${cart[0].user_id}`"
                                         class="btn btn-secondary">vai al ristorante del
                                         carrello</a>
-                                    <button type="button" class="btn btn-primary" v-on:click="removeCart()"
+                                    <button type="button" class="btn primary-color-bg text-white" v-on:click=" removeCart()"
                                         data-dismiss="modal">svuota il
                                         carrello </button>
                                 </div>
@@ -120,6 +128,15 @@
 {{-- Added the script section for the Vue logic --}}
 @section('script-end')
     <script>
+        window.addEventListener('scroll', () => {
+            const scrollButton = document.getElementById('scroll-button');
+            if (window.scrollY > 0) {
+                scrollButton.classList.remove('d-none');
+            } else {
+                scrollButton.classList.add('d-none');
+            }
+        }, true); //^SHOW THE BOTTOM RIGHT BUTTON ONLY WHEN YOU SCROLL THE PAGE.
+
         Vue.config.devtools = true;
         // Initialized a new instance of 'vue'
         const app = new Vue({
@@ -217,7 +234,9 @@
                             $('#staticBackdrop').modal('toggle')
                         }
                     }
-                }
+                },
+
+
             },
             created() {
                 let x = JSON.parse(localStorage.getItem('cart'));
