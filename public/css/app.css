@@ -10106,9 +10106,12 @@ body {
 
 /*-------------*/
 #restaurants h2 {
-  font-family: "Roboto";
   color: #7d0a0a;
   font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 #restaurant {
@@ -10139,8 +10142,20 @@ body {
 #restaurant #cart-section .card-header {
   border-radius: 10px 10px 0 0;
 }
+#restaurant #cart-section .cart-content .product-name {
+  font-size: 1rem;
+}
 #restaurant #cart-section .cart-content ul {
   padding-left: 0;
+}
+#restaurant #scroll-button a {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  padding: 10px 12px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #7d0a0a;
 }
 
 .navbar-brand {
@@ -10159,6 +10174,7 @@ body {
 }
 #guest-nav .navbar a {
   color: #7d0a0a;
+  padding: 0;
 }
 
 .logo {
@@ -10166,6 +10182,33 @@ body {
   width: auto;
   padding: 0px;
   margin: 0;
+}
+
+.arrow-product {
+  color: #7d0a0a;
+  font-size: 30px;
+}
+.arrow-product:hover {
+  color: black;
+}
+
+.card {
+  margin: 10px;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 30px;
+  text-align: left;
+}
+.card-body .name {
+  color: #7d0a0a;
+  font-weight: bold;
+}
+.card-body .category {
+  margin-left: 16px;
 }
 
 @media screen and (min-width: 768px) {

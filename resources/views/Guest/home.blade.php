@@ -60,6 +60,21 @@
       <section class="container" id="restaurants">
         <h2 class="text-center mb-5  mt-md-0">LA NOSTRA SELEZIONE</h2>
 
+        <div class="row justify-content-center" >
+          <div class="card shadow col-12 col-md-3" v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)" >
+            <img src="https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg" class="card-img-top img-restaurant" alt="...">          
+            <div class="card-body">
+                <h5 class="card-title name">@{{ restaurant . activity_name }}</h5>
+                <div class="row d-flex justify-content-between align-items-center">
+                  <p class="card-text category">@{{ restaurant . categories[0] . name }}</p>
+                  <a class="arrow-product"  :href="'/user/'+restaurant.id">
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+            </div>           
+          </div>
+
+
 
         <div class="container d-flex align-items-center flex-wrap">
           <div class="row">
