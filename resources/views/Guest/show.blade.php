@@ -8,7 +8,7 @@
     {{-- Id app to add link with Vue --}}
     <div id="app">
         <section class="container my-5 pt-4" id="restaurant">
-            <h1 class="text-center my-3"> {{ $user->activity_name }} </h1>
+            <h1 class="text-center my-md-3"> {{ $user->activity_name }} </h1>
             <div id="products-section" class="row justify-content-center">
                 {{-- Products section --}}
                 <div class="col-12 col-md-6 d-flex flex-column align-items-center order-5 order-md-0">
@@ -38,15 +38,15 @@
                 </div>
                 {{-- Cart section --}}
                 <div class="col-12 col-md-6 d-flex justify-content-center order-1">
-                    <div class="w-100 h-100" v-if="cart.length > 0">
+                    <div class="w-100 h-100 d-flex justify-content-center" v-if="cart.length > 0">
                         <div class="card shadow-lg mb-5" id="cart-section" v-if="cart[0].user_id == {{ $user->id }}">
                             <div class="card-header primary-color-bg text-white">
                                 <h3 class="text-center my-1"><i class="fas fa-shopping-cart text-center"></i></h3>
                             </div>
                             <div class="cart-content p-3">
-                                <div v-for="(item,index) in cart">
-                                    <ul>
-                                        <li>
+                                <ul>
+                                    <div v-for="(item,index) in cart">
+                                        <li class="mb-2">
                                             <div class="row">
                                                 <div class="col-5"><span>@{{ item . name }}</span></div>
                                                 <div class="col-7">
@@ -65,8 +65,8 @@
                                                 </div>
                                             </div>
                                         </li>
-                                    </ul>
-                                </div>
+                                    </div>
+                                </ul>
                                 <div class="d-flex justify-content-center mb-2">
                                     <span class="mx-1">Totale:</span>
                                     <span class="mx-1">@{{ totalCart }}€ </span>
