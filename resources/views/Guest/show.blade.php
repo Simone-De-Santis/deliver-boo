@@ -7,57 +7,78 @@
 @section('content')
     {{-- Id app to add link with Vue --}}
     <div id="app">
-        <section class="container">
-            <h1>Prodotti del ristorante {{ $user->activity_name }} </h1>
-            <div id="products-section" class="row">
+        <section class="container my-5 pt-4" id="restaurant">
+            <h1 class="text-center my-md-3"> {{ $user->activity_name }} </h1>
+            <div id="products-section" class="row justify-content-center">
                 {{-- Products section --}}
-                <div class="col-6">
+                <div class="col-12 col-md-6 d-flex flex-column align-items-center order-5 order-md-0">
                     {{-- Cycle foreach to print all the products of the restaurant --}}
                     @foreach ($user->products as $product)
-
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{ asset('storage/' . $product->url) }}"
-                                alt="immagine-prodotto">
+                        <div class="card mb-3 shadow-lg" style="width: 18rem;">
+                            @if ($product->url != '#')
+                                <img class=" card-img-top" src="{{ $product->url }}" alt="immagine-prodotto">
+                            @endif
                             <div class="card-body">
-
-                                <h5 class="card-title">{{ $product->name }}</h5>
-                                <h5 class="card-title">{{ $product->id }}</h5>
+                                <h5 class="card-title text-center">{{ $product->name }}</h5>
                                 <p class="card-text">{{ $product->description }}</p>
-                                <p class="card-text">€ {{ $product->price }}</p>
-                                <a href="/" class="btn btn-primary">Indietro</a>
-                                <button class="btn btn-warning"
-                                    v-on:click=" setModal(), addProduct({{ $product }}),setLocalStorage()">Aggiungi al
-                                    carrello</button>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span>€</span>
+                                    <p class="card-text product-price">{{ $product->price }}</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="/" class="btn btn-secondary">Indietro</a>
+                                    <button class=" btn btn-dark primary-color-bg"
+                                        v-on:click=" setModal(), addProduct({{ $product }}),setLocalStorage()">Aggiungi
+                                        al
+                                        carrello</button>
+                                </div>
                             </div>
                         </div>
-                        <hr>
                     @endforeach
                 </div>
                 {{-- Cart section --}}
-                <div v-if="cart.length > 0">
-                    <div id="cart-section" class="col" v-if="cart[0].user_id == {{ $user->id }}">
-                        <h1>Il mio carrello:</h1>
-                        <div v-for="(item,index) in cart">
-                            <ul>
-                                <li>
-                                    @{{ item . name }}
-                                    <button class="btn btn-secondary" v-on:click="decreaseQuantity(item),setLocalStorage()">
-                                        <i class="fas fa-minus"></i>
+                <div class="col-12 col-md-6 d-flex justify-content-center order-1">
+                    <div class="w-100 h-100 d-flex justify-content-center" v-if="cart.length > 0">
+                        <div class="card shadow-lg mb-5" id="cart-section" v-if="cart[0].user_id == {{ $user->id }}">
+                            <div class="card-header primary-color-bg text-white">
+                                <h3 class="text-center my-1"><i class="fas fa-shopping-cart text-center"></i></h3>
+                            </div>
+                            <div class="cart-content p-3">
+                                <ul>
+                                    <div v-for="(item,index) in cart">
+                                        <li class="mb-2">
+                                            <div class="row">
+                                                <div class="col-5"><span>@{{ item . name }}</span></div>
+                                                <div class="col-7">
+                                                    <button class="btn btn-secondary"
+                                                        v-on:click="decreaseQuantity(item),setLocalStorage()">
+                                                        <i class="fas fa-minus"></i>
+                                                    </button>
+                                                    @{{ item . quantity }}
+                                                    <button class="btn btn-secondary"
+                                                        v-on:click="addQuantity(item),setLocalStorage()">
+                                                        <i class="fas fa-plus"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger"
+                                                        v-on:click="removeProduct(index),setLocalStorage()"><i
+                                                            class="fas fa-trash-alt"></i></button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <div class="d-flex justify-content-center mb-2">
+                                    <span class="mx-1">Totale:</span>
+                                    <span class="mx-1">@{{ totalCart }}€ </span>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn primary-color-bg rounded-pill">
+                                        <a class="text-white text-decoration-none" v-on:click="setLocalStorage()"
+                                            href="{{ route('payment.index') }}">Procedi con il pagamento</a>
                                     </button>
-                                    @{{ item . quantity }}
-                                    <button class="btn btn-secondary" v-on:click="addQuantity(item),setLocalStorage()">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                    <button class="btn btn-danger"
-                                        v-on:click="removeProduct(index),setLocalStorage()">Rimuovi</button>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                         </div>
-                        <span><strong>Totale:</strong>@{{ totalCart }}</span>
-                        <button class="btn btn-success">
-                            <a class="text-white text-decoration-none" v-on:click="setLocalStorage()"
-                                href="{{ route('payment.index') }}">Procedi con il pagamento</a>
-                        </button>
                     </div>
                 </div>
                 {{-- modal --}}
@@ -93,119 +114,121 @@
                     </div>
                 </div>
             </div>
-        @endsection
-        {{-- Added the script section for the Vue logic --}}
-        @section('script-end')
-            <script>
-                Vue.config.devtools = true;
-                // Initialized a new instance of 'vue'
-                const app = new Vue({
-                    el: '#app',
-                    data: {
-                        cart: [],
-                        total: 0,
-                    },
-                    computed: {
-                        totalCart() {
-                            let total = 0;
-                            for (let i = 0; i < this.cart.length; i++) {
-                                const product = this.cart[i];
-                                total += product.price * product.quantity;
+        </section>
+    </div>
+@endsection
+{{-- Added the script section for the Vue logic --}}
+@section('script-end')
+    <script>
+        Vue.config.devtools = true;
+        // Initialized a new instance of 'vue'
+        const app = new Vue({
+            el: '#app',
+            data: {
+                cart: [],
+                total: 0,
+            },
+            computed: {
+                totalCart() {
+                    let total = 0;
+                    for (let i = 0; i < this.cart.length; i++) {
+                        const product = this.cart[i];
+                        total += product.price * product.quantity;
 
-                            }
-                            this.total = total.toFixed(2);
-                            return total.toFixed(2);
-                        }
+                    }
+                    this.total = total.toFixed(2);
+                    return total.toFixed(2);
+                }
 
-                    },
-                    methods: {
-                        // Function to add a new product to cart
-                        addProduct(x) {
-                            var isInArray = false;
-                            if (this.cart.length > 0) {
-                                for (i = 0; i < this.cart.length; i++) {
-                                    if (x.id == this.cart[i].id) {
-                                        isInArray = true;
-                                    }
-                                }
-                            }
-                            if (!isInArray) {
-                                x.quantity = 1;
-                                this.cart.push(x);
-                                this.total = this.total + x.price.toFixed(2);
-                            }
-
-                        },
-                        // Function to increase the quantity of the product
-                        addQuantity(x) {
-                            x.quantity++;
-                            this.total = this.total + parseFloat(x.price.toFixed(2));
-
-                        },
-                        // Function to decrease the quantity of the product
-                        decreaseQuantity(x) {
-                            x.quantity--;
-                            if (x.quantity <= 0) {
-                                x.quantity = 1
-                            } else {
-                                this.total -= x.price.toFixed(2);
-                            }
-
-                        },
-                        // Function to delete the product
-                        removeProduct(x) {
-                            for (var i = 0; i < this.cart.length; i++) {
-                                if (i === x) {
-                                    this.cart.splice(i, 1)
-                                    this.total -= x.price;
-                                }
-                                if (!this.total) this.total = 0;
-                            }
-
-                        },
-                        removeLast() {
-                            cart = JSON.parse(localStorage.getItem('cart'));
-                            cart.splice((cart.length - 1), 1);
-                            localStorage.setItem('cart', JSON.stringify(cart));
-                            /* this.total -= x.price; */
-                        },
-                        setLocalStorage() {
-                            //Setto il carrello nello storage
-                            localStorage.setItem('cart', JSON.stringify(this.cart));
-
-                            //Setto il totale nello storage
-                            localStorage.setItem('total', JSON.stringify(this.total));
-                        },
-                        removeCart() {
-                            localStorage.clear();
-                            this.cart = [];
-                            this.total = 0;
-
-                            localStorage.setItem('cart', JSON.stringify([]));
-                            localStorage.setItem('total', JSON.stringify(this.total));
-
-
-                        },
-                        setModal() {
-                            const thisUserCart = JSON.parse(localStorage.getItem('cart'));
-                            if (thisUserCart && thisUserCart.length > 0) {
-                                console.log('entrato')
-                                if (thisUserCart[0].user_id != {{ $user->id }}) {
-                                    $('#staticBackdrop').modal('toggle')
-                                }
+            },
+            methods: {
+                // Function to add a new product to cart
+                addProduct(x) {
+                    var isInArray = false;
+                    if (this.cart.length > 0) {
+                        for (i = 0; i < this.cart.length; i++) {
+                            if (x.id == this.cart[i].id) {
+                                isInArray = true;
                             }
                         }
-                    },
-                    created() {
-                        let x = JSON.parse(localStorage.getItem('cart'));
-                        let total = localStorage.getItem('total');
-                        if (!x) {
-                            x = [];
-                            total = 0;
+                    }
+                    if (!isInArray) {
+                        x.quantity = 1;
+                        this.cart.push(x);
+                        this.total = this.total + x.price.toFixed(2);
+                    }
+
+                },
+                // Function to increase the quantity of the product
+                addQuantity(x) {
+                    x.quantity++;
+                    this.total = this.total + parseFloat(x.price.toFixed(2));
+
+                },
+                // Function to decrease the quantity of the product
+                decreaseQuantity(x) {
+                    x.quantity--;
+                    if (x.quantity <= 0) {
+                        x.quantity = 1
+                    } else {
+                        this.total -= x.price.toFixed(2);
+                    }
+
+                },
+                // Function to delete the product
+                removeProduct(x) {
+                    for (var i = 0; i < this.cart.length; i++) {
+                        if (i === x) {
+                            this.cart.splice(i, 1)
+                            this.total -= x.price;
                         }
-                        this.cart = x;
-                        this.total = parseFloat(total);
-                    },
-                })
-            </script>
-        @endsection
+                        if (!this.total) this.total = 0;
+                    }
+
+                },
+                removeLast() {
+                    cart = JSON.parse(localStorage.getItem('cart'));
+                    cart.splice((cart.length - 1), 1);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    /* this.total -= x.price; */
+                },
+                setLocalStorage() {
+                    //Setto il carrello nello storage
+                    localStorage.setItem('cart', JSON.stringify(this.cart));
+
+                    //Setto il totale nello storage
+                    localStorage.setItem('total', JSON.stringify(this.total));
+                },
+                removeCart() {
+                    localStorage.clear();
+                    this.cart = [];
+                    this.total = 0;
+
+                    localStorage.setItem('cart', JSON.stringify([]));
+                    localStorage.setItem('total', JSON.stringify(this.total));
+
+
+                },
+                setModal() {
+                    const thisUserCart = JSON.parse(localStorage.getItem('cart'));
+                    if (thisUserCart && thisUserCart.length > 0) {
+                        console.log('entrato')
+                        if (thisUserCart[0].user_id != {{ $user->id }}) {
+                            $('#staticBackdrop').modal('toggle')
+                        }
+                    }
+                }
+            },
+            created() {
+                let x = JSON.parse(localStorage.getItem('cart'));
+                let total = localStorage.getItem('total');
+                if (!x) {
+                    x = [];
+                    total = 0;
+                }
+                this.cart = x;
+                this.total = parseFloat(total);
+            },
+        })
+    </script>
+@endsection
