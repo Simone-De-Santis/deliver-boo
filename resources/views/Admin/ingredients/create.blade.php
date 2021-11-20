@@ -3,7 +3,8 @@
 {{-- Added 'content' section to add page content --}}
 @section('content')
   <section class="container">
-    <h1>Questa è la create degli ingredienti </h1>
+    
+    <h1>Inserisci un nuovo ingrediente</h1>
     @include('includes.admin.ingredients.form')
   </section>
 @endsection

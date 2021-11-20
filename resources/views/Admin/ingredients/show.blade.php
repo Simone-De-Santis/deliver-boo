@@ -5,7 +5,7 @@
 @section('content')
   <section class="container"  id="card-igredients">
     <h1>{{ $ingredient->name }}</h1>
-    <div class="card" style="width: 18rem;">
+    <div class="card m-0" style="width: 18rem;">
       <img class="card-img-top" src="{{  $ingredient->url }}" alt="Card image cap">
       <div class="card-body card-igredients container-fluid">
         <ul>

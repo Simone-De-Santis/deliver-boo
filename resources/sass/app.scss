@@ -1,18 +1,20 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap");
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 // Variables
 @import "variables";
+// utilities
+@import "utilities";
 
 // Braintree form
 @import "form";
 // view ingredient
 @import "ingredients";
 
-// utilities
-@import "utilities";
+
 // home guest page
 @import "homeguest";
 // show guest page
@@ -25,3 +27,5 @@
 @import "login";
 // register style form
 @import "register";
+//order admin
+@import "orders_admin";

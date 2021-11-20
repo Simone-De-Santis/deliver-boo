@@ -4,22 +4,43 @@
 {{-- Added 'content' section to add page content --}}
 @section('content')
 
-  <h1>questa è la index dei ordini </h1>
-  <h3 class="mt-5">Ordini associati all'utente attuale:</h3>
-  <ul>
-    @foreach ($user_orders as $order)
-      {{-- <li>order id: {{ $order->id }}</li> --}}
-      <li>order name: {{ $order->first_name }} - as{{ $order->last_name }}</li>
-      <li>order address: {{ $order->address }}</li>
-      <li>order city: {{ $order->city }}</li>
-      <li>price ordfer total: {{ $order->total_price }}</li>
-      <li>order ordine creato il :{{ $order->created_at }}</li>
-      <button type="button" class="btn btn-dark"><a class="text-white text-decoration-none"
-          href="{{ route('admin.orders.show', $order->id) }}"> Details</a></button>
+<section class="container">
+  
+  <h2 class="mt-5 text-white">Ordini effetuati:</h2>
 
+  <div class="card order-card" style="">
+    <div class="card-body p-3 container-fluid">
+      
+      <ul class="orders-info  ">
+        @foreach ($user_orders as $order) 
+          {{-- <li>order id: {{ $order->id }}</li> --}}
+          <li>Nome Cognome: {{ $order->first_name }}  {{ $order->last_name }}</li>
+          <hr>
+          <li>Indirizzo: {{ $order->address }}</li>
+          <hr>
+          <li>Città: {{ $order->city }}</li>
+          <hr>
+          <li>Totale: {{ $order->total_price }}</li>
+          <hr>
+          <li>Data ordine :{{ $order->created_at }}</li>
+          <hr>
+          <button type="button" class="btn btn-dark mb-4"><a class="text-white text-decoration-none"
+              href="{{ route('admin.orders.show', $order->id) }}"> Dettagli</a></button>
+    
+         
+        @endforeach
+      </ul>
+<br>
       <br>
-    @endforeach
-  </ul>
+
+
+    </div>
+  </div>
+
+
+ 
+
+</section>
 @endsection
 @section('script-end')
   <script>

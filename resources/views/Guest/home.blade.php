@@ -31,8 +31,8 @@
       </div>
       {{-- barra centrale --}}
       <div class="search-bar d-flex justify-content-between justify-content-md-center align-items-center mt-4 container">
-        <form class="form-inline ml-2 mr-3">
-          <div class="row">
+        <form class="form-inline ">
+          <div class="row p-0">
             <div class="col-6">
               <input v-model.trim='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2 w-100"
                 type="search" placeholder="Search" aria-label="Search">
@@ -41,7 +41,7 @@
             </div>
           </div>
         </form>
-        <div class="select-filter mr-2">
+        <div class="select-filter m-0">
           <select class="form-select rounded py-1" v-model="select" name="" id="">
             <option value="" selected>All</option>
             <option v-for="(selectCategory, index) in selectCategories">
@@ -49,6 +49,7 @@
             </option>
           </select>
         </div>
+        
       </div>
 
     </div>

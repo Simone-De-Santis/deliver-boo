@@ -3,43 +3,44 @@
 
 {{-- Added 'content' section to add page content --}}
 @section('content')
-  <h1>questa è la show degli ordini </h1>
-  <h3 class="mt-5">Ordini associati all'utente attuale:</h3>
-  {{-- @dd($details_product_orders) --}}
-  @foreach ($details_product_orders as $details)
-    <ul>
-      <li>nome prodotto :{{ $details->name }}</li>
-      <li> descrizione prodotto:{{ $details->description }}</li>
-      <li> quantità prodotto {{ $details->quantity }}</li>
-      <li> prezzo prodotto singolo {{ $details->price }}</li>
-      <li> sconto da applicare sul prezzo {{ $details->discount }}</li>
+<section class="container">
 
-
-
-
-
-
-
-
-
+  <h1>Dettagli ordine </h1>
+  <div class="card order-card" style="">
+    <div class="card-body p-3 container-fluid">
+<hr>
+      <h2 class="mt-5">Ordini associati all'utente attuale:</h2>
+      {{-- @dd($details_product_orders) --}}
+      @foreach ($details_product_orders as $details)
+      <ul>
+        <li>Prodotto: {{ $details->name }}</li>
+        <ul>
+        <li> Descrizione: {{ $details->description }}</li>
+        <li> Quantità: {{ $details->quantity }}</li>
+        <li>Prezzo cad. :{{ $details->price }}</li>
+        <li> Sconto da applicare sul prezzo: {{ $details->discount }}</li>
+      </ul>
     </ul>
-  @endforeach
+      @endforeach
 
+<hr>
+<hr>
 
+      <h2>Dettagli spedizione:</h2>
+      <ul>
+        @foreach ($details_guest_order as $details)
 
-
-  <h3>dettagli spedizione:</h3>
-  <ul>
-    @foreach ($details_guest_order as $details)
-
-      <li>nome{{ $details->first_name }}</li>
-      <li>{{ $details->last_name }}</li>
-      <li>{{ $details->address }}</li>
-      <li>{{ $details->city }}</li>
-      <li>{{ $details->message_to_users }}</li>
-      <li>{{ $details->created_at }}</li>
-      <li>{{ $details->created_at }}</li>
-      <li>{{ $details->id }}</li>
-    @endforeach
-  </ul>
+        <li>Nom: {{ $details->first_name }}</li>
+        <li>Cognome: {{ $details->last_name }}</li>
+        <li>Indirizzo: {{ $details->address }}</li>
+        <li>Città: {{ $details->city }}</li>
+        <li>Richiesta dell'utente: {{ $details->message_to_users }}</li>
+        <li>Data della richiesta: {{ $details->created_at }}</li>
+        <li>Codice ID: {{ $details->id }}</li>
+        @endforeach
+      </ul>
+      <hr>
+    </div>
+  </div>
+</section>
 @endsection
