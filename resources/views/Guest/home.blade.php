@@ -76,7 +76,7 @@
 
 
 
-        <div class="container d-flex align-items-center flex-wrap">
+        {{-- <div class="container d-flex align-items-center flex-wrap">
           <div class="row">
             <div v-for="restaurant in selectedRestaurants" v-if="isVisible(restaurant.name)"
               class="col-md-4 col-sm-12 mb-3">
@@ -93,7 +93,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
   </div>
 
   </section>
