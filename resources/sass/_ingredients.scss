@@ -1,48 +1,45 @@
-#buttom{
-  background-color:$primary-color;
+#button {
+  background-color: $primary-color;
 }
 
-
 #ingredients-list {
-    .ingredient-item {
-        margin-bottom: 100px;
-        height: 300px;
-        overflow-y: scroll;
-       
-        list-style-type: none;
-    }
-    h1{
-      color: white;
-    }
+  .ingredient-item {
+    margin-bottom: 100px;
+    height: 300px;
+    overflow-y: scroll;
+
+    list-style-type: none;
+  }
+  h1 {
+    color: white;
+  }
 }
 
 .ingredient-item::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
 }
 
-.ingredients-table{
-  h2{
-    color:$primary-color ;
+.ingredients-table {
+  h2 {
+    color: $primary-color;
   }
 
-  a{
+  a {
     color: black;
     font-size: 20px;
   }
 }
 
-.card-igredients{
-
-  ul{
+.card-ingredients {
+  ul {
     list-style-type: none;
     padding: 0;
   }
 }
 
-#card-igredients{
-  h1{
+#card-ingredients {
+  h1 {
     color: white;
   }
- 
 }

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Dancing+Script:wght@700&display=swap');
-// Accedi e Registrati 
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Dancing+Script:wght@700&display=swap");
+// Accedi e Registrati
 #guest-nav {
     .navbar {
         background-color: transparent;
@@ -14,109 +14,112 @@
         }
     }
 }
-// Logo 
+
 .logo {
     height: 100px;
     width: auto;
     padding: 0px;
     margin: 0;
 }
-
-.search-restaurant {
-    top: -20px;
-    .text-search {
-        color: $primary-color;
-    }
-    input[placeholder] {
-        color: $primary-color;
-      }
-      ::-webkit-input-placeholder { /* WebKit browsers (Safari, Google Chrome, Opera 15+) */
-        color: $primary-color;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-       color: $primary-color;
-       opacity: 1;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-       color: $primary-color;
-       opacity: 1;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10+ */
-       color: $primary-color;
-    }
-    select, input {
-        border: 0;
-    }
-    .btn-search {
-        border: 1px solid white;
-        .fa-search {
-            color: white;
-        }
-
-    }
-    select {
-        background-color: $primary-color;
-        color: white;
-        border: 1px solid white;
-        &:hover {
+#guest-home-blade {
+    .search-restaurant {
+        top: -20px;
+        .text-search {
             color: $primary-color;
-            border: 1px solid $primary-color;
         }
-        option {
-            background-color: white;
+        input[placeholder] {
+            color: $primary-color;
+        }
+        ::-webkit-input-placeholder {
+            /* WebKit browsers (Safari, Google Chrome, Opera 15+) */
+            color: $primary-color;
+        }
+        :-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: $primary-color;
+            opacity: 1;
+        }
+        ::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: $primary-color;
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            /* Internet Explorer 10+ */
+            color: $primary-color;
+        }
+        select,
+        input {
+            border: 0;
+        }
+        .btn-search {
+            border: 1px solid white;
+            .fa-search {
+                color: white;
+            }
+        }
+        select {
+            background-color: $primary-color;
+            color: white;
+            border: 1px solid white;
+            &:hover {
+                color: $primary-color;
+                border: 1px solid $primary-color;
+            }
+            option {
+                background-color: white;
+            }
         }
     }
-}
 
-#restaurants {
-    h2{
-        margin-top: 30px;
-        font-family: 'Alegreya', serif;
-        font-size: 60px;
-        font-family: 'Dancing Script', cursive;
+    #restaurants {
+        h2 {
+            margin-top: 30px;
+            font-family: "Alegreya", serif;
+            font-size: 60px;
+            font-family: "Dancing Script", cursive;
+        }
     }
-}
-// Arrow card 
-.arrow-product {
-    color: $primary-color;
-    font-size: 30px;
-    &:hover {
-        color: black;
-
-    }
-}
-
-// Card 
-    /* SOLO LE CARTE NELL'HOME PAGE */
-#restaurants .card:hover {
-    transform: scale(1.05);
-}
-
-.card {
-    margin: 10px;
-    cursor: pointer;
-    border: 2px solid $primary-color;
-    .img-restaurant {
-        height: 80px;
-        background-image: url("https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top center;
-        border: 2px solid $primary-color;
-        margin-top: 15px;
-    }
-}
-.card-body {
-    padding: 30px;
-    text-align: left;  
-    .name {
+    // Arrow card
+    .arrow-product {
         color: $primary-color;
-        font-weight: bold;
+        font-size: 30px;
+        &:hover {
+            color: black;
+        }
     }
-    .category {
-        margin-left: 16px;
+
+    // Card
+    /* SOLO LE CARTE NELL'HOME PAGE */
+    #restaurants .card:hover {
+        transform: scale(1.05);
     }
-   
+
+    .card {
+        margin: 10px;
+        cursor: pointer;
+        border: 2px solid $primary-color;
+        .img-restaurant {
+            height: 80px;
+            background-image: url("https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            border: 2px solid $primary-color;
+            margin-top: 15px;
+        }
+    }
+    .card-body {
+        padding: 30px;
+        text-align: left;
+        .name {
+            color: $primary-color;
+            font-weight: bold;
+        }
+        .category {
+            margin-left: 16px;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -135,8 +138,17 @@
         }
     }
 }
+#scroll-button {
+    a {
+        display: none;
+    }
+}
 @media screen and (max-width: 768px) {
-
+    #scroll-button {
+        a {
+            display: block;
+        }
+    }
     .input-group {
         flex-direction: column;
         top: 18px;
@@ -150,7 +162,7 @@
         }
     }
     #restaurants {
-        h2{
+        h2 {
             font-size: 28px;
         }
     }
