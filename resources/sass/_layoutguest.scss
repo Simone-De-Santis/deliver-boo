@@ -1,10 +1,5 @@
-.navbar-brand {
-    padding: 0;
-    strong {
-        font-size: 25px;
-    }
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Dancing+Script:wght@700&display=swap');
+// Accedi e Registrati 
 #guest-nav {
     .navbar {
         background-color: transparent;
@@ -15,10 +10,11 @@
         a {
             color: $primary-color;
             padding: 0;
+            margin-right: 10px;
         }
     }
 }
-
+// Logo 
 .logo {
     height: 100px;
     width: auto;
@@ -26,6 +22,61 @@
     margin: 0;
 }
 
+.search-restaurant {
+    top: -20px;
+    .text-search {
+        color: $primary-color;
+    }
+    input[placeholder] {
+        color: $primary-color;
+      }
+      ::-webkit-input-placeholder { /* WebKit browsers (Safari, Google Chrome, Opera 15+) */
+        color: $primary-color;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color: $primary-color;
+       opacity: 1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color: $primary-color;
+       opacity: 1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+       color: $primary-color;
+    }
+    select, input {
+        border: 0;
+    }
+    .btn-search {
+        border: 1px solid white;
+        .fa-search {
+            color: white;
+        }
+
+    }
+    select {
+        background-color: $primary-color;
+        color: white;
+        border: 1px solid white;
+        &:hover {
+            color: $primary-color;
+            border: 1px solid $primary-color;
+        }
+        option {
+            background-color: white;
+        }
+    }
+}
+
+#restaurants {
+    h2{
+        margin-top: 30px;
+        font-family: 'Alegreya', serif;
+        font-size: 60px;
+        font-family: 'Dancing Script', cursive;
+    }
+}
+// Arrow card 
 .arrow-product {
     color: $primary-color;
     font-size: 30px;
@@ -35,11 +86,23 @@
     }
 }
 
+// Card 
 .card {
     margin: 10px;
+    cursor: pointer;
+    border: 2px solid $primary-color;
     &:hover {
         transform: scale(1.05);
-     }
+    }
+    .img-restaurant {
+        height: 80px;
+        background-image: url("https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        border: 2px solid $primary-color;
+        margin-top: 15px;
+    }
 }
 .card-body {
     padding: 30px;
@@ -55,13 +118,6 @@
 }
 
 @media screen and (min-width: 768px) {
-    #jumbotron {
-        .search-bar {
-            transform: translatey(-240px);
-            justify-content: center;
-        }
-    }
-
     #guest-nav {
         position: absolute;
         top: 0px;
@@ -77,4 +133,23 @@
         }
     }
 }
+@media screen and (max-width: 768px) {
 
+    .input-group {
+        flex-direction: column;
+        top: 18px;
+
+        .text-search {
+            width: 100%;
+        }
+        .input-group-append {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+    #restaurants {
+        h2{
+            font-size: 28px;
+        }
+    }
+}
