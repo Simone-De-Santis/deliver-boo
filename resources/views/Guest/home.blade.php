@@ -30,15 +30,6 @@
                     </div>
                 </div>
             </div>
-
-            {{-- <div class="select-filter">
-          <select class="form-select rounded py-1" v-model="select" name="" id="">
-            <option value="" selected>All</option>
-            <option v-for="(selectCategory, index) in selectCategories">
-              @{{ selectCategory }}
-            </option>
-          </select>
-        </div> --}}
             <div class="input-group container search-restaurant ">
                 <input type="search" v-model.trim='search_bar' @keyup.enter="getRestaurants()"
                     class="form-control text-search shadow" aria-label="Text input with dropdown button"
@@ -62,7 +53,9 @@
             <div class="row justify-content-center">
                 {{-- PAGINAZIONE TOP --}}
                 <div class="col-12 d-flex justify-content-center my-4">
-                    <button type="button" class="btn btn-outline-primary" v-on:click="currentPage = index"
+                    <button type="button" class="btn"
+                        :class="currentPage == index ? 'btn-primary' : 'btn-outline-primary'"
+                        v-on:click="currentPage = index"
                         v-for="(x, index) in Math.ceil(totalRestaurants / itemsPerPage)">@{{ index + 1 }}</button>
                 </div>
                 <div class="card shadow col-12 col-md-3" v-for="(restaurant, index) in selectedRestaurants"
@@ -81,7 +74,9 @@
                 </div>
                 {{-- PAGINAZIONE BOTTOM --}}
                 <div class="col-12 d-flex justify-content-center my-4">
-                    <button type="button" class="btn btn-outline-primary" v-on:click="currentPage = index"
+                    <button type="button" class="btn"
+                        :class="currentPage == index ? 'btn-primary' : 'btn-outline-primary'"
+                        v-on:click="currentPage = index"
                         v-for="(x, index) in Math.ceil(totalRestaurants / itemsPerPage)">@{{ index + 1 }}</button>
                 </div>
             </div>
