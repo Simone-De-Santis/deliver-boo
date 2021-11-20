@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap);@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap);@import url(https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Dancing+Script:wght@700&display=swap);@charset "UTF-8";
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10019,6 +10019,21 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  font-family: "Alegreya", serif;
+  font-weight: 700;
+  height: 100vh;
+  background-size: cover;
+}
+
+.primary-color {
+  color: #7d0a0a;
+}
+
+.primary-color-bg {
+  background-color: #7d0a0a;
+}
+
 /*--------------------
 SHARED VARIABLES
 --------------------*/
@@ -10035,7 +10050,7 @@ GENERAL
   border-radius: 0.25rem;
 }
 
-#buttom {
+#button {
   background-color: #7d0a0a;
 }
 
@@ -10055,46 +10070,30 @@ GENERAL
 }
 
 .ingredients-table h2 {
-  color: white;
+  color: #7d0a0a;
 }
 .ingredients-table a {
   color: black;
   font-size: 20px;
 }
 
-.card-igredients ul {
+.card-ingredients ul {
   list-style-type: none;
   padding: 0;
 }
 
-#card-igredients h1 {
+#card-ingredients h1 {
   color: white;
-}
-
-body {
-  font-family: "Alegreya", serif;
-  font-weight: 700;
-  height: 100vh;
-  background-size: cover;
-}
-
-.primary-color {
-  color: #7d0a0a;
-}
-
-.primary-color-bg {
-  background-color: #7d0a0a;
 }
 
 /*jumbotron slider*/
 #carousel {
-  height: 500px;
+  height: 400px;
 }
 #carousel img {
   -o-object-fit: contain;
      object-fit: contain;
   opacity: 0.8;
-  height: 500;
   width: auto;
 }
 
@@ -10158,13 +10157,6 @@ html {
   background-color: #7d0a0a;
 }
 
-.navbar-brand {
-  padding: 0;
-}
-.navbar-brand strong {
-  font-size: 25px;
-}
-
 #guest-nav .navbar {
   background-color: transparent;
 }
@@ -10175,6 +10167,7 @@ html {
 #guest-nav .navbar a {
   color: #7d0a0a;
   padding: 0;
+  margin-right: 10px;
 }
 
 .logo {
@@ -10184,39 +10177,101 @@ html {
   margin: 0;
 }
 
-.arrow-product {
+#guest-home-blade {
+  /* SOLO LE CARTE NELL'HOME PAGE */
+}
+#guest-home-blade .search-restaurant {
+  top: -20px;
+}
+#guest-home-blade .search-restaurant .text-search {
+  color: #7d0a0a;
+}
+#guest-home-blade .search-restaurant input[placeholder] {
+  color: #7d0a0a;
+}
+#guest-home-blade .search-restaurant ::-webkit-input-placeholder {
+  /* WebKit browsers (Safari, Google Chrome, Opera 15+) */
+  color: #7d0a0a;
+}
+#guest-home-blade .search-restaurant :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #7d0a0a;
+  opacity: 1;
+}
+#guest-home-blade .search-restaurant ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #7d0a0a;
+  opacity: 1;
+}
+#guest-home-blade .search-restaurant :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #7d0a0a;
+}
+#guest-home-blade .search-restaurant select,
+#guest-home-blade .search-restaurant input {
+  border: 0;
+}
+#guest-home-blade .search-restaurant .btn-search {
+  border: 1px solid white;
+}
+#guest-home-blade .search-restaurant .btn-search .fa-search {
+  color: white;
+}
+#guest-home-blade .search-restaurant select {
+  background-color: #7d0a0a;
+  color: white;
+  border: 1px solid white;
+}
+#guest-home-blade .search-restaurant select:hover {
+  color: #7d0a0a;
+  border: 1px solid #7d0a0a;
+}
+#guest-home-blade .search-restaurant select option {
+  background-color: white;
+}
+#guest-home-blade #restaurants h2 {
+  margin-top: 30px;
+  font-family: "Alegreya", serif;
+  font-size: 60px;
+  font-family: "Dancing Script", cursive;
+}
+#guest-home-blade .arrow-product {
   color: #7d0a0a;
   font-size: 30px;
 }
-.arrow-product:hover {
+#guest-home-blade .arrow-product:hover {
   color: black;
 }
-
-.card {
-  margin: 10px;
-}
-.card:hover {
+#guest-home-blade #restaurants .card:hover {
   transform: scale(1.05);
 }
-
-.card-body {
+#guest-home-blade .card {
+  margin: 10px;
+  cursor: pointer;
+  border: 2px solid #7d0a0a;
+}
+#guest-home-blade .card .img-restaurant {
+  height: 80px;
+  background-image: url("https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  border: 2px solid #7d0a0a;
+  margin-top: 15px;
+}
+#guest-home-blade .card-body {
   padding: 30px;
   text-align: left;
 }
-.card-body .name {
+#guest-home-blade .card-body .name {
   color: #7d0a0a;
   font-weight: bold;
 }
-.card-body .category {
+#guest-home-blade .card-body .category {
   margin-left: 16px;
 }
 
 @media screen and (min-width: 768px) {
-  #jumbotron .search-bar {
-    transform: translatey(-240px);
-    justify-content: center;
-  }
-
   #guest-nav {
     position: absolute;
     top: 0px;
@@ -10227,6 +10282,31 @@ html {
 
   #restaurant #cart-section {
     position: fixed;
+  }
+}
+#scroll-button a {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #scroll-button a {
+    display: block;
+  }
+
+  .input-group {
+    flex-direction: column;
+    top: 18px;
+  }
+  .input-group .text-search {
+    width: 100%;
+  }
+  .input-group .input-group-append {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  #restaurants h2 {
+    font-size: 28px;
   }
 }
 .admin-bck {
@@ -10357,4 +10437,16 @@ html {
   #register-section {
     background-image: url("/images/pasta.jpg");
   }
+}
+.orders-info {
+  list-style-type: none;
+}
+
+.order-card {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.728);
+}
+.order-card h2 {
+  color: #7d0a0a;
 }
