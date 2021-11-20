@@ -8,17 +8,25 @@
     <h3 class="mt-5">Prodotti associati all'utente attuale:</h3>
     <table class="table table-dark">
       <thead>
+        <tr class="">
+          <th></th>
+          <th></th>
+          <th class=" text-right">
+
+            <a class="text-white text-decoration-none btn btn-primary mr-2"
+              href="{{ route('admin.products.create') }}">Aggiungi un nuovo
+              prodotto</a>
+
+          </th>
+        </tr>
+      </thead>
+      <thead>
         <tr>
+
           <th scope="col">Id</th>
           <th scope="col">Name</th>
           <th scope="col">Action</th>
-          <th scope="col">
-            <button type="button" class="btn btn-primary">
-              <a class="text-white text-decoration-none" href="{{ route('admin.products.create') }}">Aggiungi
-                un nuovo
-                prodotto</a>
-            </button>
-          </th>
+
         </tr>
       </thead>
       <tbody>
