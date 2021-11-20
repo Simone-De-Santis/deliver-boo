@@ -38,6 +38,10 @@ Route::resource('user', 'Guest\UserController');
 //Braintree
 Route::resource('/payment', 'PaymentController');
 
+Route::get('/test', function () {
+
+    return view('guest/checkout.feedback_payament');
+})->name('feedback_payament');
 
 Route::get('{any?}', function () {
     return view('welcome');
