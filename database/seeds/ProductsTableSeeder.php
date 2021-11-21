@@ -62,7 +62,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -80,7 +80,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -98,7 +98,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -116,7 +116,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -134,7 +134,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -152,7 +152,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -170,7 +170,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -188,7 +188,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -206,7 +206,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -224,7 +224,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -242,7 +242,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -260,7 +260,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -278,7 +278,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -296,7 +296,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -314,7 +314,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -332,7 +332,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -350,7 +350,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -368,7 +368,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -386,7 +386,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -404,7 +404,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -422,7 +422,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -440,7 +440,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -458,7 +458,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -476,7 +476,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -494,7 +494,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -512,7 +512,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -530,7 +530,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -548,7 +548,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -566,7 +566,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -584,7 +584,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -602,7 +602,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -620,7 +620,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -638,7 +638,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -656,7 +656,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -674,7 +674,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -692,7 +692,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -710,7 +710,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -728,7 +728,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -746,7 +746,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -764,7 +764,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -782,7 +782,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -800,7 +800,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -818,7 +818,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -836,7 +836,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -854,7 +854,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -872,7 +872,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -890,7 +890,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -908,7 +908,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -926,7 +926,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -944,7 +944,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -962,7 +962,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -980,7 +980,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -998,7 +998,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1016,7 +1016,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1034,7 +1034,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1052,7 +1052,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1070,7 +1070,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1088,7 +1088,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1106,7 +1106,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1124,7 +1124,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1142,7 +1142,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1160,7 +1160,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1178,7 +1178,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1196,7 +1196,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1214,7 +1214,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1232,7 +1232,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1250,7 +1250,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1268,7 +1268,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1286,7 +1286,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1304,7 +1304,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1322,7 +1322,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1340,7 +1340,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1358,7 +1358,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1376,7 +1376,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1394,7 +1394,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1412,7 +1412,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1430,7 +1430,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1448,7 +1448,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1466,7 +1466,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1484,7 +1484,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1502,7 +1502,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1520,7 +1520,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1538,7 +1538,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1556,7 +1556,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1574,7 +1574,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1592,7 +1592,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1610,7 +1610,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1628,7 +1628,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1646,7 +1646,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1664,7 +1664,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1682,7 +1682,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1700,7 +1700,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1718,7 +1718,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1736,7 +1736,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1754,7 +1754,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1772,7 +1772,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1790,7 +1790,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1808,7 +1808,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1826,7 +1826,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1844,7 +1844,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1862,7 +1862,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1880,7 +1880,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1898,7 +1898,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1916,7 +1916,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1934,7 +1934,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1952,7 +1952,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1970,7 +1970,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -1988,7 +1988,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2006,7 +2006,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2024,7 +2024,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2042,7 +2042,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2060,7 +2060,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2078,7 +2078,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2096,7 +2096,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2114,7 +2114,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2132,7 +2132,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2150,7 +2150,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2168,7 +2168,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2186,7 +2186,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2204,7 +2204,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2222,7 +2222,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2240,7 +2240,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2258,7 +2258,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2276,7 +2276,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2294,7 +2294,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2312,7 +2312,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2330,7 +2330,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2348,7 +2348,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2366,7 +2366,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2384,7 +2384,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2402,7 +2402,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2420,7 +2420,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2438,7 +2438,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2456,7 +2456,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2474,7 +2474,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2492,7 +2492,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2510,7 +2510,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2528,7 +2528,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2546,7 +2546,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2564,7 +2564,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2582,7 +2582,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2600,7 +2600,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2618,7 +2618,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2636,7 +2636,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2654,7 +2654,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2672,7 +2672,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2690,7 +2690,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2708,7 +2708,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2726,7 +2726,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2744,7 +2744,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2762,7 +2762,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2780,7 +2780,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2798,7 +2798,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2816,7 +2816,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2834,7 +2834,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2852,7 +2852,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2870,7 +2870,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2888,7 +2888,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2906,7 +2906,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2924,7 +2924,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2942,7 +2942,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2960,7 +2960,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2978,7 +2978,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -2996,7 +2996,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3014,7 +3014,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3032,7 +3032,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3050,7 +3050,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3068,7 +3068,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3086,7 +3086,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3104,7 +3104,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3122,7 +3122,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3140,7 +3140,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3158,7 +3158,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 
@@ -3176,7 +3176,7 @@ class ProductsTableSeeder extends Seeder
 
                 "is_available" => 1,
 
-                "url" => "#",
+                "url" => "",
 
             ],
 

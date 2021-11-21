@@ -64,7 +64,7 @@
                 v-if="isVisible(restaurant.name) && index >= (currentPage * itemsPerPage) && index < (currentPage * itemsPerPage) + itemsPerPage">
                 <a class="arrow-product text-decoration-none " :href="'/user/'+restaurant.id">
                   <div class="card">
-                    <img {{-- :src="'http://127.0.0.1:8000/storage/' +restaurant.url || 'https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg'" --}}
+                    <img
                       :src="[restaurant.url ?'http://127.0.0.1:8000/storage/' +restaurant.url :'https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg']"
                       class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
