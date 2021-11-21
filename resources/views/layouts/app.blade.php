@@ -85,7 +85,7 @@
                         </a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                           onclick="event.preventDefault();
-                                                                                                                                                                                                       document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                   document.getElementById('logout-form').submit();">
                           {{ __('Logout') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -109,21 +109,33 @@
 
       <div class="container pt-5">
 
+
         <div class="row row-cols-1 row-cols-md-4 ">
+
           <div class="col mb-4 card-group ">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">Scopri DeliverBoo</h5>
-                <p class="card-text m-0"> <small class="text-muted">Investitori</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Chi siamo</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Ristoranti</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Altro</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Pressroom</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Il nostro blog</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Programmazione</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Design</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Lavora con noi</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Diventa nostro partner</small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Investitori </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Chi siamo </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Ristoranti </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Altro </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Pressroom </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Il nostro blog </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Programmazione </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Design </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Lavora con noi </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Diventa nostro partner </a></small></p>
               </div>
             </div>
           </div>
@@ -131,9 +143,12 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">Note legali</h5>
-                <p class="card-text m-0"> <small class="text-muted">Termini & condizioni</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Informativa sulla privacy</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Cookies</small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Termini & condizioni </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Informativa sulla privacy </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Cookies </a></small></p>
               </div>
             </div>
           </div>
@@ -141,10 +156,14 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">Aiuto</h5>
-                <p class="card-text m-0"> <small class="text-muted">Contatti</small></p>
-                <p class="card-text m-0"> <small class="text-muted">FAQ</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Tipi di cucina</small></p>
-                <p class="card-text m-0"> <small class="text-muted">Maooa del sito</small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Contatti </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      FAQ </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Tipi di cucina </a></small></p>
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                      Maooa del sito </a></small></p>
               </div>
             </div>
           </div>
@@ -152,27 +171,25 @@
             <div class="card">
               <div class="card-body">
                 <h3 class="card-title">Porta DeliverBoo con te </h3>
-                <p class="card-text m-0"> <small class="text-muted"></small></p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                  class="card-img-top" alt="...">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Play_Store_badge_IT.svg"
-                  class="card-img-top" alt="...">
+                <p class="card-text "> <small class=""> <a href="#" class="">
+                    </a></small></p>
+                <a href="#">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                    class="card-img-top" alt="...">
+                </a>
+                <a href="#">
+
+
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Play_Store_badge_IT.svg"
+                    class="card-img-top" alt="...">
+                </a>
 
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12 col-md-3">
-            <img src="/images/Logo-white.png" alt=" ps-footer-logo" class=" h-25">
-            <p><i class="fas fa-globe"></i> Contry / Region: Italy</small></p>
-          </div>
 
-
-
-
-        </div>
       </div>
 
 
