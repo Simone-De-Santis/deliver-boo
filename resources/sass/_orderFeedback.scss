@@ -1,0 +1,28 @@
+#order-feedback {
+    img {
+        height: 50px;
+    }
+    .rider {
+        animation: rider 10s cubic-bezier(0.52, 0.29, 0.05, 0.81) 5s 1 forwards;
+    }
+    .freccia {
+        animation: bouncing 2s infinite;
+    }
+}
+@keyframes bouncing {
+    0%,
+    100% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+}
+@keyframes rider {
+    0% {
+        transform: translatex(0px);
+    }
+    100% {
+        transform: translatex(1000px);
+    }
+}
