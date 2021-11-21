@@ -3,28 +3,28 @@
 
 {{-- Added 'content' section to add page content --}}
 @section('content')
-<section class="container">
+<section class="container orders">
 
   <h1>Dettagli ordine </h1>
   <div class="card order-card" style="">
     <div class="card-body p-3 container-fluid">
-<hr>
-      <h2 class="mt-5">Ordini associati all'utente attuale:</h2>
+
+      <h2 class="mt-3">Ordini dell'utente:</h2>
       {{-- @dd($details_product_orders) --}}
       @foreach ($details_product_orders as $details)
       <ul>
-        <li>Prodotto: {{ $details->name }}</li>
+        <li>Prodotto:  {{ $details->name }}</li>
         <ul>
-        <li> Descrizione: {{ $details->description }}</li>
-        <li> Quantità: {{ $details->quantity }}</li>
-        <li>Prezzo cad. :{{ $details->price }}</li>
-        <li> Sconto da applicare sul prezzo: {{ $details->discount }}</li>
+        <li> Descrizione:  {{ $details->description }}</li>
+        <li> Quantità:  {{ $details->quantity }}</li>
+        <li style="font-size: 18px">Prezzo cad. :  {{ $details->price }} €</li>
+        <li> Sconto da applicare sul prezzo: {{ $details->discount }} %</li>
       </ul>
     </ul>
       @endforeach
 
-<hr>
-<hr>
+<hr style="border:1px solid black">
+
 
       <h2>Dettagli spedizione:</h2>
       <ul>
