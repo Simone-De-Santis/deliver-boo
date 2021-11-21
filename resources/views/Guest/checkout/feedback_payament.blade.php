@@ -18,7 +18,8 @@
         aria-valuemin="0" aria-valuemax="100" :style="'width:' + progress+'%;'"></div>
     </div>
     <div>
-      @{{ progress }}
+
+      @{{ statusOrder }}
 
 
     </div>
@@ -33,6 +34,7 @@
       el: '#app',
       data: {
         progress: 0,
+        status: "ciao",
       },
 
       methods: {
@@ -41,6 +43,27 @@
             if (this.progress < 100) this.progress = this.progress + 1
           }, 3);
         }
+      },
+      computed: {
+        statusOrder() {
+          status = ''
+          if (this.progress < 15)
+            status = "ordine in preparazione"
+          else if (this.progress < 25)
+            status = "pronto alla sepedizione"
+          else if (this.progress < 50)
+            status = "preso in carico dal corriere"
+          else if (this.progress < 75)
+            status = "il corriere sta arrivando "
+          else if (this.progress < 95)
+            status = "pronto ad aprire ? "
+          else
+            status = "drinnnnnnnnnn "
+
+
+          return status
+        }
+
       },
       created() {
         setTimeout(() => {
