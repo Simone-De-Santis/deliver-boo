@@ -19,8 +19,8 @@ class OrderController extends Controller
      */
     public function create(Request $request)
     {
-        /*         $order = new Order();
-        return view('guest.checkout.create', compact('order')); */
+        $order = new Order();
+        return view('guest.checkout.create', compact('order'));
     }
 
     /**
