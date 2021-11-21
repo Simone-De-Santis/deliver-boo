@@ -3,8 +3,8 @@
 
 {{-- Added 'content' section to add page content --}}
 @section('content')
-  <section class="container">
-    <h1>Questa è la edit dei prodotti</h1>
+  <section class="container products-section" >
+    <h1>Modifica il tuo prodotto</h1>
     @include('includes.admin.products.form')
   </section>
 @endsection

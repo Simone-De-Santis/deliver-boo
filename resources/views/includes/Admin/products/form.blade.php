@@ -1,4 +1,5 @@
 {{-- Check if there are errors in the form --}}
+
 @if ($errors->any())
   <div>
     <div class="alert alert-danger">
@@ -14,7 +15,7 @@
 @if ($product->exists)
   <form action="{{ route('admin.products.update', $product->id) }}" method="POST" enctype="multipart/form-data">
     @method('PATCH')
-    <h1>siamo in modifica</h1>
+   
   @else
     <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
       <h1>siamo in creazione</h1>
@@ -104,12 +105,12 @@
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Scegli una o più ingredienti </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+         
+          <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;Scegli uno o più ingredienti </span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body ">
           <div class="row">
             @foreach ($ingredients as $ingredient)
               <div class="col-6">
@@ -123,8 +124,8 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Salva</button>
+          <button type="button" class="btn  " data-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn " data-dismiss="modal">Salva</button>
         </div>
       </div>
     </div>
@@ -157,8 +158,8 @@
                 @enderror --}}
   </div>
   <div class="mt-4">
-    <button type="button" class="btn btn-dark"><a class="text-white text-decoration-none"
+    <button type="button" class="btn  btn btn-dark"><a class="text-white text-decoration-none"
         href="{{ route('admin.products.index') }}">Indietro</a></button>
-    <button type="submit" class="btn btn-primary">Salva prodotto</button>
+    <button type="submit" class="btn btn-success">Salva </button>
   </div>
   </form>
