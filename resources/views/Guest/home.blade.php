@@ -73,7 +73,7 @@
                     <div class="card-body">
                       <h3 class="card-title">@{{ restaurant . activity_name }}</h3>
                       <p class="card-text"> <small class="text-muted">
-                          @{{ restaurant . categories[0] . name }} <i class="fas fa-arrow-right"></i></p></small>
+                          @{{ restaurant . categories[0] . name }} <i class="fas fa-arrow-right"></i></small></p>
                     </div>
                 </a>
               </div>
