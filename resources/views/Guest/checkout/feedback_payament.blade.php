@@ -13,12 +13,13 @@
 @section('content')
   <section class="container mt-5">
     <h1 class="primary-color pt-5 text-center font-weight-bold">Ordine processato correttamente</h1>
-    <div class="progress mt-5">
-      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar" aria-valuenow="75"
+        aria-valuemin="0" aria-valuemax="100" :style="'width:' + progress+'%;'"></div>
     </div>
     <div>
       @{{ progress }}
-      <button @click="incremento()" class="btn">viao</button>
+
 
     </div>
   </section>
@@ -31,15 +32,26 @@
     const app = new Vue({
       el: '#app',
       data: {
-        progress: 20,
+        progress: 0,
       },
+
       methods: {
         incremento() {
           setInterval(() => {
             if (this.progress < 100) this.progress = this.progress + 1
           }, 3);
         }
+      },
+      created() {
+        setTimeout(() => {
+          setInterval(() => {
+            if (this.progress < 100) this.progress = this.progress + 1
+          }, 100);
+        }, 5000);
+
+
       }
+
     })
   </script>
 @endsection
