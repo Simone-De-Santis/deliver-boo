@@ -10050,7 +10050,7 @@ GENERAL
   border-radius: 0.25rem;
 }
 
-#button {
+#buttom {
   background-color: #7d0a0a;
 }
 
@@ -10088,7 +10088,7 @@ GENERAL
 
 /*jumbotron slider*/
 #carousel {
-  height: 400px;
+  height: 600px;
 }
 #carousel img {
   -o-object-fit: contain;
@@ -10126,17 +10126,6 @@ html {
 #restaurant h1,
 #restaurant h5 {
   color: #7d0a0a;
-}
-#restaurant .card {
-  border-radius: 10px;
-}
-#restaurant .card .product-price {
-  font-size: 2rem;
-}
-#restaurant .card span {
-  font-size: 1.5rem;
-  color: #7d0a0a;
-  margin-right: 5px;
 }
 #restaurant #cart-section {
   max-width: 400px;
@@ -10240,40 +10229,26 @@ html {
 }
 #guest-home-blade .arrow-product {
   color: #7d0a0a;
-  font-size: 30px;
+  font-size: 25px;
 }
 #guest-home-blade .arrow-product:hover {
   color: black;
 }
 #guest-home-blade #restaurants .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 #guest-home-blade .card {
   margin: 10px;
   cursor: pointer;
   border: 2px solid #7d0a0a;
 }
-#guest-home-blade .card .img-restaurant {
-  height: 80px;
-  background-image: url("https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  border: 2px solid #7d0a0a;
-  margin-top: 15px;
-}
 #guest-home-blade .card-body {
-  padding: 30px;
   text-align: left;
 }
 #guest-home-blade .card-body .name {
   color: #7d0a0a;
   font-weight: bold;
 }
-#guest-home-blade .card-body .category {
-  margin-left: 16px;
-}
-
 @media screen and (min-width: 768px) {
   #guest-nav {
     position: absolute;
@@ -10443,13 +10418,48 @@ html {
 }
 .orders-info {
   list-style-type: none;
+  margin-top: 20px;
 }
 
 .order-card {
-  margin-top: 5px;
+  margin-top: 20px;
   margin-bottom: 5px;
   background-color: rgba(255, 255, 255, 0.728);
 }
 .order-card h2 {
   color: #7d0a0a;
+}
+
+.orders h1 {
+  color: #FFF;
+}
+
+.products-section h1 {
+  color: #FFF;
+}
+
+.order-table {
+  background-color: rgba(255, 255, 255, 0.571);
+}
+.order-table h4 {
+  font-weight: 600;
+}
+
+tr th .info-product {
+  vertical-align: middle;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+#footer .card {
+  background-color: #ff36361f;
+}
+#footer .card .card-body p {
+  margin: 0;
+}
+#footer .card .card-body p a {
+  text-decoration: none;
+  color: grey;
 }

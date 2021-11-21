@@ -1,9 +1,8 @@
-
 #register-section {
     min-height: 100vh;
     background-image: none;
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
     background-position: right;
     background-color: black;
 
@@ -12,63 +11,57 @@
         padding-top: 44px;
         text-align: center;
         text-transform: uppercase;
-        
     }
     .form-register {
-
         max-width: 800px;
-       padding-left: 20px;
-    min-height: 100vh;
+        padding-left: 20px;
+        min-height: 100vh;
 
+        .card-body {
+            height: 100px;
+            min-height: 100vh;
 
-       .card-body {
-           height: 100px;
-    min-height: 100vh;
+            .form-group {
+                margin-bottom: 0;
+                // margin-left: 100px;
 
+                .form-control {
+                    background-color: transparent;
+                    color: white;
+                }
 
-           .form-group {
-            margin-bottom: 0;
-            // margin-left: 100px;
-
-
-            .form-control {
-                background-color: transparent;
-                color: white;
-                
-            }
-
-            .text-label {
-                color: white;
-                text-transform: capitalize;
-            }
-            #category-btn {
-                margin-top: 38px;
-                background-color: $primary-color;
-                color: white;
-                border: 1px solid $primary-color;
-                &:hover {
-                    background-color:white;
-                    color: $primary-color;
+                .text-label {
+                    color: white;
+                    text-transform: capitalize;
+                }
+                #category-btn {
+                    margin-top: 38px;
+                    background-color: $primary-color;
+                    color: white;
                     border: 1px solid $primary-color;
-                }     
-            }
-            .btn-register {
-                background-color: $primary-color;
-                color: white;
-                margin-top: 30px;
-                
-                &:hover {
-                    background-color:white;
-                    color: $primary-color;
-                    border: 1px solid $primary-color;
+                    &:hover {
+                        background-color: white;
+                        color: $primary-color;
+                        border: 1px solid $primary-color;
+                    }
+                }
+                .btn-register {
+                    background-color: $primary-color;
+                    color: white;
+                    margin-top: 30px;
+
+                    &:hover {
+                        background-color: white;
+                        color: $primary-color;
+                        border: 1px solid $primary-color;
+                    }
                 }
             }
         }
-       }   
-    }  
+    }
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     #register-section {
         background-image: url("/images/pasta.jpg");
     }
