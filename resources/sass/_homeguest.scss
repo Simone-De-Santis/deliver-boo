@@ -22,4 +22,9 @@
         color: $primary-color;
         font-weight: 700;
     }
+
+    .btn-outline-primary-color {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
 }
