@@ -84,8 +84,9 @@ class PaymentController extends Controller
             //^IN CASO DI TRANSAZIONE ANDATA A BUON FINE MOSTRO ANCHE L'ID
             /*             $transaction_id = $transaction->id;
  */
-            $order = new Order();
-            return view('guest.checkout.create', compact('order'));
+            return redirect()->route('checkout.create');
+            /* $order = new Order();
+            return view('guest.checkout.create', compact('order')); */
         } else {
             $errorString = "";
 
