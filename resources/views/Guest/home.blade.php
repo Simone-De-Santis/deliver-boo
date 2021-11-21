@@ -51,7 +51,7 @@
 
             <section class="container mt-5 mt-md-0">
                 <section class="container" id="restaurants">
-                    <h2 class="text-center mb-5  mt-md-0">LA NOSTRA SELEZIONE</h2>
+                    <h2 class="text-center mb-5  mt-md-0">La nostra selezione</h2>
                     <div class="row justify-content-center">
                         {{-- PAGINAZIONE TOP --}}
                         <div class="col-12 d-flex justify-content-center my-4">
