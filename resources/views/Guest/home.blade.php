@@ -59,17 +59,14 @@
                 v-on:click="currentPage = index"
                 v-for="(x, index) in Math.ceil(totalRestaurants / itemsPerPage)">@{{ index + 1 }}</button>
             </div>
-
             <div class="row row-cols-1 row-cols-md-3">
-
-
               <div class="col mb-4 card-group " v-for="(restaurant, index) in selectedRestaurants"
                 v-if="isVisible(restaurant.name) && index >= (currentPage * itemsPerPage) && index < (currentPage * itemsPerPage) + itemsPerPage">
-
-
                 <a class="arrow-product text-decoration-none " :href="'/user/'+restaurant.id">
                   <div class="card">
-                    <img :src='restaurant . url' class="card-img-top img-fluid" alt="...">
+                    <img {{-- :src="'http://127.0.0.1:8000/storage/' +restaurant.url || 'https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg'" --}}
+                      :src="[restaurant.url ?'http://127.0.0.1:8000/storage/' +restaurant.url :'https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg']"
+                      class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                       <h3 class="card-title">@{{ restaurant . activity_name }}</h3>
                       <p class="card-text"> <small class="text-muted">

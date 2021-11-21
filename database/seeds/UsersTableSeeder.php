@@ -33,7 +33,7 @@ class UsersTableSeeder extends Seeder
         $user->vat = '11111111111';
         $user->telephone = '055289835';
         $user->description = "Situato nel cuore della parte più antica della città, a pochi passi dalle Cappelle Medicee e dalle caratteristiche bancarelle dei mercatini di San Lorenzo, il locale si apre con spirito cosmopolita a una clientela sempre più internazionale, pur conservando intatte le proprie radici storiche. L'ambiente, rustico ed elegante grazie agli altissimi soffitti con archi a legno e travi a vista, crea un'atmosfera suggestiva, perfetta per pranzi tra amici o per cene speciali, nelle quali è possibile ricevere fino a trecentocinquanta ospiti. Il locale dispone anche di un dehors esterno in legno che viene allestito durante i mesi caldi.";
-        $user->url = 'https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg';
+        $user->url = '';
         $user->longitude = '43.76954';
         $user->latitude = '11.23788';
         $user->save();
@@ -1362,7 +1362,7 @@ class UsersTableSeeder extends Seeder
             $new_user->vat = $faker->numberBetween(10000000000, 99999999999);
             $new_user->telephone = $restaurant['telephone'];
             $new_user->description = $restaurant['description'];
-            $new_user->url = 'https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg';
+            $new_user->url = '';
             $new_user->longitude =  $restaurant['longitude'];
             $new_user->latitude = $restaurant['latitude'];
 
