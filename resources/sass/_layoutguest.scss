@@ -82,7 +82,7 @@
     // Arrow card
     .arrow-product {
         color: $primary-color;
-        font-size: 30px;
+        font-size: 25px;
         &:hover {
             color: black;
         }
@@ -91,7 +91,7 @@
     // Card
     /* SOLO LE CARTE NELL'HOME PAGE */
     #restaurants .card:hover {
-        transform: scale(1.05);
+        transform: scale(1.01);
     }
 
     .card {
@@ -99,24 +99,20 @@
         cursor: pointer;
         border: 2px solid $primary-color;
         .img-restaurant {
-            height: 80px;
-            background-image: url("https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
-            border: 2px solid $primary-color;
-            margin-top: 15px;
+            // height: 80px;
+            // border: 2px solid $primary-color;
+            // margin-top: 15px;
         }
     }
     .card-body {
-        padding: 30px;
+        // padding: 30px;
         text-align: left;
         .name {
             color: $primary-color;
             font-weight: bold;
         }
         .category {
-            margin-left: 16px;
+            // margin-left: 16px;
         }
     }
 }
