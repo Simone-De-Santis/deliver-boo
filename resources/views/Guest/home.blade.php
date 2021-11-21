@@ -63,80 +63,35 @@
             <div class="row row-cols-1 row-cols-md-3">
 
 
-              <div class="col mb-4 " v-for="(restaurant, index) in selectedRestaurants"
+              <div class="col mb-4 card-group " v-for="(restaurant, index) in selectedRestaurants"
                 v-if="isVisible(restaurant.name) && index >= (currentPage * itemsPerPage) && index < (currentPage * itemsPerPage) + itemsPerPage">
-                <a class="arrow-product" :href="'/user/'+restaurant.id">
-                  <div class="card">
 
-                    <img src="https://www.panoramachef.it/wp-content/uploads/2019/11/men%C3%B9.jpg"
-                      class="card-img-top img-fluid" alt="...">
+
+                <a class="arrow-product text-decoration-none " :href="'/user/'+restaurant.id">
+                  <div class="card">
+                    <img :src='restaurant . url' class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title name">@{{ restaurant . activity_name }}</h5>
-                      <div class="row d-flex justify-content-between align-items-center">
-                        <p class="card-text category">@{{ restaurant . categories[0] . name }}</p>
-                        <i class="fas fa-arrow-right"></i>
+                      <h3 class="card-title">@{{ restaurant . activity_name }}</h3>
+                      <p class="card-text"> <small class="text-muted">
+                          @{{ restaurant . categories[0] . name }} <i class="fas fa-arrow-right"></i></p></small>
+                    </div>
                 </a>
               </div>
             </div>
           </div>
-    </div>
-
-  </div>
 
 
-  {{-- test card --}}
-  <div class="row row-cols-1 row-cols-md-3">
-    <div class="col mb-4">
-      <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a short card.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-            additional content.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  {{-- fine test --}}
 
-  {{-- PAGINAZIONE BOTTOM --}}
-  <div class="col-12 d-flex justify-content-center my-4">
-    <button type="button" class="btn m-1"
-      :class="currentPage == index ? 'primary-color-bg text-white' : 'btn-outline-primary-color'"
-      v-on:click="currentPage = index"
-      v-for="(x, index) in Math.ceil(totalRestaurants / itemsPerPage)">@{{ index + 1 }}</button>
-  </div>
-  </div>
-  </section>
+
+          {{-- PAGINAZIONE BOTTOM --}}
+          <div class="col-12 d-flex justify-content-center my-4">
+            <button type="button" class="btn m-1"
+              :class="currentPage == index ? 'primary-color-bg text-white' : 'btn-outline-primary-color'"
+              v-on:click="currentPage = index"
+              v-for="(x, index) in Math.ceil(totalRestaurants / itemsPerPage)">@{{ index + 1 }}</button>
+          </div>
+    </div>
+    </section>
   </div>
 
   </div>
