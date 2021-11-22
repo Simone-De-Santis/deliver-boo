@@ -23,62 +23,67 @@
             </div>
         @endif
         {{-- FORM --}}
-        <div class="container mt-5">
-            <h1>Payment Form</h1>
-            <form action="{{ route('payment.store') }}" id="payment-form" method="POST">
-                @csrf
-                <div class="row">
-                    <div class="col-3">
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="es: mario.rossi@gmail.com">
+        <div class="container mt-5 pt-5">
+            <div class="row justify-content-center">
+                <h2 class="col-12 mb-4 text-center">Inserisci i dati per il pagamento</h2>
+                <form class="col-12" action="{{ route('payment.store') }}" id="payment-form" method="POST">
+                    @csrf
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-3 order-1 order-md-0">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="es: mario.rossi@gmail.com">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="form-group">
-                            <label for="first-name">Name on Card</label>
-                            <input type="text" class="form-control" id="first-name" name="name_on_card"
-                                placeholder="es: Mario Rossi">
+                        <div class="col-12 col-md-3 order-2 order-md-0">
+                            <div class="form-group">
+                                <label for="first-name">Intestatario carta</label>
+                                <input type="text" class="form-control" id="first-name" name="name_on_card"
+                                    placeholder="es: Mario Rossi">
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        Price: @{{ price }}
-                    </div>
-                    <div class="col-3 d-none">
-                        <div class="form-group">
-                            <label for="amount">Amount</label>
-                            <input type="hidden" class="form-control" id="amount" name="amount" :value="price">
+                        <div class="order-0 order-md-0 col-12 col-md-3 d-flex align-items-center">
+                            <span class="h3">Prezzo: €@{{ price }}</span>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3">
-                        <div class="form-group">
-                            <label for="card-number">Card Number</label>
-                            <div class="form-control" id="card-number">
+                        <div class="
+                            col-12 col-md-3 d-none">
+                            <div class="form-group">
+                                <label for="amount">Prezzo</label>
+                                <input type="hidden" class="form-control" id="amount" name="amount" :value="price">
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="form-group">
-                            <label for="expiration-date">Expiry</label>
-                            <div class="form-control" id="expiration-date">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-3">
+                            <div class="form-group">
+                                <label for="card-number">Numero carta</label>
+                                <div class="form-control" id="card-number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="form-group">
+                                <label for="expiration-date">Scadenza</label>
+                                <div class="form-control" id="expiration-date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <div class="form-control" id="cvv">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="form-group">
-                            <label for="cvv">CVV</label>
-                            <div class="form-control" id="cvv">
-                            </div>
-                        </div>
+                    {{-- NONCE TYPE HIDDEN AGGIUNTO --}}
+                    <div class="row justify-content-center mt-3">
+                        <input type="hidden" id="nonce" name="payment_method_nonce">
+                        <input type="submit" value="Paga" />
                     </div>
-                </div>
-                {{-- NONCE TYPE HIDDEN AGGIUNTO --}}
-                <input type="hidden" id="nonce" name="payment_method_nonce">
-                <input type="submit" value="Pay" />
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 @endsection
