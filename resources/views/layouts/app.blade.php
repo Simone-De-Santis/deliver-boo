@@ -111,36 +111,36 @@
 
 
     {{-- footer --}}
-    <footer class="container-fluid primary-color-bg" id="footer">
+    <footer class="container-fluid primary-color-bg text-white" id="footer">
 
       <div class="container pt-5">
 
 
-        <div class="row row-cols-1 row-cols-md-4 ">
+        <div class="row row-cols-1 row-cols-md-4 text-white">
 
           <div class="col mb-4 card-group ">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body footer-section">
                 <h5 class="card-title font-weight-bold">Scopri DeliverBoo</h5>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Investitori </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Chi siamo </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Ristoranti </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Altro </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Pressroom </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Il nostro blog </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Programmazione </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Design </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Lavora con noi </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Diventa nostro partner </a></small></p>
               </div>
             </div>
@@ -149,11 +149,11 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">Note legali</h5>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Termini & condizioni </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Informativa sulla privacy </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Cookies </a></small></p>
               </div>
             </div>
@@ -162,13 +162,13 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title font-weight-bold">Aiuto</h5>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Contatti </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       FAQ </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Tipi di cucina </a></small></p>
-                <p class="card-text "> <small class=""> <a href="#" class="">
+                <p class="card-text "> <small class=""> <a href="#" class="text-white">
                       Maooa del sito </a></small></p>
               </div>
             </div>
@@ -176,18 +176,16 @@
           <div class="col mb-4 card-group ">
             <div class="card">
               <div class="card-body">
-                <h3 class="card-title">Porta DeliverBoo con te </h3>
+                <h5 class="card-title">Porta DeliverBoo con te </h5>
                 <p class="card-text "> <small class=""> <a href="#" class="">
                     </a></small></p>
-                <a href="#">
+                <a href="#" class="">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                    class="card-img-top" alt="...">
+                    class="card-img-top img-fluid p-3" alt="...">
                 </a>
-                <a href="#">
-
-
+                <a href="#" class="">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Play_Store_badge_IT.svg"
-                    class="card-img-top" alt="...">
+                    class="card-img-top img-fluid p-3" alt="...">
                 </a>
 
               </div>
