@@ -17,7 +17,7 @@
         <ul>
         <li> Descrizione:  {{ $details->description }}</li>
         <li> Quantità:  {{ $details->quantity }}</li>
-        <li style="font-size: 18px">Prezzo cad. :  {{ $details->price }} €</li>
+        <li style="font-size: 18px">Prezzo cad. : € {{ $details->price }} </li>
         <li> Sconto da applicare sul prezzo: {{ $details->discount }} %</li>
       </ul>
     </ul>

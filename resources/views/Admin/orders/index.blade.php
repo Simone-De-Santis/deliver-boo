@@ -22,7 +22,7 @@
           <hr>
           <li>Data ordine : {{ $order->created_at }}</li>
           <hr>
-          <li style="font-size: 18px">Totale: {{ $order->total_price }} €</li>
+          <li style="font-size: 18px">Totale: € {{ $order->total_price }} </li>
           <hr>
           <button type="button" class="btn btn-dark mb-4"><a class="text-white text-decoration-none"
               href="{{ route('admin.orders.show', $order->id) }}"> Dettagli</a></button>
