@@ -9,7 +9,7 @@
   <div class="card order-card" style="">
     <div class="card-body p-3 container-fluid">
 
-      <h2 class="mt-3">Ordini dell'utente:</h2>
+      <h2 class="mt-3">Ordine dell'utente:</h2>
       {{-- @dd($details_product_orders) --}}
       @foreach ($details_product_orders as $details)
       <ul>

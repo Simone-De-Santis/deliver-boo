@@ -6,8 +6,8 @@
     <div class="row justify-content-center">
       <h1>Benvenuto {{ $user->name }} </h1>
     </div>
-    <h2>
-      Statistiche di tutte cose
+    <h2 class="text-white">
+      Statistiche dei tuoi ordini 
     </h2>
     {{-- div delle statistiche --}}
     <div class="shadow-lg rounded bg-statistics-graph">
