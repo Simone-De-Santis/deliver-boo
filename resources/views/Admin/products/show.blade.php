@@ -4,7 +4,7 @@
 {{-- Added 'content' section to add page content --}}
 @section('content')
   <section class="container" class="products-section">
-    <h1>Questa è la show del prodotto {{ $product->id }} </h1>
+    {{-- <h1>{{ $product->id }} </h1> --}}
 
     <div class="card mt-4" style="width: 18rem;">
       <img class="card-img-top" @if ($product->url)
