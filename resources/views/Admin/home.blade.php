@@ -43,7 +43,7 @@
         label: 'My First dataset',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45, 0, 0, 0, 0, 0],
+        data: [12, 22, 33, 45, 39, 42, 33, 44, 49, 36, 55, 0],
       }]
     };
     const config = {
