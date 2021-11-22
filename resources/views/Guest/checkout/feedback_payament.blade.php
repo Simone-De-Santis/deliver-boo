@@ -27,7 +27,8 @@
       </div>
       <div class="mx-5 mt-3">
         <p class="text-center font-weight-bold">@{{ statusOrder }} </p>
-      </div> <img
+      </div>
+      <img
         src="https://cdn1.iconfinder.com/data/icons/logistics-transportation-vehicles/202/logistic-shipping-vehicles-002-512.png"
         alt="" class="rider">
     </section>
