@@ -18,7 +18,7 @@
         <section class="row pt-5">
 
             <section id="checkout-page" class="col-12 col-md-6">
-                <h1>Inserisci i tuoi dati</h1>
+                <h1 class="mt-4">Inserisci i tuoi dati</h1>
                 @include('includes.guest.checkout.form')
 
             </section>
