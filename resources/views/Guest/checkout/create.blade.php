@@ -13,31 +13,33 @@
 @endsection
 {{-- Content section with order --}}
 @section('content')
-  <section class="container">
+  <section class="container mt-5">
 
-    <section class="row">
+    <section class="row pt-5">
 
-      <section id="checkout-page" class="col-6">
-        <h1>Pagina carrello/ordine</h1>
+      <section id="checkout-page" class="col-12 col-md-6">
+        <h1>Inserisci i tuoi dati</h1>
         @include('includes.guest.checkout.form')
 
       </section>
-      <section class="col-6">
-        Prodotti
-        <div id="app">
+      <section class="col-12 col-md-6 p-5">
+        
+        <div id="app" class="info-cart" class="">
+          
+          <div v-for="(item,index) in cart" >
+            <h2>Carrello</h2>
 
-
-          <div v-for="(item,index) in cart">
-            <ul>
+            <ul style="list-style-type: none" class="p-0">
               <li>
                 @{{ item . name }}
-                @{{ item . quantity }}
-                @{{ item . price }}
+               
               </li>
+              <li>Quantità: @{{ item . quantity }}</li>
+              <li>Prezzo: € @{{ item . price }}</li>
 
             </ul>
           </div>
-          <h1>@{{ totalPrice }}</h1>
+          <h1>Totale: @{{ totalPrice }}</h1>
         </div>
       </section>
     </section>

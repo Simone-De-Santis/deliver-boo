@@ -12,7 +12,7 @@
 @endif
 {{-- Check if there are errors in the form --}}
 <form action="{{ route('checkout.store') }}" method="POST">
-    <h1>siamo in creazione utente</h1>
+    
     @csrf
     {{-- Guest name --}}
     <div class="form-group">

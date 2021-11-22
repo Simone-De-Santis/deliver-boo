@@ -16,7 +16,7 @@
 {{-- Content section with all restaurant --}}
 @section('content')
     <div id="app">
-        <div id="guest-home-blade">
+        <div id="guest-home-blade ">
 
             <div id="jumbotron">
                 <div id="carouselExampleControls " class="carousel slide d-none d-md-block" data-ride="carousel">

@@ -111,7 +111,7 @@
 
 
     {{-- footer --}}
-    <footer class="container-fluid primary-color-bg" id="footer">
+    <footer class="container-fluid primary-color-bg mt-4" id="footer">
 
       <div class="container pt-5">
 
