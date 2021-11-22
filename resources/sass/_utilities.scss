@@ -10,10 +10,9 @@ body {
 }
 
 .primary-color {
-    color:#7d0a0a;
+    color:$primary-color;
 }
 
 .primary-color-bg {
-    background-color: #7d0a0a;
+    background-color: $primary-color;
 }
-
