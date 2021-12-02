@@ -10,15 +10,19 @@
 
 /*---------------------------------*/
 
-.search-buttom {
+.dropdown-toggle {
     background-color: $primary-color;
     color: $body-bg;
+    .dropdown-item{
+        background-color: $body-bg;
+        
+    }
 }
 
 /*-------------*/
 
 #restaurants {
-    h2 {
+   h2, h3 {
         color: $primary-color;
         font-weight: 700;
     }

@@ -37,9 +37,9 @@
                         class="form-control text-search shadow" aria-label="Text input with dropdown button"
                         placeholder="Cerca qui il tuo ristorante..">
                     <div class="input-group-append">
-                        <select class="shadow btn btn-outline-light dropdown-toggle" data-toggle="dropdown"
+                        <select class="shadow btn btn-outline-primary-color dropdown-toggle" data-toggle="dropdown"
                             v-model="select">Categorie
-                            <option value="" selected>Tutte le categorie</option>
+                            <option class="dropdown-item" value="" selected>Tutte le categorie</option>
                             <div role="separator" class="dropdown-divider"></div>
                             <option class="dropdown-item" v-for="(selectCategory, index) in selectCategories">
                                 @{{ selectCategory }}
