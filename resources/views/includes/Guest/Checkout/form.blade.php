@@ -12,7 +12,6 @@
 @endif
 {{-- Check if there are errors in the form --}}
 <form action="{{ route('checkout.store') }}" method="POST">
-    
     @csrf
     {{-- Guest name --}}
     <div class="form-group">
@@ -121,6 +120,7 @@
     </div>
 
 
-    <button type="submit" class="btn btn-primary mt-4" v-on:click="removeCart()">Conferma ordine</button>
+    <button type="submit" class="btn primary-color-bg mt-4 text-white mb-5" v-on:click="removeCart()">Conferma
+        ordine</button>
 
 </form>
