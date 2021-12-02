@@ -10086,6 +10086,51 @@ GENERAL
   color: white;
 }
 
+#order-feedback img {
+  height: 50px;
+}
+#order-feedback .rider {
+  -webkit-animation: rider 10s cubic-bezier(0.52, 0.29, 0.05, 0.81) 5s 1 forwards;
+          animation: rider 10s cubic-bezier(0.52, 0.29, 0.05, 0.81) 5s 1 forwards;
+}
+#order-feedback .freccia {
+  -webkit-animation: bouncing 2s infinite;
+          animation: bouncing 2s infinite;
+}
+
+@-webkit-keyframes bouncing {
+  0%, 100% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+}
+
+@keyframes bouncing {
+  0%, 100% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+}
+@-webkit-keyframes rider {
+  0% {
+    transform: translatex(0px);
+  }
+  100% {
+    transform: translatex(1000px);
+  }
+}
+@keyframes rider {
+  0% {
+    transform: translatex(0px);
+  }
+  100% {
+    transform: translatex(1000px);
+  }
+}
 /*jumbotron slider*/
 #carousel {
   height: 600px;
@@ -10249,6 +10294,7 @@ html {
   color: #7d0a0a;
   font-weight: bold;
 }
+
 @media screen and (min-width: 768px) {
   #guest-nav {
     position: absolute;
@@ -10375,7 +10421,6 @@ html {
   min-height: 100vh;
 }
 #register-section .form-register .card-body {
-  height: 100px;
   min-height: 100vh;
 }
 #register-section .form-register .card-body .form-group {
@@ -10462,4 +10507,21 @@ tr th .info-product {
 #footer .card .card-body p a {
   text-decoration: none;
   color: grey;
+}
+
+body::-webkit-scrollbar-track {
+  border: 1px solid #000;
+  padding: 2px 0;
+  background-color: #FFF;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #7d0a0a;
+  border: 1px solid #000;
 }

@@ -26,9 +26,8 @@
 
                 <div id="app" class="info-cart" class="">
 
+                    <h2>Carrello</h2>
                     <div v-for="(item,index) in cart">
-                        <h2>Carrello</h2>
-
                         <ul style="list-style-type: none" class="p-0">
                             <li>
                                 @{{ item . name }}
@@ -38,6 +37,7 @@
                             <li>Prezzo: € @{{ item . price }}</li>
 
                         </ul>
+                        <hr>
                     </div>
                     <h1>Totale: @{{ totalPrice }}</h1>
                 </div>
